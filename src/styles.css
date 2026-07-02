@@ -81,3 +81,298 @@ a {
     width: min(100% - 32px, var(--page-width));
   }
 }
+
+:root {
+  --bg: #f5f6fb;
+  --card: #ffffff;
+  --text: #101226;
+  --muted: #5f6475;
+  --border: #dfe3ee;
+
+  --primary: #6c35d8;
+  --primary-dark: #4f21b5;
+
+  --nav-muted: #c7cede;
+
+  --soft-purple: #f0e9ff;
+  --soft-green: #eaf7ef;
+  --soft-orange: #fff0df;
+  --soft-blue: #eaf4ff;
+  --soft-red: #fff0f1;
+
+  --shadow: 0 10px 30px rgba(16, 18, 38, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin-top: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(1440px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.page-stack {
+  display: grid;
+  gap: 14px;
+  padding-block: 18px 40px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.content-grid-about {
+  grid-template-columns: 1fr 2fr;
+}
+
+.content-grid-process {
+  grid-template-columns: 1fr 2fr;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  gap: 14px;
+}
+
+.badge-row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button-row,
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .content-grid-about,
+  .content-grid-process,
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .page-shell {
+    width: min(100% - 24px, 1440px);
+  }
+
+  .feature-grid,
+  .screenshot-grid,
+  .lesson-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 18px;
+  }
+}
+
+.site-nav {
+  background: var(--nav);
+  color: white;
+  border-radius: 16px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.brand-title {
+  display: block;
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  display: block;
+  color: var(--nav-muted);
+  font-size: 0.82rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  color: white;
+  opacity: 0.9;
+  padding-block: 8px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #c7a7ff;
+  border-bottom-color: #8b55ff;
+  opacity: 1;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section-card {
+  padding: 22px;
+}
+
+.section-card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  font-weight: 900;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(16, 18, 38, 0.12);
+}
+
+.button-primary {
+  color: white;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.button-primary:hover {
+  background: var(--primary-dark);
+}
+
+.button-secondary {
+  color: var(--text);
+  background: white;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f5f7fb;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px 20px 32px;
+  color: var(--muted);
+}

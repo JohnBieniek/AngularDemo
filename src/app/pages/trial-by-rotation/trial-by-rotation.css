@@ -1,3 +1,20 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(115, 87, 255, 0.26), transparent 36rem),
+    linear-gradient(180deg, #080a17 0%, #070916 45%, #050711 100%);
+}
+
+.trial-by-rotation-page {
+  width: min(var(--page-width), calc(100% - 96px));
+  margin-inline: auto;
+  padding: 48px 0 96px;
+  display: grid;
+  gap: 18px;
+  background: transparent;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.45fr;
@@ -110,8 +127,8 @@
 .timeline::before {
   content: "";
   position: absolute;
-  left: 7%;
-  right: 7%;
+  left: 3%;
+  right: 15%;
   top: 0;
   height: 3px;
   background: var(--primary);
