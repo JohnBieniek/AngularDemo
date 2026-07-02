@@ -1,0 +1,20 @@
+<header class="site-header">
+  <nav class="site-nav page-shell" aria-label="Main navigation">
+    <a class="brand" routerLink="/" aria-label="John Bieniek portfolio home">
+      <span class="brand-mark">JB</span>
+
+      <span class="brand-copy">
+        <span class="brand-name">John Bieniek</span>
+        <span class="brand-title">Lead Software Engineer</span>
+      </span>
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/projects/trial-by-rotation" routerLinkActive="active">Trial by Rotation</a>
+      <a routerLink="/embedded-game" routerLinkActive="active">Embedded Game</a>
+      <a routerLink="/java-demo" routerLinkActive="active">Java Demo</a>
+      <a href="mailto:contact@johnbieniek.com">Contact</a>
+    </div>
+  </nav>
+</header>

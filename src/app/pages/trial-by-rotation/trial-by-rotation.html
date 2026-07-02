@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Trial by Rotation is a chaotic Battle Top game set in a courtroom arena that's made in Unity for The Very Serious Juniper Dev Game Jam."
+  />
+
+  <title>Trial by Rotation | John Bieniek</title>
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/pages/trial-by-rotation.css" />
+</head>
+
+<div class="lightbox" id="screenshot-lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close full-size screenshot">
+    ×
+  </button>
+
+  <img class="lightbox-image" src="" alt="" />
+
+  <p class="lightbox-caption"></p>
+</div>
+
+<script src="/js/lightbox.js"></script>
+<body>
+  <header class="site-header">
+    <nav class="site-nav page-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="John Bieniek portfolio home">
+        <span class="brand-icon" aria-hidden="true">🎮</span>
+        <span>
+          <span class="brand-title">John Bieniek</span>
+          <span class="brand-subtitle">Lead Software Engineer</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="trial-by-rotation.html">Trial by Rotation</a>
+        <a href="embedded-game.html">Embedded Game</a>
+        <a href="java-demo.html">Java Demo</a>
+        <a href="mailto:contact@johnbieniek.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell page-stack">
+    <section class="card hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Featured Project</p>
+        <h1>Trial by Rotation</h1>
+        <p class="hero-subtitle">Very serious "Spin to Win" action!</p>
+        <p>
+          Trial by Rotation is a fast-paced arena brawler where the courtroom never stops
+          turning. Spin, slam, and survive unpredictable hazards and rival attorneys in a
+          test of timing, positioning, and chaos.
+        </p>
+
+        <div class="button-row">
+          <a class="button button-primary" href="https://rotationaljustice.itch.io/trial-by-rotation" target="_blank" rel="noopener">
+            Play on itch.io
+          </a>
+          <a class="button button-secondary" href="https://youtu.be/8w58KJIr9Sk?si=RCHn4wObuHNokKbg" target="_blank" rel="noopener">
+            Watch Trailer
+          </a>
+        </div>
+      </div>
+
+     <div class="hero-video" aria-label="Trial by Rotation gameplay video">
+      <iframe
+        src="https://www.youtube.com/embed/8w58KJIr9Sk?si=8hKHisYAKt7gxZLQ&autoplay=1&mute=1&loop=1&playlist=8w58KJIr9Sk&controls=0&rel=0&modestbranding=1&playsinline=1"
+        title="Trial by Rotation gameplay preview"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    </section>
+
+    <section class="content-grid content-grid-about">
+      <article class="card section-card">
+        <h2>1. About the Game</h2>
+        <p>
+          Step into a courtroom where the floor rotates, hazards interrupt the case, and
+          every hit can send someone flying. Last person standing wins!
+        </p>
+      </article>
+
+      <article class="card section-card">
+        <h2>2. Gameplay Highlights</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card feature-purple">
+            <span class="feature-icon" aria-hidden="true">↻</span>
+            <div>
+              <h3>Spin</h3>
+              <p>The arena constantly rotates, forcing players to adapt.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-green">
+            <span class="feature-icon" aria-hidden="true">✹</span>
+            <div>
+              <h3>Knockback</h3>
+              <p>The faster you spin the harder you are to displace and the harder you hit.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-orange">
+            <span class="feature-icon" aria-hidden="true">⚠</span>
+            <div>
+              <h3>Arena Hazards</h3>
+              <p>Spinning hazards attached to the Wheel of Justice and stationary blades create dynamic challenges.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-blue">
+            <span class="feature-icon" aria-hidden="true">⚖</span>
+            <div>
+              <h3>Serious Accusations</h3>
+              <p>Voiced testimonies add depth to the narrative and create immersive moments in every trial</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid content-grid-process">
+      <article class="card section-card">
+        <h2>3. How It Was Made</h2>
+
+        <div class="badge-row">
+          <span class="tech-badge">Unity</span>
+          <span class="tech-badge">C#</span>
+          <span class="tech-badge">GIMP</span>
+          <span class="tech-badge">Canva</span>
+          <span class="tech-badge">Audacity</span>
+          <span class="tech-badge">Itch.io</span>
+          <span class="tech-badge">GitHub</span>
+        </div>
+
+        <p>
+          Built in Unity using C#. Developed around fast iteration, readable feedback,
+          simple controls, and game-jam scope control.
+        </p>
+      </article>
+
+      <article class="card section-card">
+        <h2>4. Development Process</h2>
+
+        <ol class="timeline">
+          <li>
+            <h3>Concept</h3>
+            <p>Spinning courtroom arena, movement, knockback and core loop.</p>
+          </li>
+          <li>
+            <h3>Prototype</h3>
+            <p>Basic AI, win/lose conditions, hazards, sounds.</p>
+          </li>
+          <li>
+            <h3>Core Mechanics</h3>
+            <p>Weapons, defenses, incremental difficulty, accusations, testimonies.</p>
+          </li>
+          <li>
+            <h3>Polish</h3>
+            <p>Particle effects, motion blur, weapon spinners, UI, audio, and balance passes.</p>
+          </li>
+          <li>
+            <h3>Release</h3>
+            <p>Playtesting, final fixes, and jam submission.</p>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="media-grid">
+      <article class="card section-card">
+        <h2>5. Screenshots / GIFs</h2>
+
+        <div class="screenshot-grid">
+          <button
+            class="screenshot-button"
+            type="button"
+            data-full="/assets/images/trial-screen-1.png"
+            data-caption="Spinning arena mayhem"
+          >
+            <img src="/assets/images/trial-screen-1.png" alt="Spin to win themeing for the game jam" />
+            <span>Spin for everything from weapons to defenses</span>
+          </button>
+
+          <button
+            class="screenshot-button"
+            type="button"
+            data-full="/assets/images/trial-screen-2.gif"
+            data-caption="Knockback in action"
+          >
+            <img src="/assets/images/trial-screen-2.gif" alt="Player knockback during a match" />
+            <span>Knockback depends on spin and speed</span>
+          </button>
+
+          <button
+            class="screenshot-button"
+            type="button"
+            data-full="/assets/images/trial-screen-3.png"
+            data-caption="The more you win the more plaintiffs you face"
+          >
+            <img src="/assets/images/trial-screen-3.png" alt="Incremental difficulty progression" />
+            <span>The more you win the more plaintiffs you face</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card section-card">
+        <h2>6. Trailer / YouTube Ad</h2>
+
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/8w58KJIr9Sk?si=8hKHisYAKt7gxZLQ"
+            title="Trial by Rotation trailer"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+
+      <article class="card section-card">
+        <h2>7. Challenges and Lessons</h2>
+
+        <div class="lesson-grid">
+          <div class="lesson-card lesson-challenge">
+            <h3>Challenges</h3>
+            <p>
+              Smooth rotation, camera behavior, and knockback balance required repeated
+              testing so the chaos still felt fair.
+            </p>
+          </div>
+
+          <div class="lesson-card lesson-learned">
+            <h3>Lessons Learned</h3>
+            <p>
+              Fast iteration, visible player feedback, and strict scope control made the
+              game easier to finish on time.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="card section-card links-section">
+      <h2>8. Links</h2>
+
+      <div class="link-grid">
+        <a class="button button-primary" href="https://rotationaljustice.itch.io/trial-by-rotation" target="_blank" rel="noopener">
+          Play the Game
+        </a>
+        <a class="button button-secondary" href="https://itch.io/jam/theveryseriousjuniperdevgamejam" target="_blank" rel="noopener">
+          Check Out the Jam
+        </a>
+        <a class="button button-secondary" href="https://github.com/JohnBieniek/Trial-by-Rotation" target="_blank" rel="noopener">
+          Source / Dev Notes
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 John Bieniek. Built for portfolio review and project demos.</p>
+  </footer>
+</body>
+</html>
