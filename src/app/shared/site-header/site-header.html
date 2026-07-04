@@ -1,7 +1,12 @@
 <header class="site-header">
   <nav class="site-nav page-shell" aria-label="Main navigation">
     <a class="brand" routerLink="/" aria-label="John Bieniek portfolio home">
-      <span class="brand-mark">JB</span>
+      <span class="brand-mark">
+        <img
+          src="/assets/images/SigilSmall.png"
+          alt="John Bieniek"
+        />
+      </span>
 
       <span class="brand-copy">
         <span class="brand-name">John Bieniek</span>
@@ -11,10 +16,13 @@
 
     <div class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/projects/accessibleScheduling" routerLinkActive="active">Accessible Scheduling</a>
+      <a routerLink="/projects/sophia" routerLinkActive="active">SOPHIA</a>
       <a routerLink="/projects/trial-by-rotation" routerLinkActive="active">Trial by Rotation</a>
-      <a routerLink="/embedded-game" routerLinkActive="active">Embedded Game</a>
+      <a routerLink="/projects/lakeland-fine-arts" routerLinkActive="active">Lakeland Fine Arts</a>
+      <a routerLink="/the-multiverse-adventurers-guild" routerLinkActive="active">The Multiverse Adventurers Guild</a>
       <a routerLink="/java-demo" routerLinkActive="active">Java Demo</a>
-      <a href="mailto:contact@johnbieniek.com">Contact</a>
+      <a href="mailto:Contact@johnbieniek.com">Contact</a>
     </div>
   </nav>
 </header>

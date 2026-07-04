@@ -9,5 +9,5 @@ import { SiteHeader } from "./shared/site-header/site-header";
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('AngularDemo');
+  protected readonly title = signal('Johns Portfolio');
 }
