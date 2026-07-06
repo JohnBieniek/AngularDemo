@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { TrialByRotation } from './pages/trial-by-rotation/trial-by-rotation';
+import { JavaDemoOverviewComponent } from './pages/java-demo/java-demo-overview-component';
 
 export const routes: Routes = [
   {
@@ -11,6 +12,10 @@ export const routes: Routes = [
   {
     path: 'projects/trial-by-rotation',
     component: TrialByRotation
+  },
+  {
+    path: 'java-demo',
+    component: JavaDemoOverviewComponent,
   },
   {
     path: '**',

@@ -1,0 +1,17 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a class="breadcrumb-home" routerLink="/" aria-label="Home">
+    <span aria-hidden="true">⌂</span>
+  </a>
+
+  <ng-container *ngFor="let item of items; let last = last">
+    <span class="breadcrumb-separator" aria-hidden="true">›</span>
+
+    <a *ngIf="item.route && !last" class="breadcrumb-link" [routerLink]="item.route">
+      {{ item.label }}
+    </a>
+
+    <span *ngIf="!item.route || last" class="breadcrumb-current">
+      {{ item.label }}
+    </span>
+  </ng-container>
+</nav>

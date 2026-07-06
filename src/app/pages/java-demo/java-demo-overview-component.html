@@ -1,0 +1,146 @@
+<main class="java-demo-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <section class="project-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Backend portfolio project</p>
+
+        <h1>Java 26 Demo</h1>
+
+        <p class="hero-lede">
+          A Spring Boot demo application built around Java 26, showcasing modern Java features,
+          API development, interview exercises, SQL/JPA demos, and practical backend engineering
+          patterns.
+        </p>
+
+        <p class="hero-body">
+          Java 26 Demo is a hands-on sandbox and portfolio project designed to explore current
+          Java capabilities while demonstrating solid software engineering fundamentals. It
+          includes examples from multiple Java releases, interview-style exercises, animal and
+          polymorphism scenarios, SQL and JPA demonstrations, and API-first development with
+          browsable documentation.
+        </p>
+
+        <div class="badge-grid" aria-label="Technology tags">
+          <span class="tech-badge" *ngFor="let badge of badges">
+            <span class="badge-icon">{{ badge.icon }}</span>
+            {{ badge.label }}
+          </span>
+        </div>
+      </div>
+
+      <aside class="code-preview" aria-label="Project preview">
+        <div class="window-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+
+        <div class="code-preview-body">
+          <pre>
+java26-demo/
+├─ src/
+│  └─ main/
+│     └─ java/
+│        └─ com.johnbieniek.java26demo/
+│           ├─ interview/
+│           ├─ animals/
+│           ├─ sql/
+│           └─ api/
+├─ resources/
+├─ java9-module-demo/
+├─ build.gradle
+├─ settings.gradle
+├─ Dockerfile
+└─ README.md</pre>
+
+          <div class="runtime-lines">
+            <p><span>&gt;</span> Spring Boot application started successfully</p>
+            <p><span>&gt;</span> Swagger UI: /swagger-ui.html</p>
+            <p><span>&gt;</span> H2 Console: /h2-console</p>
+          </div>
+
+          <div class="java-mark" aria-hidden="true">
+            <span>&#123;</span>
+            <strong>☕</strong>
+            <span>&#125;</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-grid two-column">
+      <article class="info-card">
+        <div class="card-title-row">
+          <span class="section-icon">i</span>
+          <h2>What It Covers</h2>
+        </div>
+
+        <ul class="check-list">
+          <li *ngFor="let item of coverageItems">{{ item }}</li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <div class="card-title-row">
+          <span class="section-icon">&lt;/&gt;</span>
+          <h2>Technical Stack</h2>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-tile" *ngFor="let item of stackItems">
+            <span class="stack-icon">{{ item.icon }}</span>
+            <span>{{ item.label }}</span>
+          </div>
+        </div>
+
+        <div class="stack-footer">
+          <span *ngFor="let item of stackFooterItems">
+            <strong>{{ item.icon }}</strong>
+            {{ item.label }}
+          </span>
+        </div>
+      </article>
+    </section>
+
+    <section class="info-card feature-section">
+      <div class="card-title-row">
+        <span class="section-icon">☆</span>
+        <h2>Core Features &amp; Sample Areas</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-tile" *ngFor="let feature of featureCards">
+          <span class="feature-icon">{{ feature.icon }}</span>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-card why-card">
+      <div class="card-title-row">
+        <span class="section-icon">♡</span>
+        <h2>Why This Project Matters</h2>
+      </div>
+
+      <p>
+        I built <strong>Java 26 Demo</strong> to stay hands-on with modern Java, reinforce backend
+        fundamentals, and package that learning into a cohesive, browsable application. It works as
+        a practical reference, an interview preparation aid, and a portfolio-quality project that
+        demonstrates depth across language features, APIs, data access, documentation, and deployment.
+      </p>
+    </section>
+
+    <section class="summary-strip" aria-label="Project summary">
+      <article class="summary-item" *ngFor="let item of summaryItems">
+        <span class="summary-icon">{{ item.icon }}</span>
+        <div>
+          <h3>{{ item.label }}</h3>
+          <p>{{ item.sublabel }}</p>
+        </div>
+      </article>
+    </section>
+  </section>
+</main>

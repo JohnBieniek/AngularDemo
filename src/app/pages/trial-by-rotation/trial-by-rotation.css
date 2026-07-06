@@ -1,9 +1,11 @@
 :host {
   display: block;
   min-height: 100vh;
+  color: #f7f5ff;
   background:
-    radial-gradient(circle at top right, rgba(115, 87, 255, 0.26), transparent 36rem),
-    linear-gradient(180deg, #080a17 0%, #070916 45%, #050711 100%);
+    radial-gradient(circle at 16% 12%, rgba(75, 116, 255, 0.2), transparent 28rem),
+    radial-gradient(circle at 88% 4%, rgba(126, 87, 255, 0.22), transparent 34rem),
+    linear-gradient(180deg, #090b18 0%, #070914 54%, #060711 100%);
 }
 
 .trial-by-rotation-page {
