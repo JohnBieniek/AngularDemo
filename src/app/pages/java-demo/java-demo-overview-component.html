@@ -4,7 +4,7 @@
   <section class="project-shell">
     <section class="hero-card">
       <div class="hero-copy">
-        <p class="eyebrow">Backend portfolio project</p>
+        <p class="eyebrow">Backend Architecture Example</p>
 
         <h1>Java 26 Demo</h1>
 
@@ -15,16 +15,17 @@
         </p>
 
         <p class="hero-body">
-          Java 26 Demo is a hands-on sandbox and portfolio project designed to explore current
-          Java capabilities while demonstrating solid software engineering fundamentals. It
-          includes examples from multiple Java releases, interview-style exercises, animal and
-          polymorphism scenarios, SQL and JPA demonstrations, and API-first development with
-          browsable documentation.
+          Java 26 Demo is a hands-on sandbox designed to explore current
+          Java capabilities while demonstrating software engineering fundamentals. It
+          includes examples from multiple Java releases, interview-style exercises, 
+          polymorphism scenarios, SQL and JPA demonstrations, and API-first development. It 
+          features automatic documentation with swagger that enables a user to explore the API endpoints and view the functions that came
+          with each version of Java. The project is deployed on AWS Elastic Beanstalk and uses Docker to containerize the application.
         </p>
 
         <div class="badge-grid" aria-label="Technology tags">
           <span class="tech-badge" *ngFor="let badge of badges">
-            <span class="badge-icon">{{ badge.icon }}</span>
+            <iconify-icon class="badge-icon" [attr.icon]="badge.icon"></iconify-icon>
             {{ badge.label }}
           </span>
         </div>
@@ -39,21 +40,26 @@
 
         <div class="code-preview-body">
           <pre>
-java26-demo/
+Java26Demo/
 ├─ src/
 │  └─ main/
-│     └─ java/
-│        └─ com.johnbieniek.java26demo/
-│           ├─ interview/
-│           ├─ animals/
-│           ├─ sql/
-│           └─ api/
-├─ resources/
-├─ java9-module-demo/
+│  │ └─ java/
+│  │    └─ com/JohnBieniek/Java26Demo
+│  │     ├─ batch
+│  │     ├─ client
+│  │     ├─ controller
+│  │     ├─ dto
+│  │     ├─ model
+│  │     ├─ repository
+│  │     ├─ service
+│  │     └─ utility
+│  └─ test/java/com/JohnBieniek/Java26Demo
+├─ .gitignore
 ├─ build.gradle
-├─ settings.gradle
 ├─ Dockerfile
-└─ README.md</pre>
+├─ java9-module-demo/
+└─ README.md
+          </pre>
 
           <div class="runtime-lines">
             <p><span>&gt;</span> Spring Boot application started successfully</p>
@@ -84,20 +90,22 @@ java26-demo/
 
       <article class="info-card">
         <div class="card-title-row">
-          <span class="section-icon">&lt;/&gt;</span>
+          <span class="section-icon">
+            <iconify-icon icon="mdi:code-tags"></iconify-icon>
+          </span>
           <h2>Technical Stack</h2>
         </div>
 
         <div class="stack-grid">
           <div class="stack-tile" *ngFor="let item of stackItems">
-            <span class="stack-icon">{{ item.icon }}</span>
+            <iconify-icon class="stack-icon" [attr.icon]="item.icon"></iconify-icon>
             <span>{{ item.label }}</span>
           </div>
         </div>
 
         <div class="stack-footer">
           <span *ngFor="let item of stackFooterItems">
-            <strong>{{ item.icon }}</strong>
+            <iconify-icon class="stack-footer-icon" [attr.icon]="item.icon"></iconify-icon>
             {{ item.label }}
           </span>
         </div>
@@ -106,13 +114,15 @@ java26-demo/
 
     <section class="info-card feature-section">
       <div class="card-title-row">
-        <span class="section-icon">☆</span>
+        <span class="section-icon">
+          <iconify-icon icon="mdi:star-outline"></iconify-icon>
+        </span>
         <h2>Core Features &amp; Sample Areas</h2>
       </div>
 
       <div class="feature-grid">
         <article class="feature-tile" *ngFor="let feature of featureCards">
-          <span class="feature-icon">{{ feature.icon }}</span>
+          <iconify-icon class="feature-icon" [attr.icon]="feature.icon"></iconify-icon>
           <h3>{{ feature.title }}</h3>
           <p>{{ feature.description }}</p>
         </article>
@@ -126,16 +136,17 @@ java26-demo/
       </div>
 
       <p>
-        I built <strong>Java 26 Demo</strong> to stay hands-on with modern Java, reinforce backend
-        fundamentals, and package that learning into a cohesive, browsable application. It works as
+        I built <strong>Java 26 Demo</strong> to use Java functions too modern to make it into most entierprise tech stacks. Here I've reinforced backend
+        fundamentals and packaged that learning into a cohesive, browsable application. It works as
         a practical reference, an interview preparation aid, and a portfolio-quality project that
-        demonstrates depth across language features, APIs, data access, documentation, and deployment.
+        demonstrates architecture, language features, data access, documentation, and AWS deployment.
       </p>
     </section>
 
     <section class="summary-strip" aria-label="Project summary">
       <article class="summary-item" *ngFor="let item of summaryItems">
-        <span class="summary-icon">{{ item.icon }}</span>
+        <iconify-icon class="summary-icon" [attr.icon]="item.icon"></iconify-icon>
+
         <div>
           <h3>{{ item.label }}</h3>
           <p>{{ item.sublabel }}</p>

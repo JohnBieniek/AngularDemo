@@ -14,6 +14,7 @@
 <script src="/js/lightbox.js"></script>
 <body>
   <main class="page-shell page-stack">
+    <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
     <section class="card hero">
       <div class="hero-copy">
         <p class="eyebrow">Featured Project</p>
@@ -52,7 +53,7 @@
           Step into a courtroom where the floor rotates, hazards interrupt the case, and
           every hit can send someone flying. Last person standing wins!
 
-          This game was made for The Very Serious Juniper Dev Game Jam, which challenged participants to create a game in 1 week with a tounge in cheek emphasis on 🍭"seriousness"🍭 and the theme "Spin to Win.". 
+          This game was made for The Very Serious Juniper Dev Game Jam, which challenged participants to create a game in 1 week with a tounge in cheek emphasis on "seriousness🍭" and the theme "Spin to Win.". 
         </p>
       </article>
 
@@ -108,7 +109,7 @@
           <span class="tech-badge">Itch.io</span>
           <span class="tech-badge">GitHub</span>
         </div>
-
+        
         <p>
           Built in Unity using C#. Developed around fast iteration, readable feedback,
           simple controls, and game-jam scope control.
@@ -116,30 +117,38 @@
       </article>
 
       <article class="card section-card">
-        <h2>4. Development Process</h2>
+       
+          <section class="card section-card">
+            <h2>4. Development Process</h2>
 
-        <ol class="timeline">
-          <li>
-            <h3>Concept</h3>
-            <p>Spinning courtroom arena, movement, knockback and core loop.</p>
-          </li>
-          <li>
-            <h3>Prototype</h3>
-            <p>Basic AI, win/lose conditions, hazards, sounds.</p>
-          </li>
-          <li>
-            <h3>Core Mechanics</h3>
-            <p>Weapons, defenses, incremental difficulty, accusations, testimonies.</p>
-          </li>
-          <li>
-            <h3>Polish</h3>
-            <p>Particle effects, motion blur, weapon spinners, UI, audio, and balance passes.</p>
-          </li>
-          <li>
-            <h3>Release</h3>
-            <p>Playtesting, final fixes, and jam submission.</p>
-          </li>
-        </ol>
+            <div class="process-timeline">
+              <article class="process-step">
+                <h3>Concept</h3>
+                <p>Spinning courtroom arena, movement, knockback and core loop.</p>
+              </article>
+
+              <article class="process-step">
+                <h3>Prototype</h3>
+                <p>Basic AI, win/lose conditions, hazards, sounds.</p>
+              </article>
+
+              <article class="process-step">
+                <h3>Core Mechanics</h3>
+                <p>Weapons, defenses, incremental difficulty, accusations, testimonies.</p>
+              </article>
+
+              <article class="process-step">
+                <h3>Polish</h3>
+                <p>Particle effects, motion blur, weapon spinners, UI, audio, and balance passes.</p>
+              </article>
+
+              <article class="process-step">
+                <h3>Release</h3>
+                <p>Playtesting, final fixes, and jam submission.</p>
+              </article>
+            </div>
+          </section>
+    
       </article>
     </section>
 

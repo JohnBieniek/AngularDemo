@@ -106,7 +106,7 @@ a {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(3rem, 7vw, 6.3rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   line-height: 0.95;
   letter-spacing: -0.07em;
 }
@@ -149,9 +149,8 @@ a {
 
 .hero-highlights {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 2fr));
   gap: 1rem;
-  max-width: 720px;
   margin-top: 2.5rem;
 }
 

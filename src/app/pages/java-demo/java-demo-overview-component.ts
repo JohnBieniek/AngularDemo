@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 import {
   BreadcrumbsComponent,
   BreadcrumbItem,
 } from '../../shared/breadcrumbs/breadcrumbs-component';
-
-import { SiteHeader } from '../../shared/site-header/site-header';
 
 interface TechBadge {
   label: string;
@@ -28,9 +26,10 @@ interface StackItem {
 @Component({
   selector: 'app-java-demo-overview',
   standalone: true,
-  imports: [NgFor, BreadcrumbsComponent, SiteHeader],
+  imports: [NgFor, BreadcrumbsComponent],
   templateUrl: './java-demo-overview-component.html',
   styleUrl: './java-demo-overview-component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class JavaDemoOverviewComponent {
   breadcrumbs: BreadcrumbItem[] = [
@@ -39,80 +38,80 @@ export class JavaDemoOverviewComponent {
   ];
 
   badges: TechBadge[] = [
-    { label: 'Java 26', icon: '☕' },
-    { label: 'Spring Boot', icon: '◉' },
-    { label: 'Gradle', icon: '🐘' },
-    { label: 'H2 Database', icon: 'H2' },
-    { label: 'Swagger / OpenAPI', icon: '{}' },
-    { label: 'SQL / JPA', icon: '▣' },
-    { label: 'Docker', icon: '🐳' },
-  ];
-
-  coverageItems: string[] = [
-    'Examples from multiple Java releases',
-    'Interview exercises for common backend topics',
-    'Animal and polymorphism examples',
-    'SQL and JPA demonstrations',
-    'In-memory H2 database exploration',
-    'API-first development with Swagger/OpenAPI',
-    'Local development workflow',
-    'Cloud-ready deployment workflow',
+    { label: 'Java 26', icon: 'devicon:java' },
+    { label: 'Spring Boot', icon: 'devicon:spring' },
+    { label: 'Gradle', icon: 'devicon:gradle' },
+    { label: 'H2 Database', icon: 'simple-icons:h2database' },
+    { label: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
+    { label: 'SQL / JPA', icon: 'mdi:database' },
+    { label: 'Docker', icon: 'devicon:docker' },
   ];
 
   stackItems: StackItem[] = [
-    { label: 'Java 26', icon: '☕' },
-    { label: 'Spring Boot', icon: '◉' },
-    { label: 'Gradle', icon: '🐘' },
-    { label: 'H2 Database', icon: 'H2' },
-    { label: 'Swagger / OpenAPI', icon: '{}' },
-    { label: 'Docker', icon: '🐳' },
+    { label: 'Java 26', icon: 'devicon:java' },
+    { label: 'Spring Boot', icon: 'devicon:spring' },
+    { label: 'Gradle', icon: 'devicon:gradle' },
+    { label: 'H2 Database', icon: 'simple-icons:h2database' },
+    { label: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
+    { label: 'Docker', icon: 'devicon:docker' },
   ];
 
   stackFooterItems: StackItem[] = [
-    { label: 'REST', icon: '◎' },
-    { label: 'JSON', icon: '{ }' },
-    { label: 'JPA / Hibernate', icon: '▤' },
+    { label: 'REST', icon: 'mdi:api' },
+    { label: 'JSON', icon: 'mdi:code-json' },
+    { label: 'JPA / Hibernate', icon: 'simple-icons:hibernate' },
   ];
 
   featureCards: FeatureCard[] = [
     {
       title: 'Release Demos',
-      icon: '</>',
+      icon: 'mdi:language-java',
       description: 'Explore language features from Java 8 through 9, 10, 11, 21, and 26.',
     },
     {
-      title: 'SQL & JPA Endpoints',
-      icon: '▤',
+      title: 'Endpoints for SQL & JPA',
+      icon: 'mdi:database-search',
       description: 'REST endpoints showcasing repositories, queries, relationships, and data access patterns.',
     },
     {
       title: 'API Documentation',
-      icon: '▨',
+      icon: 'simple-icons:swagger',
       description: 'Swagger UI and OpenAPI support make the project browsable and easy to test.',
     },
     {
       title: 'H2 Console Access',
-      icon: '▣',
+      icon: 'simple-icons:h2database',
       description: 'Browse and query the in-memory H2 database directly during local development.',
     },
     {
       title: 'Java 9 Module Demo',
-      icon: '◇',
+      icon: 'mdi:cube-outline',
       description: 'A separate module demonstrates the Java Platform Module System.',
     },
     {
       title: 'Run Anywhere',
-      icon: '↗',
+      icon: 'mdi:rocket-launch-outline',
       description: 'Run locally, package as a JAR, containerize with Docker, or deploy to cloud hosting.',
     },
   ];
 
   summaryItems: StackItem[] = [
-    { label: 'Modern Java', sublabel: 'Java 26 target', icon: '☕' },
-    { label: 'Backend Demo App', sublabel: 'API-first and practical', icon: '⚙' },
-    { label: 'In-Memory DB', sublabel: 'H2 for fast iteration', icon: 'H2' },
-    { label: 'API Docs', sublabel: 'Swagger / OpenAPI', icon: '{}' },
-    { label: 'Dockerized', sublabel: 'Portable and consistent', icon: '🐳' },
-    { label: 'Cloud Ready', sublabel: 'Deployable workflow', icon: '☁' },
+    { label: 'Modern Java', sublabel: 'Java 26 target', icon: 'devicon:java' },
+    { label: 'Backend API', sublabel: 'Practical microservice architecture', icon: 'mdi:cog-outline' },
+    { label: 'In-Memory DB', sublabel: 'H2 for fast iteration', icon: 'simple-icons:h2database' },
+    { label: 'API Docs', sublabel: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
+    { label: 'Dockerized', sublabel: 'Portable and consistent', icon: 'devicon:docker' },
+    { label: 'Cloud Ready', sublabel: 'Deployable workflow', icon: 'mdi:cloud-outline' },
   ];
+
+  coverageItems: string[] = [
+    'Examples from multiple Java releases',
+    'Interview exercises for common backend topics',
+    'Polymorphism examples',
+    'SQL and JPA demonstrations',
+    'In-memory H2 database exploration',
+    'API-first architecture exposed through Swagger/OpenAPI',
+    'Cloud-ready deployment workflow',
+  ];
+
 }
