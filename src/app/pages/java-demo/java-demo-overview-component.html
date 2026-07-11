@@ -161,9 +161,15 @@ Java26Demo/
       </div>
 
       <div class="link-grid centered-links">
-        <a class="button button-primary" href="http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/swagger-ui/index.html" target="_blank" rel="noopener">
-          Swagger UI
-        </a>
+        @if (javaDemoRunning) {
+          <a
+            href="http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/swagger-ui/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Swagger UI
+          </a>
+        }
         <a class="button button-secondary" href="https://github.com/JohnBieniek/Java26Demo" target="_blank" rel="noopener">
           Source
         </a>

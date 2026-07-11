@@ -225,7 +225,14 @@
 
           <div class="project-links">
             <a href="/java-demo">Overview</a>
-            <a href="http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/swagger-ui/index.html" target="_blank" rel="noopener noreferrer">Swagger UI</a>
+            <a
+              *ngIf="javaDemoRunning"
+              href="https://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/swagger-ui/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Swagger UI
+            </a>
             <a href="https://github.com/JohnBieniek/Java26Demo" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           </div>
         </div>

@@ -1,5 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA,OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 import {
   BreadcrumbsComponent,
@@ -31,7 +32,28 @@ interface StackItem {
   styleUrl: './java-demo-overview-component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JavaDemoOverviewComponent {
+
+export class JavaDemoOverviewComponent implements OnInit {
+  javaDemoRunning = false;
+
+  constructor(private readonly http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http
+      .get(
+        'https://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/healthcheck',
+        { responseType: 'text' }
+      )
+      .subscribe({
+        next: () => {
+          this.javaDemoRunning = true;
+        },
+        error: () => {
+          this.javaDemoRunning = false;
+        }
+      });
+  }
+
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Java Demo', route: '/java-demo' },
     { label: 'Overview' },

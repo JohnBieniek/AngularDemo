@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\",
+  "WorkspaceRootPath": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\.vscode\\settings.json.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\.vscode\\settings.json.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\settings.json.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\index.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\index.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -32,9 +32,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "app.ts",
-              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.ts",
+              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.ts",
               "RelativeDocumentMoniker": "src\\app\\app.ts",
-              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.ts",
+              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.ts",
               "RelativeToolTip": "src\\app\\app.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
@@ -45,9 +45,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "settings.json.json",
-              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\.vscode\\settings.json.json",
+              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\.vscode\\settings.json.json",
               "RelativeDocumentMoniker": ".vscode\\settings.json.json",
-              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\.vscode\\settings.json.json",
+              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\.vscode\\settings.json.json",
               "RelativeToolTip": ".vscode\\settings.json.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -58,9 +58,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "app.html",
-              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.html",
+              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.html",
               "RelativeDocumentMoniker": "src\\app\\app.html",
-              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\app\\app.html",
+              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\app\\app.html",
               "RelativeToolTip": "src\\app\\app.html",
               "ViewState": "AgIAAK4AAAAAJjW0AfAWwK8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
@@ -71,9 +71,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\index.html",
+              "DocumentMoniker": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\index.html",
               "RelativeDocumentMoniker": "src\\index.html",
-              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\AngularDemo\\src\\index.html",
+              "ToolTip": "C:\\Users\\JohnB\\Documents\\workspace\\JohnsPortfolio\\src\\index.html",
               "RelativeToolTip": "src\\index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
