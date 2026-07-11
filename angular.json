@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "AngularDemo": {
+    "JohnsPortfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularDemo:build:production"
+              "buildTarget": "JohnsPortfolio:build:production"
             },
             "development": {
-              "buildTarget": "AngularDemo:build:development"
+              "buildTarget": "JohnsPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
