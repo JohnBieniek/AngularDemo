@@ -31,6 +31,12 @@
   letter-spacing: -0.08em;
 }
 
+.brand-mark img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
 .brand-copy {
   display: grid;
   gap: 2px;
@@ -68,14 +74,17 @@
 
 @media (max-width: 800px) {
   .site-nav {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     padding-block: 16px;
+    text-align: center;
   }
 
   .nav-links {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
+    width: 100%;
   }
 
   .nav-links a {

@@ -10,6 +10,6 @@ import { APP_VERSION } from './generated-version';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Johns Portfolio');
+  protected readonly title = signal("John Bieniek's Portfolio");
   protected readonly version = APP_VERSION;
 }
