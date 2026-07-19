@@ -1,6 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA,OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, NgFor } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 import {
   BreadcrumbsComponent,
@@ -35,10 +35,15 @@ interface StackItem {
 
 export class JavaDemoOverviewComponent implements OnInit {
   javaDemoRunning = false;
+  private readonly platformId = inject(PLATFORM_ID);
 
   constructor(private readonly http: HttpClient) {}
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     this.http
       .get(
         'https://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/healthcheck',
