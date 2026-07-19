@@ -404,16 +404,17 @@ a {
   }
 
   .site-footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     width: 100%;
   }
 
   .site-version {
-    grid-column: 1;
-    justify-self: center;
+    grid-column: 2;
+    justify-self: end;
   }
 
   .site-footer div {
-    justify-self: start;
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 }
