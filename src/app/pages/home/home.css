@@ -218,6 +218,10 @@ a {
   line-height: 1.6;
 }
 
+.projects-summary-mobile {
+  display: none;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -434,6 +438,20 @@ a {
 
   #projects .section-header > p {
     text-align: right;
+  }
+
+  .projects-summary-desktop {
+    display: none;
+  }
+
+  .projects-summary-mobile {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
   .hero-section {
