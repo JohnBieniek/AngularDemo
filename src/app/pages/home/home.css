@@ -311,6 +311,22 @@ a {
   align-items: start;
 }
 
+.about-section > div:first-child {
+  min-width: 0;
+}
+
+.about-section h2 {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.about-section h2 + p {
+  margin-top: 0;
+}
+
 .about-section p {
   max-width: 720px;
   color: #c9d0df;
