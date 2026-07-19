@@ -378,14 +378,14 @@ a {
   color: #ffffff;
 }
 
-/* Restore the expansive hero treatment only on displays wider than 1080p. */
-@media (min-width: 1921px) {
+/* Desktop input capabilities are more reliable than resolution or display scaling. */
+@media (hover: hover) and (pointer: fine) {
   .hero-section {
-    align-items: center;
+    align-items: start !important;
   }
 
   .hero-copy h1 {
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(0.9rem, 2.1vw, 1.5rem) !important;
   }
 }
 
