@@ -1,10 +1,13 @@
 {
   "name": "angular-demo",
-  "version": "0.0.0",
+  "version": "1.1.1",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/generate-version.mjs",
     "start": "ng serve",
+    "prebuild": "node scripts/generate-version.mjs",
     "build": "ng build",
+    "prewatch": "node scripts/generate-version.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:JohnsPortfolio": "node dist/JohnsPortfolio/server/server.mjs"

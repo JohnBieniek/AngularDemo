@@ -362,14 +362,14 @@ a {
   color: #ffffff;
 }
 
-/* Keep the portrait level with the role label on standard desktop screens. */
-@media (min-width: 981px) and (max-width: 1599px) {
+/* Keep the portrait level with the role label on desktop screens up to 1080p. */
+@media (min-width: 981px) and (max-width: 1920px) {
   .hero-section {
     align-items: start;
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-size: clamp(0.9rem, 2.1vw, 1.5rem);
   }
 }
 

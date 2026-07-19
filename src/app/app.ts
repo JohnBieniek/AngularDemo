@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SiteHeader } from "./shared/site-header/site-header";
-import packageInfo from '../../package.json';
+import { APP_VERSION } from './generated-version';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +11,5 @@ import packageInfo from '../../package.json';
 })
 export class App {
   protected readonly title = signal('Johns Portfolio');
-  protected readonly version = packageInfo.version;
+  protected readonly version = APP_VERSION;
 }
