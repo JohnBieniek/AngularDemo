@@ -98,6 +98,28 @@ h1 {
   gap: 0.65rem;
 }
 
+/* Keep architecture technology badges on one line on smaller desktops */
+@media (min-width: 761px) and (max-width: 1250px) {
+  .architecture-overview .technology-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .architecture-overview .technology-list span,
+  .architecture-overview .technology-list a {
+    flex: 0 0 auto;
+    gap: 0.3rem;
+    padding: 0.45rem 0.55rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .architecture-overview .technology-list iconify-icon {
+    font-size: 1rem;
+  }
+}
+
 .hero-tags {
   margin-top: 1.4rem;
 }
