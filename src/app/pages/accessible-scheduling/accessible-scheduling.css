@@ -530,6 +530,10 @@ h1 {
 }
 
 .decision-grid article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: start;
+  column-gap: 0.75rem;
   min-height: 12rem;
   padding: 1.1rem;
   border: 1px solid rgba(94, 234, 212, 0.13);
@@ -538,16 +542,20 @@ h1 {
 }
 
 .decision-grid iconify-icon {
+  align-self: center;
   color: #5eead4;
   font-size: 2rem;
 }
 
 .decision-grid h3 {
-  margin: 0.85rem 0 0.55rem;
+  align-self: center;
+  margin: 0;
   color: #ffffff;
 }
 
 .decision-grid p {
+  grid-column: 1 / -1;
+  margin-top: 0.75rem;
   margin-bottom: 0;
   color: #96b2af;
   line-height: 1.5;
@@ -942,11 +950,7 @@ h1 {
   }
 
   .hours-range {
-    grid-template-columns: 1fr;
-  }
-
-  .hours-range i {
-    width: 100%;
+    display: none;
   }
 
   .architecture-section,
