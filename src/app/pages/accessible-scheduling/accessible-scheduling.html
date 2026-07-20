@@ -1,0 +1,229 @@
+<main class="scheduling-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Healthcare Operations Platform</p>
+        <h1>Accessible Scheduling</h1>
+        <p class="hero-lede">
+          A constraint-aware scheduling platform built to turn a complex, manual care-team
+          workflow into a fast and practical planning experience.
+        </p>
+        <p class="hero-body">
+          The system brings employees, clients, requests, shifts, availability, and compatibility
+          rules into one workflow. It helps coordinators build schedules while accounting for the
+          real operational details that make care assignments difficult.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="button primary"
+            href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
+            target="_blank"
+            rel="noopener"
+          >
+            View Source
+          </a>
+          <a class="button secondary" href="#architecture">Explore Architecture</a>
+        </div>
+      </div>
+
+      <div class="product-preview">
+        <div class="preview-bar">
+          <span></span><span></span><span></span>
+          <strong>Schedule workspace</strong>
+        </div>
+        <img
+          src="/assets/images/accessibleSchedulingScreen.png"
+          alt="Accessible Scheduling application showing a care-team schedule"
+        />
+        <div class="preview-status">
+          <span><i class="status-dot"></i> Constraints evaluated</span>
+          <span>Schedule ready for review</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-strip" aria-label="Project impact">
+      <div class="impact-story">
+        <p>Manual scheduling effort</p>
+        <div class="time-change">
+          <strong>10 hours</strong>
+          <span aria-hidden="true">→</span>
+          <strong>5 minutes</strong>
+        </div>
+      </div>
+      <div class="impact-stat">
+        <strong>120×</strong>
+        <span>Faster planning workflow</span>
+      </div>
+      <div class="impact-stat">
+        <strong>One view</strong>
+        <span>People, clients, shifts, and requests</span>
+      </div>
+    </section>
+
+    <section class="story-grid">
+      <article class="panel problem-panel">
+        <p class="section-label">The operational problem</p>
+        <h2>Scheduling care is more than filling empty time slots.</h2>
+        <p>
+          Coordinators need to reconcile staff availability, travel, qualifications, client
+          requests, overtime, weekend rotation, and assignment compatibility. Doing that by hand
+          is slow, difficult to review, and easy to disrupt when requirements change.
+        </p>
+      </article>
+
+      <article class="panel outcome-panel">
+        <p class="section-label">The product response</p>
+        <h2>Make constraints visible, then automate the repetitive work.</h2>
+        <p>
+          Accessible Scheduling models the participants and rules directly, generates candidate
+          shifts and assignments, reports issues, and leaves coordinators with a schedule they can
+          review and adjust.
+        </p>
+      </article>
+    </section>
+
+    <section class="constraints-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Constraint-aware planning</p>
+          <h2>Built around the decisions coordinators actually make</h2>
+        </div>
+        <p>
+          The application treats scheduling rules as first-class domain concepts instead of
+          hiding them in spreadsheets and manual checks.
+        </p>
+      </div>
+
+      <div class="constraint-grid">
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:calendar-clock"></iconify-icon>
+          <h3>Availability</h3>
+          <p>Match working times and requested coverage before assignments are finalized.</p>
+        </article>
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:account-heart"></iconify-icon>
+          <h3>Client compatibility</h3>
+          <p>Represent client needs and employee-to-client compatibility in the schedule.</p>
+        </article>
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:map-marker-distance"></iconify-icon>
+          <h3>Travel</h3>
+          <p>Account for the practical movement required between care assignments.</p>
+        </article>
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:clock-alert-outline"></iconify-icon>
+          <h3>Overtime</h3>
+          <p>Surface weekly workload and over-scheduling concerns during planning.</p>
+        </article>
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:calendar-weekend-outline"></iconify-icon>
+          <h3>Weekend rotation</h3>
+          <p>Support alternate-weekend and recurring coverage considerations.</p>
+        </article>
+        <article class="constraint-card">
+          <iconify-icon icon="mdi:alert-circle-check-outline"></iconify-icon>
+          <h3>Issue reporting</h3>
+          <p>Return actionable shift and schedule notifications for coordinator review.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow-section">
+      <div class="section-heading compact">
+        <div>
+          <p class="section-label">Scheduling workflow</p>
+          <h2>From operational data to a reviewable schedule</h2>
+        </div>
+      </div>
+
+      <div class="workflow">
+        <article>
+          <span>01</span>
+          <h3>Model</h3>
+          <p>Capture employees, clients, requests, custom fields, and schedule options.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Evaluate</h3>
+          <p>Calculate employee/client and employee/shift compatibility.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Generate</h3>
+          <p>Create shifts and assignments through dedicated scheduling managers.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Review</h3>
+          <p>Present status, alerts, and conflicts so a coordinator stays in control.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="architecture-section">
+      <div class="architecture-copy">
+        <p class="section-label">Full-stack architecture</p>
+        <h2>Layered for change, deployment, and persistence choices</h2>
+        <p>
+          A browser client talks to Spring controllers backed by domain managers and repository
+          abstractions. Spring profiles support an in-memory development mode or MongoDB, while
+          Cloud Foundry connectors discover bound services in deployed environments.
+        </p>
+
+        <div class="technology-list" aria-label="Technology stack">
+          <span><iconify-icon icon="devicon:angularjs"></iconify-icon> Angular</span>
+          <span><iconify-icon icon="devicon:spring"></iconify-icon> Spring</span>
+          <span><iconify-icon icon="devicon:mongodb"></iconify-icon> MongoDB</span>
+          <span><iconify-icon icon="devicon:gradle"></iconify-icon> Gradle</span>
+          <span><iconify-icon icon="mdi:cloud-outline"></iconify-icon> Cloud Foundry</span>
+        </div>
+      </div>
+
+      <div class="architecture-map" aria-label="Application architecture diagram">
+        <div class="architecture-node client-node">
+          <small>Experience</small>
+          <strong>Angular client</strong>
+        </div>
+        <span class="connector" aria-hidden="true">↓</span>
+        <div class="architecture-node api-node">
+          <small>Application</small>
+          <strong>Spring controllers &amp; managers</strong>
+        </div>
+        <span class="connector" aria-hidden="true">↓</span>
+        <div class="persistence-row">
+          <div class="architecture-node">
+            <small>Local profile</small>
+            <strong>In-memory data</strong>
+          </div>
+          <div class="architecture-node">
+            <small>Persistent profile</small>
+            <strong>MongoDB</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-card">
+      <div>
+        <p class="section-label">Why it matters</p>
+        <h2>Software that gives operational time back to people.</h2>
+        <p>
+          This project demonstrates product thinking, domain modeling, constraint-heavy backend
+          design, full-stack delivery, and measurable workflow improvement in one system.
+        </p>
+      </div>
+      <a
+        class="button primary"
+        href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
+        target="_blank"
+        rel="noopener"
+      >
+        Explore the Repository
+      </a>
+    </section>
+  </div>
+</main>
