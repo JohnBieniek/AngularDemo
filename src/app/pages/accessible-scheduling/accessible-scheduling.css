@@ -689,7 +689,7 @@ h1 {
 }
 
 .architecture-overview .technology-list {
-  justify-content: flex-start;
+  justify-content: center;
   max-width: none;
   margin-top: 1.5rem;
 }
@@ -707,6 +707,29 @@ h1 {
 
 .architecture-security article {
   min-height: 0;
+}
+
+.architecture-diagram {
+  overflow: hidden;
+  margin: 1.5rem 0 0;
+  border: 1px solid rgba(248, 113, 113, 0.24);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+}
+
+.architecture-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.architecture-diagram figcaption {
+  padding: 0.8rem 1rem;
+  color: #e8d5d9;
+  font-size: 0.85rem;
+  text-align: center;
+  background: rgba(35, 9, 14, 0.98);
 }
 
 .closing-section {
@@ -878,6 +901,10 @@ h1 {
   }
 
   .technology-list {
+    justify-content: flex-start;
+  }
+
+  .architecture-overview .technology-list {
     justify-content: flex-start;
   }
 

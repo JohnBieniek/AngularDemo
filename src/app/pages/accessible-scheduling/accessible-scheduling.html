@@ -361,7 +361,7 @@
       <div class="section-heading">
         <div>
           <p class="section-label">Application architecture</p>
-          <h2>Layered for change. Operated for reliability.</h2>
+          <h2>Layered for change. Engineered for reliable delivery.</h2>
         </div>
         <p>
           Accessible Scheduling separates presentation, business logic, persistence, security,
@@ -397,7 +397,7 @@
         <article><span>Development</span><strong>Fast iteration with isolated configuration and local in-memory data when needed</strong></article>
         <article><span>QA</span><strong>Production-like validation against a separate route, profile, and bound data service</strong></article>
         <article><span>Production</span><strong>Durable MongoDB persistence, external backups, and independently managed runtime configuration</strong></article>
-        <article><span>Blue-green</span><strong>Deploy and validate the green release before shifting traffic, with a clear rollback path</strong></article>
+        <article><span>Hot-cold</span><strong>Run production on the hot deployment while maintaining a separate cold release for controlled promotion, failover, and rollback</strong></article>
       </div>
 
       <div class="security-grid architecture-security">
@@ -426,6 +426,14 @@
         <span><iconify-icon icon="devicon:spring"></iconify-icon> Spring</span>
         <span><iconify-icon icon="devicon:mongodb"></iconify-icon> MongoDB</span>
       </div>
+
+      <figure class="architecture-diagram">
+        <img
+          src="/AS-Architecture.png"
+          alt="Accessible Scheduling high-level architecture showing users, the Angular front end, Spring Boot controllers and managers, scheduling rules, MongoDB, integrations, and Cloud Foundry deployment"
+        />
+        <figcaption>Accessible Scheduling high-level application and deployment architecture.</figcaption>
+      </figure>
     </section>
 
     <section class="closing-section">
