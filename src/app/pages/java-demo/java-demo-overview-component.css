@@ -325,7 +325,8 @@ h1 {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  align-items: start;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
   gap: 1rem;
 }
 
@@ -444,6 +445,11 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  .feature-grid {
+    grid-auto-rows: auto;
+    align-items: start;
+  }
+
   .project-shell {
     padding-inline: 1rem;
   }
