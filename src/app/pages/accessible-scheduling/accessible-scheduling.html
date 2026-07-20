@@ -1,0 +1,465 @@
+<main class="scheduling-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-primary">
+          <p class="eyebrow">In-home nursing operations</p>
+          <h1>Accessible Scheduling</h1>
+          <p class="hero-lede">
+            Dynamic nurse scheduling that balances each client’s care requirements with each
+            staff member’s availability, qualifications, and workload.
+          </p>
+        </div>
+        <p class="hero-body">
+          Accessible Scheduling helps administrators generate, assign, release, and update
+          complex schedules for in-home care. What once required slow, error-prone manual work
+          can be completed for an entire month in minutes.
+        </p>
+
+        <div class="hero-tags" aria-label="Product capabilities">
+          <span class="desktop-capability">Recurring shift generation</span>
+          <span class="mobile-capability">Shift generation</span>
+          <span>Whole-month assignment</span>
+          <span>Custom care requirements</span>
+          <span>Rapid staff updates</span>
+          <span class="desktop-capability">Role-based access controls</span>
+          <span class="mobile-capability">Role-based access</span>
+          <span class="desktop-capability">Google account integration</span>
+          <span class="mobile-capability">Google integration</span>
+        </div>
+
+        <div class="hero-actions">
+          <a
+            class="button secondary"
+            href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
+            target="_blank"
+            rel="noopener"
+          >
+            View source
+          </a>
+        </div>
+      </div>
+
+      <figure class="product-preview">
+        <img
+          src="/assets/images/accessibleSchedulingScreen.png"
+          alt="Accessible Scheduling interface displaying an in-home nursing schedule"
+        />
+      </figure>
+    </section>
+
+    <section class="outcome-bar" aria-label="Product outcomes">
+      <article>
+        <strong>Hours → minutes</strong>
+        <span>Shift assignment time reduced from hours of work to minutes.</span>
+      </article>
+      <article>
+        <strong>Accurate to the minute</strong>
+        <span>Communicate new assignments and call-offs within 60 seconds.</span>
+      </article>
+      <article>
+        <strong>Configurable</strong>
+        <span>Add new client requirements and staff certifications as needs change.</span>
+      </article>
+    </section>
+
+    <section class="needs-section">
+      <div class="section-intro">
+        <p class="section-label">A complete scheduling picture</p>
+        <h2>Care needs and staff needs belong in the same decision.</h2>
+        <p>
+          The schedule is only successful when every client receives appropriate care and every
+          nurse receives a workable, accurate assignment. Accessible Scheduling models both sides
+          before it creates a single match.
+        </p>
+      </div>
+
+      <div class="needs-grid">
+        <article class="needs-card client-card">
+          <div class="card-heading">
+            <span class="card-icon"><iconify-icon icon="mdi:home-heart"></iconify-icon></span>
+            <div>
+              <p>Client-defined care</p>
+              <h3>Every client can ask for what they need.</h3>
+            </div>
+          </div>
+
+          <div class="request-group">
+            <h4>Flexible recurrence</h4>
+            <div class="request-tags">
+              <span>Daily</span>
+              <span>Weekly</span>
+              <span>Bi-weekly</span>
+              <span>Every X week</span>
+              <span>Monthly</span>
+              <span class="desktop-capability">Custom patterns</span>
+              <span class="mobile-capability">Custom</span>
+            </div>
+          </div>
+
+          <ul>
+            <li>Language capabilities such as ASL</li>
+            <li>Specialized training and certifications</li>
+            <li>Location or service-area requirements</li>
+            <li>Environmental needs, allergies, and preferences</li>
+            <li>Custom requirements added as regulations and care needs evolve</li>
+          </ul>
+        </article>
+
+        <article class="needs-card staff-card">
+          <div class="card-heading">
+            <span class="card-icon"><iconify-icon icon="mdi:account-clock"></iconify-icon></span>
+            <div>
+              <p>Staff-defined work</p>
+              <h3>Every nurse can define a sustainable schedule.</h3>
+            </div>
+          </div>
+
+          <div class="hours-range" aria-label="Staff workload preferences">
+            <div><span>Minimum</span><strong>Needed hours</strong></div>
+            <i></i>
+            <div><span>Maximum</span><strong>Desired limit</strong></div>
+          </div>
+
+          <ul>
+            <li>Available days and precise working hours</li>
+            <li>Minimum, maximum, and requested overtime hours</li>
+            <li>Call-offs, inactivity, and temporary unavailability</li>
+            <li>Credentials, certifications, and service areas</li>
+            <li>Preferred clients and other configurable requests</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="automation-section">
+      <div class="automation-copy">
+        <p class="section-label">Two clicks, two hard problems</p>
+        <h2>Generate the work. Then find the best people for it.</h2>
+        <p>
+          Shift generation expands recurring requests into the actual shifts needed across the
+          schedule period. Assignment then evaluates the full combination of care needs, staff
+          qualifications, workload targets, travel feasibility, and availability. A dynamic
+          simulated-annealing strategy works through the most constrained needs first, then
+          improves the full schedule as more flexible matches become available.
+        </p>
+
+        <div class="automation-steps">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Define the scheduling model</h3>
+              <p>Set up clients, staff, care needs, qualifications, availability, hour targets, locations, and scheduling policies.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Generate shifts</h3>
+              <p>Turn daily, alternating, monthly, and custom client requests into a complete calendar.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Evaluate compatibility</h3>
+              <p>Filter for credentials, custom requirements, availability, location, and viable travel time.</p>
+            </div>
+          </article>
+          <article>
+            <span>04</span>
+            <div>
+              <h3>Balance workloads</h3>
+              <p>Work toward minimum hours, stay below desired maximums, and limit unnecessary overtime.</p>
+            </div>
+          </article>
+          <article>
+            <span>05</span>
+            <div>
+              <h3>Review and release</h3>
+              <p>Let administrators validate the result and choose when the month becomes visible to staff.</p>
+            </div>
+          </article>
+          <article>
+            <span>06</span>
+            <div>
+              <h3>Adjust and communicate</h3>
+              <p>Respond to changing coverage by reassigning staff, adding shifts, recording call-offs, and notifying everyone affected.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="engine-card">
+        <div class="engine-orbit" aria-hidden="true">
+          <span class="orbit-center"><iconify-icon icon="mdi:chart-timeline-variant-shimmer"></iconify-icon></span>
+          <span class="orbit-dot dot-one"></span>
+          <span class="orbit-dot dot-two"></span>
+          <span class="orbit-dot dot-three"></span>
+        </div>
+        <p class="section-label">After publishing</p>
+        <h2>Built to change with the schedule</h2>
+        <p>
+          Publishing is not the end of the workflow. Administrators can add or change shifts,
+          update client and staffing needs, respond to coverage gaps, reassign work, and
+          communicate the revised schedule without rebuilding the month from scratch.
+        </p>
+        <div class="priority-list">
+          <span><b>1</b> Added or changed shifts</span>
+          <span><b>2</b> Updated client needs</span>
+          <span><b>3</b> Staff availability changes</span>
+          <span><b>4</b> Coverage gaps</span>
+          <span class="priority-responsive"><b>5</b> Overtime needs</span>
+          <span class="priority-responsive"><b>6</b> Reassignments</span>
+          <span class="priority-responsive"><b>7</b> Last-minute call-offs</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="decision-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Decision support</p>
+          <h2>Useful answers at one-shift and whole-schedule scale.</h2>
+        </div>
+        <p>
+          Administrators can make an informed manual assignment or ask the engine to consider
+          every need across the month at once.
+        </p>
+      </div>
+
+      <div class="decision-grid">
+        <article>
+          <iconify-icon icon="mdi:certificate-outline"></iconify-icon>
+          <h3>Who is qualified?</h3>
+          <p>See who meets every required credential and configurable client condition.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:progress-clock"></iconify-icon>
+          <h3>Who needs hours?</h3>
+          <p>Identify staff furthest from minimum targets or with fewer future opportunities.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:clock-alert-outline"></iconify-icon>
+          <h3>Who reaches overtime?</h3>
+          <p>Know when an assignment exceeds preferred hours and minimize overtime where possible.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:map-clock-outline"></iconify-icon>
+          <h3>Who can get there?</h3>
+          <p>Prevent impossible back-to-back assignments across town with no travel window.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <div class="control-copy">
+        <p class="section-label">Administrator control</p>
+        <h2>Automation follows policy. It does not replace judgment.</h2>
+        <p>
+          Administrators decide how aggressively the system schedules, when exceptions are
+          appropriate, and when staff should receive the finished plan.
+        </p>
+      </div>
+
+      <div class="control-grid">
+        <article><span>Per day</span><strong>Maximum shifts per staff member</strong></article>
+        <article><span>Per week</span><strong>Maximum shifts and workload limits</strong></article>
+        <article><span>Overtime</span><strong>Use only the minimum amount required</strong></article>
+        <article><span>Short staffing</span><strong>Optionally include inactive or unavailable staff</strong></article>
+        <article><span>Release</span><strong>Choose when the monthly schedule becomes visible</strong></article>
+        <article><span>Exceptions</span><strong>Review and override assignments when reality demands it</strong></article>
+      </div>
+    </section>
+
+    <section class="security-section">
+      <div class="security-copy">
+        <p class="section-label">Communication, identity, and access</p>
+        <h2>Published schedules stay current—and visible to the right people.</h2>
+        <p>
+          New assignments and call-offs reach affected staff within 60 seconds, keeping everyone’s
+          view accurate to the minute. Google account-based sign-up provides familiar authentication,
+          while role-based controls limit schedules, staff data, and administrative actions to the
+          people responsible for them.
+        </p>
+      </div>
+
+      <div class="security-grid">
+        <article class="google-access-card">
+          <span class="security-icon"><iconify-icon icon="flat-color-icons:google"></iconify-icon></span>
+          <div>
+            <small>Integrated identity</small>
+            <h3>Google account sign-up</h3>
+            <p>Use an existing Google identity for a straightforward registration and sign-in experience.</p>
+          </div>
+        </article>
+
+        <article>
+          <span class="security-icon"><iconify-icon icon="mdi:account-lock-outline"></iconify-icon></span>
+          <div>
+            <small>Staff access</small>
+            <h3>Personal schedule visibility</h3>
+            <p>Staff can access the assignments and details relevant to their own work.</p>
+          </div>
+        </article>
+
+        <article>
+          <span class="security-icon"><iconify-icon icon="mdi:account-supervisor-circle-outline"></iconify-icon></span>
+          <div>
+            <small>Lead access</small>
+            <h3>Managed-team visibility</h3>
+            <p>Team leads can coordinate the staff they manage without receiving unrestricted system access.</p>
+          </div>
+        </article>
+
+        <article>
+          <span class="security-icon"><iconify-icon icon="mdi:shield-crown-outline"></iconify-icon></span>
+          <div>
+            <small>Administrator access</small>
+            <h3>Scheduling and policy control</h3>
+            <p>Administrators can manage people, requirements, generation, assignment, release, and exceptions.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="decision-section quality-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Enterprise-level quality</p>
+          <h2>Tested from isolated logic through integrated application behavior.</h2>
+        </div>
+        <p>
+          A comprehensive JUnit suite covers the major scheduling, assignment, communication,
+          security, and data workflows so critical behavior is verified before deployment.
+        </p>
+      </div>
+
+      <div class="decision-grid quality-grid">
+        <article>
+          <iconify-icon icon="mdi:test-tube"></iconify-icon>
+          <h3>Unit-test coverage</h3>
+          <p>Focused JUnit tests prove individual managers, services, rules, and scheduling functions in isolation.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:layers-triple-outline"></iconify-icon>
+          <h3>Integration coverage</h3>
+          <p>Integration tests exercise the major workflows across application layers, validating that the complete system works together.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:connection"></iconify-icon>
+          <h3>Mockito and simulated REST</h3>
+          <p>Mockito, mocked collaborators, and simulated REST calls verify expected responses, edge cases, and failure behavior without fragile external dependencies.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:shield-check-outline"></iconify-icon>
+          <h3>Deployment confidence</h3>
+          <p>Repeatable automated tests catch regressions early, make changes safer, and provide confidence that each release will behave reliably in production.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="decision-section architecture-overview">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Application architecture</p>
+          <h2>Layered for change. Engineered for reliable delivery.</h2>
+        </div>
+        <p>
+          Accessible Scheduling separates presentation, business logic, persistence, security,
+          and deployment concerns so each layer can evolve without destabilizing the whole system.
+        </p>
+      </div>
+
+      <div class="decision-grid architecture-layers">
+        <article>
+          <iconify-icon icon="devicon:angularjs"></iconify-icon>
+          <h3>Angular front end</h3>
+          <p>The browser client turns complex scheduling workflows into focused views for staff, leads, and administrators.</p>
+        </article>
+        <article>
+          <iconify-icon icon="devicon:spring"></iconify-icon>
+          <h3>Spring back end</h3>
+          <p>Spring controllers, managers, workers, and repositories keep API handling separate from scheduling and domain logic.</p>
+        </article>
+        <article>
+          <iconify-icon icon="devicon:mongodb"></iconify-icon>
+          <h3>MongoDB persistence</h3>
+          <p>MongoDB repositories persist clients, staff, requests, shifts, schedule status, sessions, and configurable domain data.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:database-sync-outline"></iconify-icon>
+          <h3>Development data and backups</h3>
+          <p>An in-memory profile supports fast local development and testing, while deployed data uses MongoDB with external backups for recovery.</p>
+        </article>
+      </div>
+
+      <h3 class="architecture-subheading">Environment promotion and safe releases</h3>
+      <div class="control-grid architecture-environments">
+        <article><span>Development</span><strong>Fast iteration with isolated configuration and local in-memory data when needed</strong></article>
+        <article><span>QA</span><strong>Production-like validation against a separate route, profile, and bound data service</strong></article>
+        <article><span>Production</span><strong>Durable MongoDB persistence, external backups, and independently managed runtime configuration</strong></article>
+        <article><span>Hot-cold</span><strong>Run production on the hot deployment while maintaining a separate cold release for controlled promotion, failover, and rollback</strong></article>
+      </div>
+
+      <div class="security-grid architecture-security">
+        <article>
+          <span class="security-icon"><iconify-icon icon="mdi:shield-lock-outline"></iconify-icon></span>
+          <div>
+            <small>Security boundary</small>
+            <h3>Spring Security, Google authentication, and RBAC</h3>
+            <p>Spring Security establishes the application security layer. Google identity tokens are validated and represented by managed sessions, while role-based authorization checks enforce user, manager, and administrator access at protected operations.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="technology-list" aria-label="Architecture technologies">
+        <span><iconify-icon icon="mdi:cloud-outline"></iconify-icon> Cloud Foundry</span>
+        <span><iconify-icon icon="devicon:gradle"></iconify-icon> Gradle</span>
+        <a
+          href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
+          target="_blank"
+          rel="noopener"
+        >
+          <iconify-icon icon="mdi:github"></iconify-icon> GitHub
+        </a>
+        <span><iconify-icon icon="devicon:angularjs"></iconify-icon> Angular</span>
+        <span><iconify-icon icon="logos:google-icon"></iconify-icon> Google</span>
+        <span><iconify-icon icon="devicon:spring"></iconify-icon> Spring</span>
+        <span><iconify-icon icon="devicon:mongodb"></iconify-icon> MongoDB</span>
+      </div>
+
+      <figure class="architecture-diagram">
+        <picture>
+          <source media="(max-width: 760px)" srcset="/AS-Architecture-Mobile.png" />
+          <img
+            src="/AS-Architecture.png"
+            alt="Accessible Scheduling high-level architecture showing users, the Angular front end, Spring Boot controllers and managers, scheduling rules, MongoDB, integrations, and Cloud Foundry deployment"
+          />
+        </picture>
+      </figure>
+    </section>
+
+    <section class="closing-section">
+      <div>
+        <p class="section-label">The result</p>
+        <h2>Less scheduling friction. Earlier answers. More reliable care.</h2>
+        <p>
+          Accessible Scheduling replaces tedious manual assignment with a fast, configurable
+          process that helps administrators respond to change and gives nurses accurate schedules
+          earlier than manual planning allows.
+        </p>
+      </div>
+      <a
+        class="button primary"
+        href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
+        target="_blank"
+        rel="noopener"
+      >
+        Explore the repository
+      </a>
+    </section>
+  </div>
+</main>
