@@ -1,11 +1,22 @@
 :host {
+  --bg: #050b18;
+  --bg-elevated: #0a1628;
+  --bg-card: #0d1b30;
+  --bg-card-soft: #12233d;
+  --border: rgba(96, 165, 250, 0.16);
+  --border-strong: rgba(96, 165, 250, 0.3);
+  --primary: #2563eb;
+  --primary-hover: #60a5fa;
+  --primary-soft: rgba(37, 99, 235, 0.18);
+  --accent: #3b82f6;
+  --accent-cyan: #38bdf8;
   display: block;
   min-height: 100vh;
   color: var(--text);
   background:
     radial-gradient(circle at 16% 12%, rgba(75, 116, 255, 0.16), transparent 30rem),
-    radial-gradient(circle at 88% 6%, rgba(126, 87, 255, 0.22), transparent 34rem),
-    linear-gradient(180deg, #090b18 0%, #070914 54%, #060711 100%);
+    radial-gradient(circle at 88% 6%, rgba(37, 99, 235, 0.22), transparent 34rem),
+    linear-gradient(180deg, #050d1e 0%, #050b18 54%, #030813 100%);
 }
 
 /* Page shell */
@@ -111,7 +122,7 @@
   aspect-ratio: 16 / 9;
   min-height: 320px;
   overflow: hidden;
-  border: 1px solid rgba(153, 136, 255, 0.32);
+  border: 1px solid rgba(96, 165, 250, 0.32);
   border-radius: 14px;
   background: #050713;
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.34);
@@ -168,19 +179,19 @@
 }
 
 .feature-card:nth-child(1) {
-  background: rgba(115, 87, 255, 0.18);
+  background: rgba(37, 99, 235, 0.18);
 }
 
 .feature-card:nth-child(2) {
-  background: rgba(92, 220, 160, 0.12);
+  background: rgba(14, 165, 233, 0.14);
 }
 
 .feature-card:nth-child(3) {
-  background: rgba(255, 184, 77, 0.12);
+  background: rgba(59, 130, 246, 0.14);
 }
 
 .feature-card:nth-child(4) {
-  background: rgba(94, 166, 255, 0.12);
+  background: rgba(125, 211, 252, 0.12);
 }
 
 .feature-icon {
@@ -280,7 +291,7 @@
   border: 3px solid var(--primary-hover);
   border-radius: 999px;
   background: var(--bg);
-  box-shadow: 0 0 0 4px rgba(115, 87, 255, 0.18);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
 }
 
 .process-step h3,
@@ -331,7 +342,7 @@
   height: auto;
   object-fit: cover;
   object-position: center;
-  border: 1px solid rgba(153, 136, 255, 0.28);
+  border: 1px solid rgba(96, 165, 250, 0.28);
   border-radius: 12px;
   background: #050713;
   transition:
@@ -355,7 +366,7 @@
 .screenshot-button:hover img,
 .screenshot-button:focus-visible img {
   transform: translateY(-2px);
-  border-color: rgba(153, 136, 255, 0.55);
+  border-color: rgba(96, 165, 250, 0.55);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
 }
 
@@ -370,7 +381,7 @@
 .video-embed {
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba(153, 136, 255, 0.28);
+  border: 1px solid rgba(96, 165, 250, 0.28);
   border-radius: 12px;
   background: #050713;
 }
