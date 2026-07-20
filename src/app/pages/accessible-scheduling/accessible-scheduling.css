@@ -700,7 +700,7 @@ h1 {
 
 @media (min-width: 761px) {
   .page-shell {
-    padding-top: 0;
+    padding-top: 1.25rem;
   }
 }
 
