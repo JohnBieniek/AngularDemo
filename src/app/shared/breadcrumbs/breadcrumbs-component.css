@@ -1,3 +1,8 @@
+:host {
+  display: block;
+  font-size: 16px;
+}
+
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -7,11 +12,16 @@
   padding: 1.3rem clamp(1rem, 5vw, 4rem);
   color: #b8b4ce;
   font-size: 0.95rem;
+  line-height: 1.25;
   border-bottom: 1px solid rgba(159, 134, 255, 0.18);
 }
 
-.breadcrumb-home{
+.breadcrumb-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
+  line-height: 1;
   color: #d8d4ea;
   text-decoration: none;
   transition: color 150ms ease, transform 150ms ease;
@@ -37,7 +47,7 @@
 }
 
 @media (min-width: 761px) {
-  :host-context(.scheduling-page) .breadcrumbs {
+  .breadcrumbs {
     padding-block: 0;
   }
 }

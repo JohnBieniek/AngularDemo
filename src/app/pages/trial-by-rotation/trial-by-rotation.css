@@ -241,10 +241,12 @@
 
 .process-timeline,
 .timeline {
+  --timeline-gap: 14px;
+  --marker-left: 16px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: var(--timeline-gap);
   margin: 0;
   padding: 30px 0 0;
   list-style: none;
@@ -252,19 +254,7 @@
 
 .process-timeline::before,
 .timeline::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 18px;
-  right: 18px;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--primary-hover),
-    rgba(125, 220, 255, 0.8)
-  );
+  content: none;
 }
 
 .process-step,
@@ -285,13 +275,26 @@
   content: '';
   position: absolute;
   top: -27px;
-  left: 16px;
+  left: var(--marker-left);
   width: 14px;
   height: 14px;
   border: 3px solid var(--primary-hover);
   border-radius: 999px;
   background: var(--bg);
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+  z-index: 2;
+}
+
+.process-step:not(:last-child)::after,
+.timeline li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: -21.5px;
+  left: calc(var(--marker-left) + 5.5px);
+  width: calc(100% + var(--timeline-gap));
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
 }
 
 .process-step h3,
@@ -534,26 +537,27 @@
 
   .process-timeline,
   .timeline {
+    --timeline-gap: 16px;
+    --marker-left: -25px;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: var(--timeline-gap);
     padding-top: 0;
     padding-left: 26px;
   }
 
-  .process-timeline::before,
-  .timeline::before {
-    top: 10px;
-    bottom: 10px;
-    left: 8px;
-    right: auto;
+  .process-step:not(:last-child)::after,
+  .timeline li:not(:last-child)::after {
+    top: 23.5px;
+    left: calc(var(--marker-left) + 5.5px);
     width: 3px;
-    height: auto;
+    height: calc(100% + var(--timeline-gap));
+    background: linear-gradient(180deg, var(--primary), var(--primary-hover));
   }
 
   .process-step::before,
   .timeline li::before {
     top: 18px;
-    left: -25px;
+    left: var(--marker-left);
   }
 }
 
@@ -638,12 +642,8 @@
 
   .process-timeline,
   .timeline {
+    --marker-left: -22px;
     padding-left: 22px;
-  }
-
-  .process-timeline::before,
-  .timeline::before {
-    left: 7px;
   }
 
   .process-step,
@@ -654,7 +654,7 @@
 
   .process-step::before,
   .timeline li::before {
-    left: -22px;
+    left: var(--marker-left);
   }
 
   .lightbox {
