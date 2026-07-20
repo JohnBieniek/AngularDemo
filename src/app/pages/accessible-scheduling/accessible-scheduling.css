@@ -27,7 +27,6 @@
 .automation-section,
 .decision-section,
 .controls-section,
-.communication-section,
 .security-section,
 .architecture-section,
 .closing-section {
@@ -84,7 +83,6 @@ h1 {
 .hero-body,
 .section-intro > p:last-child,
 .automation-copy > p,
-.communication-copy > p,
 .architecture-section p,
 .closing-section p,
 .control-copy > p {
@@ -208,7 +206,6 @@ h1 {
 .needs-section,
 .decision-section,
 .controls-section,
-.communication-section,
 .security-section,
 .architecture-section,
 .closing-section {
@@ -240,7 +237,6 @@ h1 {
 .automation-copy h2,
 .engine-card h2,
 .control-copy h2,
-.communication-copy h2,
 .architecture-section h2,
 .closing-section h2 {
   margin-bottom: 0;
@@ -489,7 +485,6 @@ h1 {
 
 .decision-section,
 .controls-section,
-.communication-section,
 .security-section,
 .architecture-section,
 .closing-section {
@@ -530,8 +525,7 @@ h1 {
   color: #ffffff;
 }
 
-.decision-grid p,
-.role-grid p {
+.decision-grid p {
   margin-bottom: 0;
   color: #96b2af;
   line-height: 1.5;
@@ -578,47 +572,6 @@ h1 {
 .control-grid strong {
   color: #e9fffc;
   line-height: 1.4;
-}
-
-.communication-section {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.communication-copy > p {
-  margin: 1rem 0 0;
-}
-
-.role-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-}
-
-.role-grid article {
-  min-height: 13rem;
-  padding: 1rem;
-  border: 1px solid rgba(103, 232, 249, 0.14);
-  border-radius: 0.8rem;
-  background: rgba(2, 14, 19, 0.5);
-}
-
-.role-grid article > span {
-  display: grid;
-  place-items: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  color: #67e8f9;
-  font-size: 1.55rem;
-  border-radius: 0.75rem;
-  background: rgba(56, 189, 248, 0.08);
-}
-
-.role-grid h3 {
-  margin: 0.9rem 0 0.5rem;
-  color: #ffffff;
 }
 
 .security-section {
@@ -820,8 +773,7 @@ h1 {
 
   .hero,
   .automation-section,
-  .controls-section,
-  .communication-section {
+  .controls-section {
     grid-template-columns: 1fr;
   }
 
@@ -850,7 +802,6 @@ h1 {
   .automation-section,
   .decision-section,
   .controls-section,
-  .communication-section,
   .security-section,
   .architecture-section,
   .closing-section {
@@ -870,7 +821,6 @@ h1 {
   .automation-steps,
   .decision-grid,
   .control-grid,
-  .role-grid,
   .security-grid,
   .section-intro,
   .section-heading {
@@ -929,7 +879,6 @@ h1 {
 .automation-section,
 .decision-section,
 .controls-section,
-.communication-section,
 .security-section,
 .architecture-section,
 .closing-section {
@@ -943,7 +892,6 @@ h1 {
 .automation-steps article > span,
 .decision-grid iconify-icon,
 .control-grid span,
-.role-grid article > span,
 .security-icon,
 .technology-list iconify-icon {
   color: #fb7185;
@@ -956,7 +904,6 @@ h1 {
 .hero-body,
 .section-intro > p:last-child,
 .automation-copy > p,
-.communication-copy > p,
 .architecture-section p,
 .closing-section p,
 .control-copy > p {
@@ -991,7 +938,6 @@ h1 {
 .engine-card,
 .decision-grid article,
 .control-grid article,
-.role-grid article,
 .security-grid article {
   border-color: rgba(248, 113, 113, 0.2);
   background: rgba(35, 9, 14, 0.58);
@@ -1002,8 +948,7 @@ h1 {
 }
 
 .card-icon,
-.security-icon,
-.role-grid article > span {
+.security-icon {
   color: #fb7185;
   border-color: rgba(248, 113, 113, 0.24);
   background: rgba(248, 113, 113, 0.08);
