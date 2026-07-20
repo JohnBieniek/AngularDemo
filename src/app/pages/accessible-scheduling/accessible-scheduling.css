@@ -908,6 +908,7 @@ h1 {
     order: initial;
     grid-column: 1;
     grid-row: 2;
+    margin-inline: 0;
   }
 
   .hero-copy > .hero-body {
@@ -952,6 +953,10 @@ h1 {
     border-bottom: 0;
   }
 
+  .decision-grid article {
+    min-height: 0;
+  }
+
   .section-intro > p:last-child {
     grid-column: 1;
     grid-row: auto;
@@ -972,7 +977,7 @@ h1 {
   }
 
   .architecture-overview .technology-list {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .closing-section .button {
