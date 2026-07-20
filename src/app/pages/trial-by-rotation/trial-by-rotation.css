@@ -692,7 +692,19 @@
 }
 
 @media (min-width: 1921px) {
-  .trial-by-rotation-page {
+  .page-shell.page-stack {
     width: min(1880px, calc(100% - 96px));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1150px) {
+  .page-shell.page-stack {
+    width: min(100% - 48px, var(--page-width));
+  }
+}
+
+@media (max-width: 760px) {
+  .page-shell.page-stack {
+    width: min(100% - 24px, var(--page-width));
   }
 }

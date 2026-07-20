@@ -594,3 +594,10 @@ h1 {
     width: min(1880px, calc(100% - 96px));
   }
 }
+
+@media (max-width: 760px) {
+  .project-shell {
+    width: min(100% - 24px, var(--page-width));
+    padding-inline: 0;
+  }
+}
