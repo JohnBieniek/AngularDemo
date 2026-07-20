@@ -99,7 +99,7 @@ h1 {
 }
 
 /* Keep architecture technology badges on one line on smaller desktops */
-@media (min-width: 761px) and (max-width: 1250px) {
+@media (min-width: 761px) and (max-width: 1920px) {
   .architecture-overview .technology-list {
     flex-wrap: nowrap;
     justify-content: center;
@@ -561,6 +561,14 @@ h1 {
   line-height: 1.5;
 }
 
+.quality-grid {
+  align-items: start;
+}
+
+.quality-grid article {
+  min-height: 0;
+}
+
 .controls-section {
   display: grid;
   grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
@@ -879,11 +887,11 @@ h1 {
   .security-section,
   .architecture-section,
   .closing-section {
+    padding: 0.75rem;
     border-radius: 1rem;
   }
 
   .hero {
-    padding: 1.2rem;
     row-gap: 1.2rem;
   }
 
