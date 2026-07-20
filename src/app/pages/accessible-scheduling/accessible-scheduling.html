@@ -137,7 +137,9 @@
         <p>
           Shift generation expands recurring requests into the actual shifts needed across the
           schedule period. Assignment then evaluates the full combination of care needs, staff
-          qualifications, workload targets, travel feasibility, and availability.
+          qualifications, workload targets, travel feasibility, and availability. A dynamic
+          simulated-annealing strategy works through the most constrained needs first, then
+          improves the full schedule as more flexible matches become available.
         </p>
 
         <div class="automation-steps">
@@ -193,18 +195,21 @@
           <span class="orbit-dot dot-two"></span>
           <span class="orbit-dot dot-three"></span>
         </div>
-        <p class="section-label">Under the hood</p>
-        <h2>Hardest needs first</h2>
+        <p class="section-label">After publishing</p>
+        <h2>Built to change with the schedule</h2>
         <p>
-          A dynamic simulated-annealing strategy prioritizes highly constrained work—rare
-          qualifications, limited availability, or difficult staff hour targets—before moving
-          toward more flexible shifts and workers.
+          Publishing is not the end of the workflow. Administrators can add or change shifts,
+          update client and staffing needs, respond to coverage gaps, reassign work, and
+          communicate the revised schedule without rebuilding the month from scratch.
         </p>
         <div class="priority-list">
-          <span><b>1</b> Rare skills + scarce hours</span>
-          <span><b>2</b> Staff with tight availability</span>
-          <span><b>3</b> Minimum-hour gaps</span>
-          <span><b>4</b> Flexible assignments</span>
+          <span><b>1</b> Added or changed shifts</span>
+          <span><b>2</b> Updated client needs</span>
+          <span><b>3</b> Staff availability changes</span>
+          <span><b>4</b> Coverage gaps</span>
+          <span class="priority-responsive"><b>5</b> Overtime needs</span>
+          <span class="priority-responsive"><b>6</b> Reassignments</span>
+          <span class="priority-responsive"><b>7</b> Last-minute call-offs</span>
         </div>
       </aside>
     </section>
@@ -358,12 +363,8 @@
       </div>
 
       <div class="technology-list" aria-label="Technology stack">
-        <span><iconify-icon icon="devicon:angularjs"></iconify-icon> Angular</span>
-        <span><iconify-icon icon="devicon:spring"></iconify-icon> Spring</span>
-        <span><iconify-icon icon="devicon:mongodb"></iconify-icon> MongoDB</span>
-        <span><iconify-icon icon="devicon:gradle"></iconify-icon> Gradle</span>
         <span><iconify-icon icon="mdi:cloud-outline"></iconify-icon> Cloud Foundry</span>
-        <span><iconify-icon icon="logos:google-icon"></iconify-icon> Google</span>
+        <span><iconify-icon icon="devicon:gradle"></iconify-icon> Gradle</span>
         <a
           href="https://github.com/JohnBieniek/PCF_AccessibleScheduling"
           target="_blank"
@@ -371,6 +372,10 @@
         >
           <iconify-icon icon="mdi:github"></iconify-icon> GitHub
         </a>
+        <span><iconify-icon icon="devicon:angularjs"></iconify-icon> Angular</span>
+        <span><iconify-icon icon="logos:google-icon"></iconify-icon> Google</span>
+        <span><iconify-icon icon="devicon:spring"></iconify-icon> Spring</span>
+        <span><iconify-icon icon="devicon:mongodb"></iconify-icon> MongoDB</span>
       </div>
     </section>
 
