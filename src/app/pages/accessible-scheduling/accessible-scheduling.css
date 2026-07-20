@@ -124,6 +124,10 @@ h1 {
   margin-top: 1.4rem;
 }
 
+.mobile-capability {
+  display: none;
+}
+
 .hero-tags span,
 .request-tags span {
   padding: 0.55rem 0.75rem;
@@ -874,6 +878,14 @@ h1 {
 }
 
 @media (max-width: 760px) {
+  .desktop-capability {
+    display: none;
+  }
+
+  .mobile-capability {
+    display: initial;
+  }
+
   .page-shell {
     width: min(100% - 24px, var(--page-width));
     padding: 24px 0 56px;
@@ -963,7 +975,7 @@ h1 {
   }
 
   .hours-range {
-    display: none;
+    display: none !important;
   }
 
   .architecture-section,
