@@ -688,6 +688,27 @@ h1 {
   font-size: 1.35rem;
 }
 
+.architecture-overview .technology-list {
+  justify-content: flex-start;
+  max-width: none;
+  margin-top: 1.5rem;
+}
+
+.architecture-subheading {
+  margin: 2rem 0 1rem;
+  color: #ffffff;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.architecture-security {
+  grid-template-columns: 1fr;
+  margin-top: 0.8rem;
+}
+
+.architecture-security article {
+  min-height: 0;
+}
+
 .closing-section {
   background:
     radial-gradient(circle at 88% 0%, rgba(45, 212, 191, 0.14), transparent 28rem),

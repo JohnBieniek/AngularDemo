@@ -50,7 +50,7 @@
     <section class="outcome-bar" aria-label="Product outcomes">
       <article>
         <strong>Hours → minutes</strong>
-        <span>From hours of work to minutes.</span>
+        <span>Shift assignment time reduced from hours of work to minutes.</span>
       </article>
       <article>
         <strong>Accurate to the minute</strong>
@@ -357,19 +357,61 @@
       </div>
     </section>
 
-    <section class="architecture-section">
-      <div>
-        <p class="section-label">Full-stack implementation</p>
-        <h2>Designed to keep a complex domain configurable.</h2>
+    <section class="decision-section architecture-overview">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Application architecture</p>
+          <h2>Layered for change. Operated for reliability.</h2>
+        </div>
         <p>
-          The application combines an Angular client with Spring controllers and domain managers,
-          MongoDB persistence, profile-based local storage, Gradle builds, and Cloud Foundry service
-          discovery. Custom fields allow new requirements and certifications without forcing the
-          scheduling model to stand still while care standards evolve.
+          Accessible Scheduling separates presentation, business logic, persistence, security,
+          and deployment concerns so each layer can evolve without destabilizing the whole system.
         </p>
       </div>
 
-      <div class="technology-list" aria-label="Technology stack">
+      <div class="decision-grid architecture-layers">
+        <article>
+          <iconify-icon icon="devicon:angularjs"></iconify-icon>
+          <h3>Angular front end</h3>
+          <p>The browser client turns complex scheduling workflows into focused views for staff, leads, and administrators.</p>
+        </article>
+        <article>
+          <iconify-icon icon="devicon:spring"></iconify-icon>
+          <h3>Spring back end</h3>
+          <p>Spring controllers, managers, workers, and repositories keep API handling separate from scheduling and domain logic.</p>
+        </article>
+        <article>
+          <iconify-icon icon="devicon:mongodb"></iconify-icon>
+          <h3>MongoDB persistence</h3>
+          <p>MongoDB repositories persist clients, staff, requests, shifts, schedule status, sessions, and configurable domain data.</p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:database-sync-outline"></iconify-icon>
+          <h3>Development data and backups</h3>
+          <p>An in-memory profile supports fast local development and testing, while deployed data uses MongoDB with external backups for recovery.</p>
+        </article>
+      </div>
+
+      <h3 class="architecture-subheading">Environment promotion and safe releases</h3>
+      <div class="control-grid architecture-environments">
+        <article><span>Development</span><strong>Fast iteration with isolated configuration and local in-memory data when needed</strong></article>
+        <article><span>QA</span><strong>Production-like validation against a separate route, profile, and bound data service</strong></article>
+        <article><span>Production</span><strong>Durable MongoDB persistence, external backups, and independently managed runtime configuration</strong></article>
+        <article><span>Blue-green</span><strong>Deploy and validate the green release before shifting traffic, with a clear rollback path</strong></article>
+      </div>
+
+      <div class="security-grid architecture-security">
+        <article>
+          <span class="security-icon"><iconify-icon icon="mdi:shield-lock-outline"></iconify-icon></span>
+          <div>
+            <small>Security boundary</small>
+            <h3>Spring Security, Google authentication, and RBAC</h3>
+            <p>Spring Security establishes the application security layer. Google identity tokens are validated and represented by managed sessions, while role-based authorization checks enforce user, manager, and administrator access at protected operations.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="technology-list" aria-label="Architecture technologies">
         <span><iconify-icon icon="mdi:cloud-outline"></iconify-icon> Cloud Foundry</span>
         <span><iconify-icon icon="devicon:gradle"></iconify-icon> Gradle</span>
         <a
