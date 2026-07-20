@@ -325,11 +325,17 @@ h1 {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
   gap: 1rem;
 }
 
 .feature-tile {
-  min-height: 16rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 0.75rem;
+  row-gap: 0.85rem;
+  min-height: 0;
   padding: 1.15rem;
   border: 1px solid rgba(248, 113, 113, 0.22);
   border-radius: 0.8rem;
@@ -338,20 +344,20 @@ h1 {
 
 .feature-icon {
   display: block;
-  margin-bottom: 1rem;
   color: #fb7185;
   font-size: 2rem;
   font-weight: 950;
 }
 
 .feature-tile h3 {
-  margin-bottom: 0.85rem;
+  margin-bottom: 0;
   color: #ffffff;
   font-size: 1.05rem;
   line-height: 1.2;
 }
 
 .feature-tile p {
+  grid-column: 1 / -1;
   margin-bottom: 0;
   color: #e8d5d9;
   line-height: 1.5;
