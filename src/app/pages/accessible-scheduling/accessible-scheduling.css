@@ -984,8 +984,10 @@ h1 {
     flex-direction: column;
   }
 
+  .hero-tags,
+  .request-tags,
   .technology-list {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .architecture-overview .technology-list {
