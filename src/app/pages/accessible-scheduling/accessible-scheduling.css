@@ -122,37 +122,10 @@ h1 {
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
 }
 
-.preview-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.7rem;
-  padding: 0 1rem;
-  color: #91aaa9;
-  font-size: 0.8rem;
-  border-bottom: 1px solid rgba(94, 234, 212, 0.14);
-}
-
-.preview-bar span {
-  width: 0.65rem;
-  height: 0.65rem;
-  border-radius: 50%;
-  background: #334c4c;
-}
-
-.preview-bar span:first-child {
-  background: #5eead4;
-}
-
-.preview-bar strong {
-  margin-left: auto;
-}
-
 .product-preview img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  object-fit: contain;
 }
 
 .impact-strip {
