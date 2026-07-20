@@ -718,7 +718,8 @@ h1 {
   max-width: 520px;
 }
 
-.technology-list span {
+.technology-list span,
+.technology-list a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -727,6 +728,7 @@ h1 {
   border: 1px solid rgba(94, 234, 212, 0.17);
   border-radius: 0.7rem;
   background: rgba(94, 234, 212, 0.05);
+  text-decoration: none;
 }
 
 .technology-list iconify-icon {
@@ -741,6 +743,54 @@ h1 {
 
 .closing-section .button {
   flex: 0 0 auto;
+}
+
+@media (min-width: 761px) {
+  .page-shell {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1151px) and (max-width: 1920px) {
+  .hero {
+    column-gap: clamp(2rem, 5vw, 5rem);
+    row-gap: 1.4rem;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-primary {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product-preview {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .hero-copy > .hero-body,
+  .hero-copy > .hero-tags {
+    grid-column: 1 / -1;
+  }
+
+  .hero-copy > .hero-body {
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+
+  .hero-copy > .hero-tags {
+    grid-row: 3;
+    margin-top: 0;
+  }
+
+  .hero-copy > .hero-actions {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1921px) {

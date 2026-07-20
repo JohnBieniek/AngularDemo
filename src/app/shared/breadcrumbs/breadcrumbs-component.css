@@ -36,6 +36,12 @@
   color: #77728d;
 }
 
+@media (min-width: 761px) {
+  :host-context(.scheduling-page) .breadcrumbs {
+    padding-block: 0;
+  }
+}
+
 @media (max-width: 700px) {
   .breadcrumbs {
     overflow-x: auto;
