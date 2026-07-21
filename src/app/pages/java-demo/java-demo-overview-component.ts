@@ -30,9 +30,8 @@ interface StackItem {
   imports: [NgFor, BreadcrumbsComponent],
   templateUrl: './java-demo-overview-component.html',
   styleUrl: './java-demo-overview-component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-
 export class JavaDemoOverviewComponent implements OnInit {
   javaDemoRunning = false;
   private readonly platformId = inject(PLATFORM_ID);
@@ -45,17 +44,16 @@ export class JavaDemoOverviewComponent implements OnInit {
     }
 
     this.http
-      .get(
-        'https://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/healthcheck',
-        { responseType: 'text' }
-      )
+      .get('http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/health', {
+        responseType: 'text',
+      })
       .subscribe({
         next: () => {
           this.javaDemoRunning = true;
         },
         error: () => {
           this.javaDemoRunning = false;
-        }
+        },
       });
   }
 
@@ -98,7 +96,8 @@ export class JavaDemoOverviewComponent implements OnInit {
     {
       title: 'Endpoints for SQL & JPA',
       icon: 'mdi:database-search',
-      description: 'REST endpoints showcasing repositories, queries, relationships, and data access patterns.',
+      description:
+        'REST endpoints showcasing repositories, queries, relationships, and data access patterns.',
     },
     {
       title: 'Living Contracts',
@@ -118,13 +117,18 @@ export class JavaDemoOverviewComponent implements OnInit {
     {
       title: 'Run Anywhere',
       icon: 'mdi:rocket-launch-outline',
-      description: 'Run locally, package as a JAR, containerize with Docker, or deploy to cloud hosting.',
+      description:
+        'Run locally, package as a JAR, containerize with Docker, or deploy to cloud hosting.',
     },
   ];
 
   summaryItems: StackItem[] = [
     { label: 'Modern Java', sublabel: 'Java 26 target', icon: 'devicon:java' },
-    { label: 'Backend API', sublabel: 'Practical microservice architecture', icon: 'mdi:cog-outline' },
+    {
+      label: 'Backend API',
+      sublabel: 'Practical microservice architecture',
+      icon: 'mdi:cog-outline',
+    },
     { label: 'In-Memory DB', sublabel: 'H2 for fast iteration', icon: 'simple-icons:h2database' },
     { label: 'API Docs', sublabel: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
     { label: 'Dockerized', sublabel: 'Portable and consistent', icon: 'devicon:docker' },
@@ -140,5 +144,4 @@ export class JavaDemoOverviewComponent implements OnInit {
     'API-first architecture exposed through Swagger/OpenAPI',
     'Cloud-ready deployment workflow',
   ];
-
 }

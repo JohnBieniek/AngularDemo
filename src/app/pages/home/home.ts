@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrl: './home.css',
 })
 export class Home implements OnInit {
   javaDemoRunning = false;
@@ -21,17 +21,16 @@ export class Home implements OnInit {
     }
 
     this.http
-      .get(
-        'https://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/healthcheck',
-        { responseType: 'text' }
-      )
+      .get('http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/health', {
+        responseType: 'text',
+      })
       .subscribe({
         next: () => {
           this.javaDemoRunning = true;
         },
         error: () => {
           this.javaDemoRunning = false;
-        }
+        },
       });
   }
 }
