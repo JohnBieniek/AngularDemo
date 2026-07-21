@@ -6,8 +6,8 @@ const root = resolve(import.meta.dirname, '..');
 const packageInfo = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
 const [major, minor, basePatch] = packageInfo.version.split('.').map(Number);
 
-// This feature lands in commit 23. Each later commit advances the patch version.
-const baselineCommitCount = 23;
+// Version 1.2.2 lands in commit 63. Each later commit advances the patch version.
+const baselineCommitCount = 63;
 let commitCount = baselineCommitCount;
 
 try {
