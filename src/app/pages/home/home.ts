@@ -1,4 +1,12 @@
-import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  inject,
+  makeStateKey,
+  OnInit,
+  PLATFORM_ID,
+  signal,
+  TransferState,
+} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,13 +18,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './home.css',
 })
 export class Home implements OnInit {
-  javaDemoRunning = false;
+  readonly javaDemoRunning = signal(false);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly transferState = inject(TransferState);
+  private readonly javaDemoRunningKey = makeStateKey<boolean>('javaDemoRunning');
 
   constructor(private readonly http: HttpClient) {}
 
   ngOnInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.javaDemoRunning.set(this.transferState.get(this.javaDemoRunningKey, false));
+      this.transferState.remove(this.javaDemoRunningKey);
       return;
     }
 
@@ -26,10 +38,12 @@ export class Home implements OnInit {
       })
       .subscribe({
         next: () => {
-          this.javaDemoRunning = true;
+          this.javaDemoRunning.set(true);
+          this.transferState.set(this.javaDemoRunningKey, true);
         },
         error: () => {
-          this.javaDemoRunning = false;
+          this.javaDemoRunning.set(false);
+          this.transferState.set(this.javaDemoRunningKey, false);
         },
       });
   }

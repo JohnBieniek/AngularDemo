@@ -1,4 +1,13 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  inject,
+  makeStateKey,
+  OnInit,
+  PLATFORM_ID,
+  signal,
+  TransferState,
+} from '@angular/core';
 import { isPlatformBrowser, NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -33,13 +42,17 @@ interface StackItem {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class JavaDemoOverviewComponent implements OnInit {
-  javaDemoRunning = false;
+  readonly javaDemoRunning = signal(false);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly transferState = inject(TransferState);
+  private readonly javaDemoRunningKey = makeStateKey<boolean>('javaDemoRunning');
 
   constructor(private readonly http: HttpClient) {}
 
   ngOnInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.javaDemoRunning.set(this.transferState.get(this.javaDemoRunningKey, false));
+      this.transferState.remove(this.javaDemoRunningKey);
       return;
     }
 
@@ -49,10 +62,12 @@ export class JavaDemoOverviewComponent implements OnInit {
       })
       .subscribe({
         next: () => {
-          this.javaDemoRunning = true;
+          this.javaDemoRunning.set(true);
+          this.transferState.set(this.javaDemoRunningKey, true);
         },
         error: () => {
-          this.javaDemoRunning = false;
+          this.javaDemoRunning.set(false);
+          this.transferState.set(this.javaDemoRunningKey, false);
         },
       });
   }
