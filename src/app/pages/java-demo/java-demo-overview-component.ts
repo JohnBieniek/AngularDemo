@@ -101,7 +101,7 @@ export class JavaDemoOverviewComponent implements OnInit {
       description: 'REST endpoints showcasing repositories, queries, relationships, and data access patterns.',
     },
     {
-      title: 'API Documentation',
+      title: 'Living Contracts',
       icon: 'simple-icons:swagger',
       description: 'Swagger UI and OpenAPI support make the project browsable and easy to test.',
     },

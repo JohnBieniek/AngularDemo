@@ -86,6 +86,7 @@ h1 {
 .badge-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.8rem;
 }
 
@@ -594,6 +595,10 @@ h1 {
   .project-shell {
     width: min(var(--page-width), calc(100% - 96px));
     padding-inline: 0;
+  }
+
+  .stack-footer {
+    padding-bottom: 1.2rem;
   }
 }
 
