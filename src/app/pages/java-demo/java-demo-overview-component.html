@@ -18,10 +18,9 @@
           Java 26 Demo is a hands-on sandbox designed to explore current Java capabilities while
           demonstrating software engineering fundamentals. It includes examples from multiple Java
           releases, interview-style exercises, polymorphism scenarios, SQL and JPA demonstrations,
-          and API-first development. It features automatic documentation with swagger that enables a
-          user to explore the API endpoints and view the functions that came with each version of
-          Java. The project is deployed on AWS Elastic Beanstalk and uses Docker to containerize the
-          application.
+          and API-first development. Swagger documents the REST endpoints, while the GraphiQL
+          explorer provides an interactive way to inspect and run GraphQL queries. The project is
+          deployed on AWS Elastic Beanstalk and uses Docker to containerize the application.
         </p>
 
         <div class="badge-grid" aria-label="Technology tags">
@@ -65,6 +64,7 @@ Java26Demo/
           <div class="runtime-lines">
             <p><span>&gt;</span> Spring Boot application started successfully</p>
             <p><span>&gt;</span> Swagger UI: /swagger-ui.html</p>
+            <p><span>&gt;</span> GraphiQL: /graphiql?path=/graphql</p>
             <p><span>&gt;</span> H2 Console: /h2-console</p>
           </div>
 
@@ -162,6 +162,14 @@ Java26Demo/
             rel="noopener noreferrer"
           >
             Swagger UI
+          </a>
+          <a
+            class="button button-secondary"
+            href="http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/graphiql?path=/graphql"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GraphiQL
           </a>
         }
         <a
