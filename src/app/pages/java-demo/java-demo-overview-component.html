@@ -207,19 +207,15 @@ Java26Demo/
 
         <article class="query-example">
           <div class="query-heading">
-            <h3>Projects and budgets</h3>
-            <span>Field selection</span>
+            <h3>No data? Reset the demo</h3>
+            <span>Mutation</span>
           </div>
-          <p>Requests project data without downloading fields the client does not need.</p>
-          <pre><code>query ProjectBudgets &#123;
-  projects &#123;
-    id
-    name
-    budget
-    team &#123;
-      id
-    &#125;
-  &#125;
+          <p>
+            If a query returns no records, run this mutation to restore the organization demo data,
+            then retry the query.
+          </p>
+          <pre><code>mutation ResetOrganizationDemo &#123;
+  resetOrganizationDemo
 &#125;</code></pre>
         </article>
       </div>
