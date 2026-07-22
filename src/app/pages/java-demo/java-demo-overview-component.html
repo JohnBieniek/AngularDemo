@@ -241,17 +241,6 @@ Java26Demo/
       </p>
     </section>
 
-    <section class="summary-strip" aria-label="Project summary">
-      <article class="summary-item" *ngFor="let item of summaryItems">
-        <iconify-icon class="summary-icon" [attr.icon]="item.icon"></iconify-icon>
-
-        <div>
-          <h3>{{ item.label }}</h3>
-          <p>{{ item.sublabel }}</p>
-        </div>
-      </article>
-    </section>
-
     <section class="info-card why-card card section-card links-section">
       <div class="card-title-row">
         <h2>{{ javaDemoRunning() ? 'Links' : 'Code' }}</h2>

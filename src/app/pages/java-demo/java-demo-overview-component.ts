@@ -139,19 +139,6 @@ export class JavaDemoOverviewComponent implements OnInit {
     },
   ];
 
-  summaryItems: StackItem[] = [
-    { label: 'Modern Java', sublabel: 'Java 26 target', icon: 'devicon:java' },
-    {
-      label: 'Backend API',
-      sublabel: 'Practical microservice architecture',
-      icon: 'mdi:cog-outline',
-    },
-    { label: 'In-Memory DB', sublabel: 'H2 for fast iteration', icon: 'simple-icons:h2database' },
-    { label: 'API Explorer', sublabel: 'Swagger & GraphiQL', icon: 'simple-icons:graphql' },
-    { label: 'Dockerized', sublabel: 'Portable and consistent', icon: 'devicon:docker' },
-    { label: 'Cloud Ready', sublabel: 'Deployable workflow', icon: 'mdi:cloud-outline' },
-  ];
-
   coverageItems: string[] = [
     'Examples from multiple Java releases',
     'Interview exercises for common backend topics',
