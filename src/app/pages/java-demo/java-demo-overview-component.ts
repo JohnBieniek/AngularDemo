@@ -83,6 +83,7 @@ export class JavaDemoOverviewComponent implements OnInit {
     { label: 'Gradle', icon: 'devicon:gradle' },
     { label: 'H2 Database', icon: 'simple-icons:h2database' },
     { label: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
+    { label: 'GraphQL', icon: 'simple-icons:graphql' },
     { label: 'SQL / JPA', icon: 'mdi:database' },
     { label: 'Docker', icon: 'devicon:docker' },
   ];
@@ -115,9 +116,10 @@ export class JavaDemoOverviewComponent implements OnInit {
         'REST endpoints showcasing repositories, queries, relationships, and data access patterns.',
     },
     {
-      title: 'Living Contracts',
-      icon: 'simple-icons:swagger',
-      description: 'Swagger UI and OpenAPI support make the project browsable and easy to test.',
+      title: 'REST & GraphQL APIs',
+      icon: 'simple-icons:graphql',
+      description:
+        'Swagger UI, OpenAPI, and GraphiQL make the REST and GraphQL APIs browsable and easy to test.',
     },
     {
       title: 'H2 Console Access',
@@ -145,7 +147,7 @@ export class JavaDemoOverviewComponent implements OnInit {
       icon: 'mdi:cog-outline',
     },
     { label: 'In-Memory DB', sublabel: 'H2 for fast iteration', icon: 'simple-icons:h2database' },
-    { label: 'API Docs', sublabel: 'Swagger / OpenAPI', icon: 'simple-icons:swagger' },
+    { label: 'API Explorer', sublabel: 'Swagger & GraphiQL', icon: 'simple-icons:graphql' },
     { label: 'Dockerized', sublabel: 'Portable and consistent', icon: 'devicon:docker' },
     { label: 'Cloud Ready', sublabel: 'Deployable workflow', icon: 'mdi:cloud-outline' },
   ];
@@ -157,6 +159,7 @@ export class JavaDemoOverviewComponent implements OnInit {
     'SQL and JPA demonstrations',
     'In-memory H2 database exploration',
     'API-first architecture exposed through Swagger/OpenAPI',
+    'GraphQL queries with an interactive GraphiQL explorer',
     'Cloud-ready deployment workflow',
   ];
 }
