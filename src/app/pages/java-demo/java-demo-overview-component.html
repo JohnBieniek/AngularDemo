@@ -123,6 +123,114 @@ Java26Demo/
       </div>
     </section>
 
+    <section class="info-card graphiql-guide">
+      <div class="card-title-row">
+        <h2>Using the GraphiQL Explorer</h2>
+      </div>
+
+      <p class="guide-intro">
+        GraphiQL is an interactive workspace for the <code>/graphql</code> API. Unlike a REST
+        endpoint with a fixed response, GraphQL lets you request only the fields you need and follow
+        relationships, such as an employee's team, in the same request.
+      </p>
+
+      <div class="guide-steps" aria-label="How to run a GraphQL query">
+        <article>
+          <span>1</span>
+          <div>
+            <h3>Open GraphiQL</h3>
+            <p>Use the GraphiQL link below when the Java API is online.</p>
+          </div>
+        </article>
+        <article>
+          <span>2</span>
+          <div>
+            <h3>Choose fields</h3>
+            <p>Open the Docs panel to browse queries, arguments, types, and available fields.</p>
+          </div>
+        </article>
+        <article>
+          <span>3</span>
+          <div>
+            <h3>Run the query</h3>
+            <p>Paste an example into the editor and press Execute or Ctrl+Enter.</p>
+          </div>
+        </article>
+        <article>
+          <span>4</span>
+          <div>
+            <h3>Read the result</h3>
+            <p>The response pane shows JSON containing exactly the fields you selected.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="query-grid">
+        <article class="query-example">
+          <div class="query-heading">
+            <h3>Employees and their teams</h3>
+            <span>Nested query</span>
+          </div>
+          <p>Returns employee details and follows each employee's relationship to a team.</p>
+          <pre><code>query EmployeesWithTeams &#123;
+  employees &#123;
+    id
+    name
+    department
+    salary
+    bonus
+    team &#123;
+      id
+    &#125;
+  &#125;
+&#125;</code></pre>
+        </article>
+
+        <article class="query-example">
+          <div class="query-heading">
+            <h3>Look up one employee</h3>
+            <span>Query argument</span>
+          </div>
+          <p>Passes an ID to fetch one record and selects a smaller, focused response.</p>
+          <pre><code>query EmployeeById &#123;
+  employee(id: "1") &#123;
+    id
+    name
+    department
+    phoneNumber
+    team &#123;
+      id
+    &#125;
+  &#125;
+&#125;</code></pre>
+        </article>
+
+        <article class="query-example">
+          <div class="query-heading">
+            <h3>Projects and budgets</h3>
+            <span>Field selection</span>
+          </div>
+          <p>Requests project data without downloading fields the client does not need.</p>
+          <pre><code>query ProjectBudgets &#123;
+  projects &#123;
+    id
+    name
+    budget
+    team &#123;
+      id
+    &#125;
+  &#125;
+&#125;</code></pre>
+        </article>
+      </div>
+
+      <p class="guide-tip">
+        <strong>Try this:</strong> remove <code>salary</code> from the first query and run it again.
+        The field disappears from the response, demonstrating how GraphQL gives the client control
+        over the returned shape.
+      </p>
+    </section>
+
     <section class="info-card why-card">
       <div class="card-title-row">
         <h2>Why This Project Matters</h2>
