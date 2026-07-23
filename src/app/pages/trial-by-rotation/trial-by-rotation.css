@@ -691,6 +691,159 @@
   }
 }
 
+/* Professional portfolio theme */
+:host {
+  --bg: #f7f9fc;
+  --bg-elevated: #eef2f6;
+  --bg-card: #ffffff;
+  --bg-card-soft: #f3f6f9;
+  --border: #dce3ec;
+  --border-strong: #c5d0dc;
+  --primary: #24568a;
+  --primary-hover: #1b466f;
+  --primary-soft: #e9f0f7;
+  --accent: #315d91;
+  --accent-cyan: #527ca8;
+  color: #172033;
+  background: #f7f9fc;
+}
+
+.trial-by-rotation-page {
+  background: #f7f9fc;
+}
+
+.card,
+.feature-card,
+.timeline li,
+.lesson-card {
+  color: #172033;
+  border-color: #dce3ec;
+  border-radius: 0.65rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+}
+
+.section-card h2,
+.section-card h3,
+.hero h1,
+.feature-card h3,
+.timeline h3,
+.lesson-card h3,
+.links-section h2 {
+  color: #17263c;
+}
+
+.section-card p,
+.hero-subtitle,
+.hero-copy p:not(.eyebrow):not(.hero-subtitle),
+.feature-card p,
+.timeline p,
+.lesson-card p {
+  color: #5a687b;
+}
+
+.eyebrow {
+  color: #315d91;
+}
+
+.hero h1 {
+  letter-spacing: -0.04em;
+}
+
+.hero-video,
+.video-embed,
+.screenshot-button img {
+  border-color: #c8d2de;
+  background: #122338;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.14);
+}
+
+.feature-card:nth-child(n),
+.lesson-card,
+.lesson-challenge,
+.lesson-learned {
+  background: #ffffff;
+}
+
+.feature-icon,
+.tech-badge {
+  color: #315d91;
+  border-color: #d3dfeb;
+  background: #e9f0f7;
+}
+
+.timeline::before,
+.timeline li:not(:last-child)::after {
+  background: #cbd6e2;
+}
+
+.timeline li::before {
+  border-color: #6f8eae;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px #e9f0f7;
+}
+
+.screenshot-button span {
+  color: #4c5b70;
+}
+
+.screenshot-button:hover img,
+.screenshot-button:focus-visible img {
+  border-color: #7c98b5;
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.14);
+}
+
+/* Unified page palette: override retired game-specific color themes. */
+:host,
+.trial-by-rotation-page {
+  color: #172033 !important;
+  background: #f7f9fc !important;
+}
+
+:host :where(section, article, .card, .section-card, .feature-card, .timeline li, .lesson-card) {
+  color: #172033 !important;
+  border-color: #dce3ec !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06) !important;
+}
+
+:host :where(h1, h2, h3, h4, strong) {
+  color: #17263c !important;
+  text-shadow: none !important;
+}
+
+:host :where(p, li, small, .screenshot-button span) {
+  color: #5a687b !important;
+}
+
+:host :where(.eyebrow, .feature-icon) {
+  color: #315d91 !important;
+  text-shadow: none !important;
+}
+
+:host :where(.feature-icon, .tech-badge) {
+  color: #315d91 !important;
+  border-color: #d3dfeb !important;
+  background: #e9f0f7 !important;
+  box-shadow: none !important;
+}
+
+:host :where(.hero-video, .video-embed, .screenshot-button img) {
+  border-color: #c8d2de !important;
+  background: #122338 !important;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.14) !important;
+}
+
+:host :where(.timeline::before, .timeline li:not(:last-child)::after) {
+  background: #cbd6e2 !important;
+}
+
+:host .timeline li::before {
+  border-color: #6f8eae !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px #e9f0f7 !important;
+}
+
 @media (min-width: 1921px) {
   .page-shell.page-stack {
     width: min(1880px, calc(100% - 96px));
@@ -707,4 +860,47 @@
   .page-shell.page-stack {
     width: min(100% - 24px, var(--page-width));
   }
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  padding: 0;
+  line-height: 1;
+  border: 1px solid #d3dfeb !important;
+  border-radius: 0.45rem;
+  background: #e9f0f7 !important;
+}
+
+.trial-by-rotation-page .button-secondary,
+.page-stack .button-secondary {
+  color: #24568a !important;
+  border: 1px solid #7c98b5 !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(23, 32, 51, 0.08) !important;
+}
+
+.trial-by-rotation-page .button-secondary:hover,
+.page-stack .button-secondary:hover {
+  color: #ffffff !important;
+  border-color: #1b466f !important;
+  background: #1b466f !important;
+}
+
+.links-section .link-grid .button {
+  display: inline-flex !important;
+  color: #ffffff !important;
+  border: 1px solid #24568a !important;
+  background: #24568a !important;
+  box-shadow: 0 6px 16px rgba(36, 86, 138, 0.18) !important;
+  opacity: 1 !important;
+}
+
+.links-section .link-grid .button:hover {
+  color: #ffffff !important;
+  border-color: #1b466f !important;
+  background: #1b466f !important;
 }

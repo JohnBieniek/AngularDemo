@@ -11,12 +11,12 @@
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.16);
 
-  --primary: #7357ff;
-  --primary-hover: #8b73ff;
-  --primary-soft: rgba(115, 87, 255, 0.18);
+  --primary: #24568a;
+  --primary-hover: #1b466f;
+  --primary-soft: rgba(36, 86, 138, 0.12);
 
-  --accent: #8f7cff;
-  --accent-cyan: #7ddcff;
+  --accent: #315d91;
+  --accent-cyan: #527ca8;
 
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
   --radius: 18px;
@@ -36,10 +36,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(circle at top right, rgba(115, 87, 255, 0.18), transparent 34rem),
-    radial-gradient(circle at top left, rgba(45, 95, 255, 0.14), transparent 30rem),
-    var(--bg);
+  background: #f7f9fc;
   color: var(--text);
   font-family: Inter, Arial, Helvetica, sans-serif;
   line-height: 1.5;

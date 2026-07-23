@@ -2,10 +2,7 @@
   display: block;
   min-height: 100vh;
   color: #f6f7fb;
-  background:
-    radial-gradient(circle at top right, rgba(132, 79, 255, 0.3), transparent 34rem),
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 28rem),
-    #050816;
+  background: #f7f9fc;
   font-family:
     Inter,
     ui-sans-serif,
@@ -342,8 +339,9 @@ a {
   align-items: center;
   gap: 1rem;
   padding: 2rem 6vw;
-  color: #aab2c5;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b8c6d5;
+  background: #122338;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .site-footer p {

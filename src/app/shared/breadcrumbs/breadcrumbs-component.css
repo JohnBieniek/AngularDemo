@@ -10,10 +10,10 @@
   width: min(100%, 1440px);
   margin: 0 auto;
   padding: 1.3rem clamp(1rem, 5vw, 4rem);
-  color: #b8b4ce;
+  color: #5a687b;
   font-size: 0.95rem;
   line-height: 1.25;
-  border-bottom: 1px solid rgba(159, 134, 255, 0.18);
+  border-bottom: 1px solid #dce3ec;
 }
 
 .breadcrumb-home {
@@ -22,28 +22,28 @@
   justify-content: center;
   font-size: 2rem;
   line-height: 1;
-  color: #d8d4ea;
+  color: #315d91;
   text-decoration: none;
   transition: color 150ms ease, transform 150ms ease;
 }
 .breadcrumb-link {
-  color: #d8d4ea;
+  color: #315d91;
   text-decoration: none;
   transition: color 150ms ease, transform 150ms ease;
 }
 
 .breadcrumb-home:hover,
 .breadcrumb-link:hover {
-  color: #9f86ff;
+  color: #1b466f;
 }
 
 .breadcrumb-current {
-  color: #b58cff;
+  color: #17263c;
   font-weight: 700;
 }
 
 .breadcrumb-separator {
-  color: #77728d;
+  color: #8996a6;
 }
 
 @media (min-width: 761px) {

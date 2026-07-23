@@ -8,6 +8,271 @@
     linear-gradient(180deg, #061414 0%, #071117 52%, #050b12 100%);
 }
 
+/* Final neutral theme overrides must follow the legacy color variants. */
+:host {
+  color: #172033;
+  background: #f7f9fc;
+}
+
+.scheduling-page { background: #f7f9fc; }
+
+.hero,
+.closing-section,
+.needs-card,
+.automation-steps article,
+.engine-card,
+.decision-grid article,
+.control-grid article,
+.security-grid article,
+.outcome-bar {
+  color: #172033;
+  border-color: #dce3ec;
+  border-radius: 0.65rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+}
+
+h1,
+.section-intro h2,
+.closing-section h2,
+.card-heading h3,
+.automation-steps h3,
+.decision-grid h3,
+.security-copy h2,
+.security-grid h3 {
+  color: #17263c;
+  letter-spacing: -0.035em;
+}
+
+.hero-lede,
+.control-copy > p,
+.section-intro > p:last-child,
+.card-heading p,
+.needs-card li,
+.automation-copy > p,
+.automation-steps p,
+.engine-card > p:not(.section-label),
+.decision-grid p,
+.security-copy > p:last-child,
+.security-grid p,
+.closing-section p,
+.outcome-bar span { color: #5a687b; }
+
+.section-label,
+.card-icon,
+.technology-list iconify-icon,
+.security-icon,
+.decision-grid iconify-icon { color: #315d91; }
+
+.request-tags span,
+.technology-list a,
+.security-icon,
+.decision-grid iconify-icon {
+  color: #315d91;
+  border-color: #d3dfeb;
+  background: #e9f0f7;
+  box-shadow: none;
+}
+
+.outcome-bar article,
+.security-grid article,
+.control-grid article { border-color: #dce3ec; }
+
+.outcome-bar strong,
+.hours-range strong,
+.priority-list b,
+.control-grid strong { color: #17263c; }
+
+.needs-card li::before,
+.automation-steps article > span,
+.priority-list span {
+  color: #ffffff;
+  background: #315d91;
+}
+
+.hours-range i,
+.orbit-dot { background: #527ca8; }
+
+.engine-orbit {
+  border-color: #9eb2c7;
+  background: #f3f6f9;
+}
+
+.orbit-center {
+  color: #315d91;
+  border-color: #9eb2c7;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+/* Final correction for post-publishing priority badges. */
+.engine-card h2 {
+  color: #17263c !important;
+}
+
+.engine-card .priority-list span {
+  color: #4c5b70 !important;
+  border-color: #dce3ec !important;
+  background: #f3f6f9 !important;
+  box-shadow: none !important;
+}
+
+.engine-card .priority-list b {
+  color: #ffffff !important;
+  background: #315d91 !important;
+  box-shadow: none !important;
+}
+
+.engine-card h2 {
+  color: #17263c !important;
+}
+
+.priority-list span {
+  color: #4c5b70 !important;
+  border-color: #dce3ec !important;
+  background: #f3f6f9 !important;
+  box-shadow: none !important;
+}
+
+.priority-list b {
+  color: #ffffff !important;
+  background: #315d91 !important;
+  box-shadow: none !important;
+}
+
+/* Unified page palette: override retired per-section color themes. */
+:host,
+.scheduling-page {
+  color: #172033 !important;
+  background: #f7f9fc !important;
+}
+
+:host :where(section, article, .hero, .closing-section, .outcome-bar, .needs-card, .engine-card) {
+  color: #172033 !important;
+  border-color: #dce3ec !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06) !important;
+}
+
+:host :where(h1, h2, h3, h4, strong, b) {
+  color: #17263c !important;
+  text-shadow: none !important;
+}
+
+:host :where(p, li, small, figcaption) {
+  color: #5a687b !important;
+}
+
+:host :where(.section-label, .card-icon, .security-icon, iconify-icon) {
+  color: #315d91 !important;
+  text-shadow: none !important;
+}
+
+:host :where(.request-tags span, .technology-list a, .security-icon, .decision-grid iconify-icon) {
+  color: #315d91 !important;
+  border-color: #d3dfeb !important;
+  background: #e9f0f7 !important;
+  box-shadow: none !important;
+}
+
+:host :where(.button.primary, .priority-list span, .automation-steps article > span) {
+  color: #ffffff !important;
+  border-color: #24568a !important;
+  background: #24568a !important;
+  box-shadow: none !important;
+}
+
+:host .button.secondary {
+  color: #203651 !important;
+  border-color: #b9c5d4 !important;
+  background: #ffffff !important;
+}
+
+:host :where(.product-preview, .architecture-diagram) {
+  border-color: #c8d2de !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.12) !important;
+}
+
+:host :where(.product-preview figcaption, .architecture-diagram figcaption) {
+  color: #5a687b !important;
+  border-color: #dce3ec !important;
+  background: #f3f6f9 !important;
+}
+
+:host .engine-orbit {
+  border-color: #9eb2c7 !important;
+  background: #f3f6f9 !important;
+  box-shadow: none !important;
+}
+
+:host .orbit-center {
+  color: #315d91 !important;
+  border-color: #9eb2c7 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+:host :where(.orbit-dot, .hours-range i) {
+  background: #527ca8 !important;
+}
+
+/* Small controls and labels use the same restrained palette as the page. */
+:host :where(
+  .hero-tags span,
+  .request-tags span,
+  .technology-list span,
+  .technology-list a,
+  .control-grid span
+) {
+  color: #315d91 !important;
+  border-color: #d3dfeb !important;
+  background: #e9f0f7 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+:host .architecture-subheading {
+  color: #17263c !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+:host :where(
+  .card-icon,
+  .security-icon,
+  .decision-grid iconify-icon,
+  .technology-list iconify-icon
+) {
+  color: #315d91 !important;
+  border-color: #d3dfeb !important;
+  background: #e9f0f7 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+:host :where(.hours-range, .control-grid article, .security-grid article) {
+  color: #172033 !important;
+  border-color: #dce3ec !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+:host :where(.hours-range strong, .control-grid strong, .security-grid h3) {
+  color: #17263c !important;
+}
+
+:host .hours-range i {
+  background: #527ca8 !important;
+}
+
+:host :where(.priority-list span, .automation-steps article > span) {
+  color: #ffffff !important;
+  border-color: #315d91 !important;
+  background: #315d91 !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -34,6 +299,150 @@
   border-radius: 1.35rem;
   background: linear-gradient(145deg, rgba(10, 34, 35, 0.9), rgba(7, 18, 27, 0.95));
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.26);
+}
+
+/* Professional portfolio theme */
+:host {
+  color: #172033;
+  background: #f7f9fc;
+}
+
+.scheduling-page {
+  background: #f7f9fc;
+}
+
+.hero,
+.closing-section,
+.needs-card,
+.automation-steps article,
+.engine-card,
+.decision-grid article,
+.control-grid article,
+.security-grid article,
+.outcome-bar {
+  color: #172033;
+  border-color: #dce3ec;
+  border-radius: 0.65rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+}
+
+h1,
+.section-intro h2,
+.closing-section h2,
+.card-heading h3,
+.automation-steps h3,
+.decision-grid h3,
+.security-copy h2,
+.security-grid h3 {
+  color: #17263c;
+  letter-spacing: -0.035em;
+}
+
+.hero-lede,
+.control-copy > p,
+.section-intro > p:last-child,
+.card-heading p,
+.needs-card li,
+.automation-copy > p,
+.automation-steps p,
+.engine-card > p:not(.section-label),
+.decision-grid p,
+.security-copy > p:last-child,
+.security-grid p,
+.closing-section p,
+.outcome-bar span {
+  color: #5a687b;
+}
+
+.section-label,
+.card-icon,
+.technology-list iconify-icon,
+.security-icon,
+.decision-grid iconify-icon {
+  color: #315d91;
+}
+
+.request-tags span,
+.technology-list a,
+.security-icon,
+.decision-grid iconify-icon {
+  color: #315d91;
+  border-color: #d3dfeb;
+  background: #e9f0f7;
+  box-shadow: none;
+}
+
+.button {
+  border-radius: 0.4rem;
+  font-weight: 700;
+}
+
+.button.primary {
+  color: #ffffff;
+  border-color: #24568a;
+  background: #24568a;
+  box-shadow: 0 8px 20px rgba(36, 86, 138, 0.2);
+}
+
+.button.secondary {
+  color: #203651;
+  border-color: #b9c5d4;
+  background: #ffffff;
+}
+
+.product-preview,
+.architecture-diagram {
+  border-color: #c8d2de;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.12);
+}
+
+.product-preview figcaption,
+.architecture-diagram figcaption {
+  color: #5a687b;
+  border-color: #dce3ec;
+  background: #f3f6f9;
+}
+
+.outcome-bar article,
+.security-grid article,
+.control-grid article {
+  border-color: #dce3ec;
+}
+
+.outcome-bar strong,
+.hours-range strong,
+.priority-list b,
+.control-grid strong {
+  color: #17263c;
+}
+
+.needs-card li::before,
+.automation-steps article > span,
+.priority-list span {
+  color: #ffffff;
+  background: #315d91;
+}
+
+.hours-range i {
+  background: #527ca8;
+}
+
+.engine-orbit {
+  border-color: #9eb2c7;
+  background: #f3f6f9;
+}
+
+.orbit-center {
+  color: #315d91;
+  border-color: #9eb2c7;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.orbit-dot {
+  background: #527ca8;
 }
 
 .hero {
@@ -1159,4 +1568,155 @@ h1 {
   background:
     radial-gradient(circle at 88% 0%, rgba(239, 68, 68, 0.16), transparent 28rem),
     linear-gradient(145deg, rgba(55, 19, 25, 0.9), rgba(24, 8, 13, 0.95));
+}
+
+/* Final business palette */
+:host {
+  color: #172033;
+  background: #f7f9fc;
+}
+
+.scheduling-page { background: #f7f9fc; }
+
+.hero,
+.closing-section,
+.needs-card,
+.automation-steps article,
+.engine-card,
+.decision-grid article,
+.control-grid article,
+.security-grid article,
+.outcome-bar {
+  color: #172033;
+  border-color: #dce3ec;
+  border-radius: 0.65rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+}
+
+h1,
+.section-intro h2,
+.closing-section h2,
+.card-heading h3,
+.automation-steps h3,
+.decision-grid h3,
+.security-copy h2,
+.security-grid h3 { color: #17263c; }
+
+.hero-lede,
+.control-copy > p,
+.section-intro > p:last-child,
+.card-heading p,
+.needs-card li,
+.automation-copy > p,
+.automation-steps p,
+.engine-card > p:not(.section-label),
+.decision-grid p,
+.security-copy > p:last-child,
+.security-grid p,
+.closing-section p,
+.outcome-bar span { color: #5a687b; }
+
+.section-label,
+.card-icon,
+.technology-list iconify-icon,
+.security-icon,
+.decision-grid iconify-icon { color: #315d91; }
+
+.request-tags span,
+.technology-list a,
+.security-icon,
+.decision-grid iconify-icon {
+  color: #315d91;
+  border-color: #d3dfeb;
+  background: #e9f0f7;
+  box-shadow: none;
+}
+
+.button.primary {
+  color: #ffffff;
+  border-color: #24568a;
+  border-radius: 0.4rem;
+  background: #24568a;
+  box-shadow: 0 8px 20px rgba(36, 86, 138, 0.2);
+}
+
+.button.secondary {
+  color: #203651;
+  border-color: #b9c5d4;
+  border-radius: 0.4rem;
+  background: #ffffff;
+}
+
+.product-preview,
+.architecture-diagram {
+  border-color: #c8d2de;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.12);
+}
+
+.product-preview figcaption,
+.architecture-diagram figcaption {
+  color: #5a687b;
+  border-color: #dce3ec;
+  background: #f3f6f9;
+}
+
+.outcome-bar strong,
+.hours-range strong,
+.priority-list b,
+.control-grid strong { color: #17263c; }
+
+.needs-card li::before,
+.automation-steps article > span,
+.priority-list span {
+  color: #ffffff;
+  background: #315d91;
+}
+
+.hours-range i,
+.orbit-dot { background: #527ca8; }
+
+.engine-orbit {
+  border-color: #9eb2c7;
+  background: #f3f6f9;
+}
+
+.orbit-center {
+  color: #315d91;
+  border-color: #9eb2c7;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+/* Final correction for post-publishing priority badges. */
+.engine-card h2 {
+  color: #17263c !important;
+}
+
+.engine-card .priority-list span {
+  color: #4c5b70 !important;
+  border-color: #dce3ec !important;
+  background: #f3f6f9 !important;
+  box-shadow: none !important;
+}
+
+.engine-card .priority-list b {
+  color: #ffffff !important;
+  background: #315d91 !important;
+  box-shadow: none !important;
+}
+
+.security-grid small {
+  display: inline;
+  padding: 0;
+  color: #5a687b !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.technology-list iconify-icon {
+  border: 0 !important;
+  background: transparent !important;
 }

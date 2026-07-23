@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7, 9, 22, 0.88);
+  background: rgba(18, 35, 56, 0.97);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .site-nav {
@@ -26,8 +26,8 @@
   place-items: center;
   width: 2.4rem;
   height: 2.4rem;
-  border-radius: 0.68rem;
-  background: linear-gradient(135deg, #3700fd, #8a50ff);
+  border-radius: 0.35rem;
+  background: #ffffff;
   letter-spacing: -0.08em;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .brand-title {
-  color: var(--text-muted);
+  color: #b8c6d5;
   font-size: 0.82rem;
 }
 
@@ -56,7 +56,7 @@
   display: flex;
   align-items: center;
   gap: 28px;
-  color: var(--text-soft);
+  color: #d8e0e9;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -69,7 +69,7 @@
 .nav-links a:hover,
 .nav-links a.active {
   color: white;
-  border-bottom-color: var(--primary);
+  border-bottom-color: #79a8d8;
 }
 
 @media (max-width: 800px) {
