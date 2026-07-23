@@ -70,6 +70,7 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 
 .sheet-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr); gap: 22px; align-items: start; }
 .sheet-details { display: grid; gap: 14px; }
+.linked-inline { display: none; }
 .screenshot img { height: auto; aspect-ratio: auto; }
 .screenshot figcaption { padding: 12px 14px; color: #4c5b70; background: #f7f9fc; font-size: 0.84rem; font-weight: 750; }
 .comparison-grid { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(280px, 0.75fr); gap: 18px; align-items: start; }
@@ -78,7 +79,7 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 .mobile-shot { box-shadow: 0 10px 28px rgba(23, 32, 51, 0.09); }
 
 .technology-section, .links-section { display: grid; grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr); gap: 32px; align-items: center; }
-.technology-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.technology-list { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 10px; }
 .technology-list span { display: inline-flex; align-items: center; gap: 0.48rem; padding: 0.62rem 0.85rem; border: 1px solid #c8d2de; border-radius: 999px; color: #283a51; background: #fff; font-weight: 750; }
 .technology-list iconify-icon { color: #315d91; font-size: 1.18rem; }
 .project-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
@@ -87,6 +88,12 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 .button.primary { color: #fff; background: #24568a; }
 .button.secondary { color: #24568a; background: #fff; }
 .button:hover { border-color: #1b466f; box-shadow: 0 4px 12px rgba(23, 32, 51, 0.12); }
+
+@media (max-width: 1920px) {
+  .sheet-layout { grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr); }
+  .linked-inline { display: block; }
+  .linked-card { display: none; }
+}
 
 @media (max-width: 980px) {
   .hero, .sheet-layout, .technology-section, .links-section { grid-template-columns: 1fr; }
