@@ -539,8 +539,8 @@ a {
   align-items: center;
   max-width: 1720px;
   margin-inline: auto;
-  padding-top: clamp(3rem, 6vw, 6rem);
-  padding-bottom: clamp(3rem, 5vw, 5rem);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .hero-photo-card {
@@ -664,8 +664,8 @@ a {
 
 #projects {
   max-width: none;
-  padding-top: clamp(3rem, 5vw, 5rem);
-  padding-bottom: clamp(3rem, 5vw, 5rem);
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
   background: #eef2f6;
 }
 
@@ -750,8 +750,8 @@ a {
 }
 
 .about-section {
-  padding-top: clamp(3rem, 5vw, 5rem);
-  padding-bottom: clamp(3rem, 5vw, 5rem);
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .about-card {

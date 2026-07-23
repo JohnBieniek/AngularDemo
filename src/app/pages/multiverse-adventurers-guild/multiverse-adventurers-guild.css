@@ -4,8 +4,8 @@
   background: #f7f9fc;
 }
 
-.mag-page { min-height: 100%; padding: 32px 0 72px; }
-.page-stack { display: grid; gap: 22px; }
+.mag-page { min-height: 100%; padding: 0 0 72px; }
+.page-stack { display: grid; gap: 22px; margin-top: 32px; }
 
 .hero,
 .content-section,
@@ -109,7 +109,7 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 }
 
 @media (max-width: 680px) {
-  .mag-page { padding-top: 20px; }
+  .page-stack { margin-top: 20px; }
   .hero { padding: 24px 20px; }
   .hero-preview { min-height: 0; }
   .summary-grid, .process-grid, .comparison-grid, .mobile-gallery { grid-template-columns: 1fr; }
@@ -120,3 +120,10 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
   .technology-list span { flex: 0 0 auto; }
   .button { width: 100%; }
 }
+
+/* Shared compact page rhythm. */
+.page-stack { margin-top: 16px; }
+.hero,
+.content-section,
+.technology-section,
+.links-section { padding-top: 20px; }

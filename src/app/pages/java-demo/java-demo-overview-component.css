@@ -227,7 +227,7 @@ p,
 .project-shell {
   width: min(100%, 1440px);
   margin: 0 auto;
-  padding: clamp(1rem, 3vw, 2.5rem) clamp(1rem, 5vw, 4rem) 4rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem) 4rem;
 }
 
 .hero-card,
@@ -414,7 +414,7 @@ h1 {
 .content-grid {
   display: grid;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .two-column {
@@ -529,11 +529,11 @@ h1 {
 }
 
 .feature-section {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .graphiql-guide {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .graphiql-guide code {
@@ -678,7 +678,7 @@ h1 {
 }
 
 .why-card {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .why-card p {
@@ -1236,3 +1236,16 @@ p,
 .java-demo-page .guide-tip {
   color: #dbe7f3 !important;
 }
+
+/* Layout gutters use the same neutral page surface as the surrounding portfolio pages. */
+.java-demo-page > .project-shell,
+.project-shell > .content-grid {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f7f9fc !important;
+  box-shadow: none !important;
+}
+
+/* Shared compact page rhythm. */
+.hero-card,
+.info-card { padding-top: 20px; }

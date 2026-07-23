@@ -6,12 +6,13 @@
 
 .sophia-page {
   min-height: 100%;
-  padding: 32px 0 72px;
+  padding: 0 0 72px;
 }
 
 .page-stack {
   display: grid;
   gap: 22px;
+  margin-top: 32px;
 }
 
 .hero,
@@ -357,12 +358,13 @@ a {
 
 @media (max-width: 760px) {
   .sophia-page {
-    padding: 24px 0 56px;
+    padding: 0 0 56px;
   }
 
   .page-stack {
     width: min(100% - 24px, var(--page-width));
     gap: 14px;
+    margin-top: 24px;
   }
 
   .hero,
@@ -405,3 +407,10 @@ a {
     flex-direction: column;
   }
 }
+
+/* Shared compact page rhythm. */
+.page-stack { margin-top: 16px; }
+.hero,
+.content-section,
+.technology-section,
+.links-section { padding-top: 20px; }
