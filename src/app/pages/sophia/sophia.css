@@ -1,0 +1,392 @@
+:host {
+  display: block;
+  color: #172033;
+  background: #f7f9fc;
+}
+
+.sophia-page {
+  min-height: 100%;
+  padding: 32px 0 72px;
+}
+
+.page-stack {
+  display: grid;
+  gap: 22px;
+}
+
+.hero,
+.content-section,
+.simulation-layout,
+.technology-section,
+.links-section {
+  border: 1px solid #dce3ec;
+  border-radius: 0.7rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(440px, 1.1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 9px;
+  color: #315d91;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: #17263c;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+p {
+  color: #465568;
+  line-height: 1.65;
+}
+
+.hero-lede {
+  margin: 0 0 16px;
+  color: #283a51;
+  font-size: clamp(1.15rem, 2vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.hero-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-preview,
+.graphics-preview {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #c8d2de;
+  border-radius: 0.6rem;
+  background: #eef2f6;
+}
+
+.hero-preview img,
+.graphics-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #dce3ec;
+  border-radius: 0.7rem;
+  background: #dce3ec;
+}
+
+.summary-grid article {
+  display: grid;
+  gap: 3px;
+  padding: 22px;
+  background: #fff;
+}
+
+.summary-grid strong {
+  color: #24568a;
+  font-size: 1.55rem;
+}
+
+.summary-grid span {
+  color: #526174;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.content-section,
+.technology-section,
+.links-section {
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.section-intro {
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.section-intro > p:last-child {
+  margin-bottom: 0;
+}
+
+.split-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+  gap: 48px;
+  max-width: none;
+  align-items: end;
+}
+
+.workflow-grid,
+.detail-grid,
+.physics-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.workflow-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.detail-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.physics-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.workflow-grid article,
+.detail-grid article,
+.physics-grid article {
+  padding: 20px;
+  border: 1px solid #dce3ec;
+  border-radius: 0.55rem;
+  background: #fff;
+}
+
+.workflow-grid span {
+  display: block;
+  margin-bottom: 18px;
+  color: #56799d;
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.detail-grid iconify-icon,
+.analysis-grid iconify-icon {
+  display: block;
+  margin-bottom: 16px;
+  color: #315d91;
+  font-size: 2rem;
+}
+
+.workflow-grid p,
+.detail-grid p,
+.physics-grid p,
+.analysis-grid p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+code {
+  color: #203f62;
+  font-weight: 700;
+}
+
+.source-note {
+  margin: 24px 0 0;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #24568a;
+  font-weight: 750;
+}
+
+.simulation-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.simulation-copy {
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.simulation-copy + .simulation-copy {
+  border-left: 1px solid #dce3ec;
+}
+
+.simulation-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.analysis-grid article {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 20px;
+  border-top: 2px solid #8da7c1;
+  background: #f8fafc;
+}
+
+.analysis-grid iconify-icon {
+  margin: 0;
+}
+
+.graphics-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.graphics-copy p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.text-link {
+  display: inline-flex;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #8da7c1;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.technology-list span {
+  padding: 9px 13px;
+  color: #294763;
+  font-size: 0.9rem;
+  font-weight: 750;
+  border: 1px solid #cbd6e2;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.links-section {
+  text-align: center;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  padding: 12px 20px;
+  color: #fff;
+  border: 1px solid #24568a;
+  border-radius: 0.45rem;
+  background: #24568a;
+  box-shadow: 0 6px 16px rgba(36, 86, 138, 0.18);
+}
+
+.button:hover {
+  color: #fff;
+  border-color: #1b466f;
+  background: #1b466f;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .graphics-section {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-grid,
+  .physics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-grid,
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .sophia-page {
+    padding: 24px 0 56px;
+  }
+
+  .page-stack {
+    width: min(100% - 24px, var(--page-width));
+    gap: 14px;
+  }
+
+  .hero,
+  .content-section,
+  .technology-section,
+  .links-section {
+    padding: 22px;
+  }
+
+  .summary-grid,
+  .workflow-grid,
+  .physics-grid,
+  .split-heading,
+  .simulation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-heading {
+    gap: 8px;
+  }
+
+  .simulation-copy {
+    padding: 24px;
+  }
+
+  .simulation-copy + .simulation-copy {
+    border-top: 1px solid #dce3ec;
+    border-left: 0;
+  }
+
+  .graphics-section {
+    gap: 24px;
+  }
+
+  .link-grid {
+    flex-direction: column;
+  }
+}

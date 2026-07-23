@@ -3,6 +3,7 @@ import { Home } from './pages/home/home';
 import { TrialByRotation } from './pages/trial-by-rotation/trial-by-rotation';
 import { JavaDemoOverviewComponent } from './pages/java-demo/java-demo-overview-component';
 import { AccessibleScheduling } from './pages/accessible-scheduling/accessible-scheduling';
+import { Sophia } from './pages/sophia/sophia';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path: 'projects/accessible-scheduling',
     component: AccessibleScheduling,
+  },
+  {
+    path: 'projects/sophia',
+    component: Sophia,
   },
   {
     path: 'projects/trial-by-rotation',

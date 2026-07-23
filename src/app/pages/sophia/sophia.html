@@ -1,0 +1,333 @@
+<main class="sophia-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Scientific computing and visualization</p>
+        <h1>SOPHIA</h1>
+        <p class="hero-lede">
+          A molecular simulation workbench created for physics research at the Georgia Institute
+          of Technology.
+        </p>
+        <p>
+          SOPHIA brings model setup, force-based simulation, energy minimization, trajectory
+          playback, interactive 3D graphics, and quantitative graphing into one Java desktop
+          application. Researchers can move from molecular coordinates to an inspectable,
+          repeatable experiment without assembling a separate tool for every stage.
+        </p>
+      </div>
+
+      <figure class="hero-preview">
+        <img
+          src="/assets/images/sophia color molocules.png"
+          alt="Colored molecules displayed in the SOPHIA three-dimensional viewer"
+        />
+      </figure>
+    </section>
+
+    <section class="summary-grid" aria-label="Project highlights">
+      <article><strong>5</strong><span>Force and energy terms</span></article>
+      <article><strong>2</strong><span>Simulation families</span></article>
+      <article><strong>3D</strong><span>Trajectory playback</span></article>
+      <article><strong>PDB</strong><span>Coordinate interchange</span></article>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">Research workflow</p>
+        <h2>One application from molecular model to measurable result.</h2>
+        <p>
+          The interface guides the user through selecting a model, configuring the experiment,
+          running it, reviewing the recorded frames, and plotting the variables produced by the
+          solver. A controller layer coordinates the Swing views with separate simulation,
+          recording, visualization, and chart models.
+        </p>
+      </div>
+
+      <div class="workflow-grid">
+        <article>
+          <span>01</span>
+          <h3>Import a system</h3>
+          <p>Load atomic coordinates and the molecular interactions that define the model.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Configure the run</h3>
+          <p>Choose dimensions, timestep, step count, output interval, temperature, and protocol.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Run the solver</h3>
+          <p>Calculate forces, integrate motion, or minimize the system's potential energy.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Inspect and export</h3>
+          <p>Play the trajectory in 3D, graph recorded variables, and save the result as PDB.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro split-heading">
+        <div>
+          <p class="section-label">Import and export</p>
+          <h2>A familiar coordinate format with explicit simulation data.</h2>
+        </div>
+        <p>
+          SOPHIA uses the legacy Protein Data Bank text format as its coordinate interchange.
+          PDB <code>ATOM</code> records identify atoms and carry Cartesian X, Y, and Z positions,
+          occupancy, and temperature-factor fields. The format's <code>CONECT</code> records can
+          express connectivity by atom serial number.
+        </p>
+      </div>
+
+      <div class="detail-grid">
+        <article>
+          <iconify-icon icon="mdi:file-import-outline"></iconify-icon>
+          <h3>PDB coordinate import</h3>
+          <p>
+            The importer reads each atom's identifier, type, molecule, chain, sequence, position,
+            occupancy, temperature factor, mass, radius, and charge. SOPHIA extends the conventional
+            coordinate record with the physical values its solver needs.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:vector-polyline"></iconify-icon>
+          <h3>Companion structure files</h3>
+          <p>
+            A plain-text <code>.sf</code> file supplies the force field: bonded atom indices,
+            equilibrium lengths and angles, force constants, torsion parameters, and global
+            van der Waals radius and well depth. Keeping these values separate makes a model easier
+            to inspect and tune.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:file-export-outline"></iconify-icon>
+          <h3>Trajectory export</h3>
+          <p>
+            A completed recording can be written as a multi-frame PDB trajectory. Each frame stores
+            updated coordinates, while connectivity records preserve the bond network so the
+            exported motion can be loaded again for playback.
+          </p>
+        </article>
+      </div>
+
+      <p class="source-note">
+        Format reference:
+        <a
+          href="https://www.wwpdb.org/documentation/file-format-content/format30/sect9.html"
+          target="_blank"
+          rel="noopener"
+        >wwPDB coordinate records</a>
+        and
+        <a
+          href="https://www.wwpdb.org/documentation/file-format-content/format23/sect10.html"
+          target="_blank"
+          rel="noopener"
+        >connectivity records</a>.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">Physics engine</p>
+        <h2>Forces are assembled from the molecular model at every step.</h2>
+        <p>
+          Internally, a molecular cluster is represented as atoms plus associations between them.
+          Each association contributes force vectors to its atoms and reports its own potential
+          energy. The cluster clears the previous net force, applies every active interaction, and
+          converts the result to acceleration through <em>F = ma</em>.
+        </p>
+      </div>
+
+      <div class="physics-grid">
+        <article>
+          <h3>Harmonic bonds</h3>
+          <p>
+            Two-atom spring forces resist stretching or compression away from an equilibrium bond
+            length. Their quadratic energy makes small displacements inexpensive and increasingly
+            penalizes large distortions.
+          </p>
+        </article>
+        <article>
+          <h3>Harmonic angles</h3>
+          <p>
+            Three-atom interactions compare the current angle with its equilibrium value. The
+            calculated force is distributed across all three atoms to restore the preferred
+            molecular geometry.
+          </p>
+        </article>
+        <article>
+          <h3>Torsional rotation</h3>
+          <p>
+            Four connected atoms define a dihedral. A periodic torsion term models the energetic
+            barriers encountered as one part of a molecule rotates around a bond.
+          </p>
+        </article>
+        <article>
+          <h3>van der Waals interaction</h3>
+          <p>
+            Non-bonded atom pairs use a Lennard-Jones-style potential: strong short-range repulsion
+            prevents overlap while a weaker attractive region models dispersion at greater
+            separation.
+          </p>
+        </article>
+        <article>
+          <h3>Electrostatics</h3>
+          <p>
+            Charged non-bonded atoms receive a Coulomb interaction scaled by the configured
+            dielectric constant, producing attraction for opposite charges and repulsion for like
+            charges.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="simulation-layout">
+      <div class="simulation-copy">
+        <p class="section-label">Molecular dynamics</p>
+        <h2>Follow motion through time.</h2>
+        <p>
+          The molecular-dynamics solver assigns initial velocities for the requested temperature,
+          repeatedly calculates forces and accelerations, and advances atom positions and
+          velocities with velocity-Verlet integration. The user controls the timestep in
+          picoseconds, number of dimensions, run length, and how frequently a frame is recorded.
+        </p>
+        <p>
+          Each stored frame contains coordinates, time, temperature, kinetic energy, potential
+          energy, total energy, and the individual potential terms. Optional temperature cycles can
+          hold or ramp toward targets and rescale velocities during selected portions of a run,
+          making heating, cooling, and equilibration protocols repeatable.
+        </p>
+      </div>
+
+      <div class="simulation-copy">
+        <p class="section-label">Energy minimization</p>
+        <h2>Find a lower-energy configuration.</h2>
+        <p>
+          SOPHIA also runs geometry optimization without simulated thermal motion. Steepest descent
+          proposes a displacement along the current force. Conjugate gradient combines the current
+          force with the previous search direction to move more efficiently through long, narrow
+          energy valleys.
+        </p>
+        <p>
+          A trial configuration is retained only when it lowers potential energy. Successful steps
+          grow by a factor of 1.2; rejected steps restore the prior coordinates and shrink by 0.5.
+          The run ends when the relative energy change falls below the selected convergence
+          criterion or the step limit is reached.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro split-heading">
+        <div>
+          <p class="section-label">Analysis</p>
+          <h2>Turn a trajectory into evidence.</h2>
+        </div>
+        <p>
+          The recording model exposes every quantity available across its frames. JFreeChart then
+          builds either a time-series view or a relationship plot selected by the researcher.
+        </p>
+      </div>
+
+      <div class="analysis-grid">
+        <article>
+          <iconify-icon icon="mdi:chart-line"></iconify-icon>
+          <div>
+            <h3>Time plots</h3>
+            <p>
+              Overlay temperature and one or more energy series against frame number. This makes
+              equilibration, drift, transitions, and convergence visible across the complete run.
+            </p>
+          </div>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:chart-scatter-plot"></iconify-icon>
+          <div>
+            <h3>Scatter plots</h3>
+            <p>
+              Compare any two recorded variables—for example, temperature against kinetic energy
+              or bond energy against total potential—to reveal correlation and outliers.
+            </p>
+          </div>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:sigma"></iconify-icon>
+          <div>
+            <h3>Energy decomposition</h3>
+            <p>
+              Inspect kinetic, total, and potential energy alongside bond, angle, torsion, van der
+              Waals, and electrostatic contributions instead of relying on one aggregate number.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section graphics-section">
+      <div class="graphics-copy">
+        <p class="section-label">Interactive 3D graphics</p>
+        <h2>A scene graph built directly from the molecular topology.</h2>
+        <p>
+          The viewer uses jMonkeyEngine and LWJGL. Atoms become lit sphere geometries and bonds
+          become cylinder geometries attached to the scene's root node. For every recorded frame,
+          atom spheres translate to the new Cartesian coordinates; each bond cylinder is scaled to
+          the current distance, rotated onto the bond vector, and placed at its midpoint.
+        </p>
+        <p>
+          Playback controls step forward and backward, jump to a selected frame, or animate the
+          trajectory at a configurable rate. Researchers can switch between a compact ball-and-stick
+          representation and radius-scaled space-filling atoms, then recolor by element, atom,
+          chain, or sequence to make different structures easier to read.
+        </p>
+        <a
+          class="text-link"
+          href="https://wiki.jmonkeyengine.org/docs/3.4/core/scene/spatial.html"
+          target="_blank"
+          rel="noopener"
+        >Read about the jMonkeyEngine scene graph</a>
+      </div>
+      <figure class="graphics-preview">
+        <img
+          src="/assets/images/big Molucle sophia screen.png"
+          alt="Large molecular system displayed in SOPHIA"
+        />
+      </figure>
+    </section>
+
+    <section class="technology-section">
+      <p class="section-label">Technology</p>
+      <h2>Desktop Java with dedicated scientific and rendering libraries.</h2>
+      <div class="technology-list" aria-label="SOPHIA technology stack">
+        <span>Java</span>
+        <span>Swing</span>
+        <span>jMonkeyEngine</span>
+        <span>LWJGL</span>
+        <span>JFreeChart</span>
+        <span>Apache Ant</span>
+        <span>PDB</span>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <h2>See SOPHIA in action or explore the implementation.</h2>
+      <div class="link-grid">
+        <a
+          class="button"
+          href="https://youtu.be/x9STcU9hGS8?si=TmR8LyeOv25FiAP0"
+          target="_blank"
+          rel="noopener"
+        >Watch video</a>
+        <a
+          class="button"
+          href="https://github.com/JohnBieniek/Sophia"
+          target="_blank"
+          rel="noopener"
+        >GitHub repo</a>
+      </div>
+    </section>
+  </div>
+</main>
