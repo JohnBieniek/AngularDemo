@@ -28,7 +28,7 @@ interface YouTubePlayerEvent {
 
 interface YouTubeApi {
   Player: new (
-    element: HTMLIFrameElement,
+    elementId: string,
     options: {
       events: {
         onReady: (event: YouTubePlayerEvent) => void;
@@ -91,11 +91,12 @@ export class Sophia implements AfterViewInit, OnDestroy {
       return;
     }
 
-    this.player = new window.YT.Player(this.playerFrame.nativeElement, {
+    this.player = new window.YT.Player('sophia-youtube-player', {
       events: {
         onReady: ({ target }) => {
           target.mute();
           target.playVideo();
+          this.videoLoaded.set(true);
         },
         onStateChange: ({ data }) => {
           if (data === 1) {
