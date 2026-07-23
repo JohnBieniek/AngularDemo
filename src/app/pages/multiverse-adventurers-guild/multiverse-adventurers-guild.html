@@ -1,0 +1,227 @@
+<main class="mag-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent publishing and product engineering</p>
+        <h1>Multiverse Adventurers Guild</h1>
+        <p class="hero-lede">
+          The initial offering from the publishing house I own, built as both a tabletop
+          roleplaying game and a usable digital product.
+        </p>
+        <p>
+          Multiverse Adventurers Guild is designed for heroes and stories that can move across
+          fantasy, science fiction, western, and other settings. I rebuilt its web presence to make
+          the rules easier to read and navigate—and to let players create and use a character
+          directly inside the same application.
+        </p>
+      </div>
+
+      <figure class="hero-preview">
+        <img
+          src="/assets/images/mag-new-site-desktop.png"
+          alt="The rebuilt Multiverse Adventurers Guild home page"
+        />
+      </figure>
+    </section>
+
+    <section class="summary-grid" aria-label="Project highlights">
+      <article><strong>Owner</strong><span>Publishing house and product direction</span></article>
+      <article><strong>React</strong><span>Responsive single-page application</span></article>
+      <article><strong>Text</strong><span>Simple, maintainable content sources</span></article>
+      <article><strong>Playable</strong><span>Interactive character management</span></article>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">The product</p>
+        <h2>A publishing platform that also supports play at the table.</h2>
+        <p>
+          This is the first public offering from my publishing company. The site introduces the
+          game, presents the complete player, rules, and Game Master material, and turns that
+          material into a connected reference during play. The digital character sheet extends the
+          publication beyond static reading: players can build heroes, apply rules, and roll from
+          one integrated experience.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article>
+          <iconify-icon icon="mdi:book-open-page-variant-outline"></iconify-icon>
+          <h3>Complete game reference</h3>
+          <p>
+            Dedicated Rules, Players, and Game Masters routes organize the system for the person
+            using it, with stable sections that can be linked directly.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:account-edit-outline"></iconify-icon>
+          <h3>Playable character sheet</h3>
+          <p>
+            The sheet is a working game interface, not a printable mockup. Stats, skills, defenses,
+            attacks, resources, equipment, talents, contacts, notes, and dice rolls remain together.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:link-variant"></iconify-icon>
+          <h3>Rules where players need them</h3>
+          <p>
+            Sheet labels link back to the relevant guide anchors, so a stat, skill, weapon, talent,
+            item, or contact can lead directly to its supporting rule.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">Content architecture</p>
+        <h2>Write simple files; generate a connected reference.</h2>
+        <p>
+          Game content lives in focused plain-text files grouped by audience and subject. Vite
+          imports those files as raw text. A reusable React guide component interprets their
+          structure, produces headings, cards, tables, chips, and stable anchor IDs, then recognizes
+          rule references and converts them into links to the correct section—even when that
+          destination is on another route.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article><span>01</span><h3>Author</h3><p>Edit compact <code>.txt</code> rule files without embedding presentation markup.</p></article>
+        <article><span>02</span><h3>Import</h3><p>Vite's <code>?raw</code> imports deliver that source directly to React.</p></article>
+        <article><span>03</span><h3>Transform</h3><p>The guide parser creates readable sections, data displays, and predictable anchors.</p></article>
+        <article><span>04</span><h3>Connect</h3><p>Reference maps and React Router dynamically link related rules and application pages.</p></article>
+      </div>
+
+      <p class="architecture-note">
+        This separation keeps editorial work straightforward while allowing the application to
+        improve presentation and navigation globally. A content correction stays a content change;
+        a readability improvement in the guide renderer benefits the entire publication.
+      </p>
+    </section>
+
+    <section class="content-section sheet-section">
+      <div class="section-intro">
+        <p class="section-label">Interactive character management</p>
+        <h2>The character sheet creates, calculates, saves, and travels.</h2>
+        <p>
+          React state drives the active hero and derived game values. Selecting an archetype applies
+          its starting statistics and skill allocation, fills archetype traits, generates an
+          appropriate weapon and item loadout, and creates contacts from role-aware name pools.
+          Computed values update as the character changes, while integrated d4 through d20 controls
+          support checks, attacks, and damage rolls.
+        </p>
+      </div>
+
+      <div class="sheet-layout">
+        <figure class="screenshot">
+          <img
+            src="/assets/images/mag-character-sheet-desktop.png"
+            alt="Playable character sheet library on a desktop display"
+          />
+          <figcaption>Character library and creation entry point — desktop</figcaption>
+        </figure>
+
+        <div class="sheet-details">
+          <article>
+            <h3>Private browser-local saves</h3>
+            <p>
+              Characters are serialized to <code>localStorage</code>, sorted by their last update,
+              and restored into a saved-hero library. The app remembers the active character and
+              offers both explicit saving and per-character autosave.
+            </p>
+          </article>
+          <article>
+            <h3>Portable import and export</h3>
+            <p>
+              Export converts the hero state to JSON in a Blob and downloads a named
+              <code>.MAGHero</code> file. Import uses <code>FileReader</code>, parses and validates
+              the JSON, gives the imported hero a new identifier, and loads it for editing. This
+              provides backups and movement between devices without requiring an account or server.
+            </p>
+          </article>
+          <article>
+            <h3>Linked through the application</h3>
+            <p>
+              The character library is a first-class React Router destination. From the sheet,
+              reference links return players to exact Rules and Players anchors, keeping character
+              decisions connected to the publication instead of duplicating explanations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">Site rebuild</p>
+        <h2>From a static introduction to a clearer, responsive application.</h2>
+        <p>
+          The original site established the identity and premise of the game. The new build retains
+          that foundation while improving information hierarchy, typography, spacing, contrast,
+          navigation, and direct linking. Content now adapts cleanly across screen sizes, related
+          rules connect to one another, and the playable sheet turns the site into part of the game.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <figure class="screenshot">
+          <img src="/assets/images/mag-old-site-desktop.png" alt="Original Multiverse Adventurers Guild website" />
+          <figcaption>Original publishing site</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="/assets/images/mag-new-site-desktop.png" alt="Rebuilt Multiverse Adventurers Guild website" />
+          <figcaption>Rebuilt application with clearer paths into the content</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-intro">
+        <p class="section-label">Responsive implementation</p>
+        <h2>The publication and play tools remain usable on smaller screens.</h2>
+        <p>
+          Responsive layouts reorganize navigation, content cards, and character controls rather
+          than simply shrinking a desktop page. That makes the guides easier to consult from a
+          phone and keeps the character library available at the table.
+        </p>
+      </div>
+      <div class="mobile-gallery">
+        <figure class="screenshot mobile-shot">
+          <img src="/assets/images/mag-new-site-mobile.png" alt="Multiverse Adventurers Guild home page on mobile" />
+          <figcaption>Publishing site — mobile</figcaption>
+        </figure>
+        <figure class="screenshot mobile-shot">
+          <img src="/assets/images/mag-character-sheet-mobile.png" alt="Playable character sheet library on mobile" />
+          <figcaption>Character library — mobile</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="technology-section">
+      <div>
+        <p class="section-label">Tools used</p>
+        <h2>A lightweight modern web stack.</h2>
+      </div>
+      <div class="technology-list" aria-label="Technology stack">
+        <span>React 18</span><span>React Router</span><span>Vite</span><span>JavaScript / JSX</span>
+        <span>CSS3</span><span>React Icons</span><span>Browser Storage</span><span>JSON</span>
+        <span>Cloudflare Workers</span><span>Wrangler</span>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div>
+        <p class="section-label">Explore the project</p>
+        <h2>Read the rules, build a hero, or inspect the code.</h2>
+      </div>
+      <div class="project-links">
+        <a class="button primary" href="https://multiverseadventurersguild.pages.dev/" target="_blank" rel="noopener">New Website</a>
+        <a class="button secondary" href="https://multiverseadventurersguild.pages.dev/character-sheet" target="_blank" rel="noopener">Playable Character Sheet</a>
+        <a class="button secondary" href="https://www.multiverseadventurersguild.com/" target="_blank" rel="noopener">Original Website</a>
+        <a class="button secondary" href="https://github.com/JohnBieniek/MultiverseAdventurersGuild" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </section>
+  </div>
+</main>

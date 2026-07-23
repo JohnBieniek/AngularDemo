@@ -4,6 +4,7 @@ import { TrialByRotation } from './pages/trial-by-rotation/trial-by-rotation';
 import { JavaDemoOverviewComponent } from './pages/java-demo/java-demo-overview-component';
 import { AccessibleScheduling } from './pages/accessible-scheduling/accessible-scheduling';
 import { Sophia } from './pages/sophia/sophia';
+import { MultiverseAdventurersGuild } from './pages/multiverse-adventurers-guild/multiverse-adventurers-guild';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,10 @@ export const routes: Routes = [
   {
     path: 'projects/sophia',
     component: Sophia,
+  },
+  {
+    path: 'projects/multiverse-adventurers-guild',
+    component: MultiverseAdventurersGuild,
   },
   {
     path: 'projects/trial-by-rotation',

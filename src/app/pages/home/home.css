@@ -315,6 +315,10 @@ a {
   align-items: start;
 }
 
+.mag-preview {
+  background: #e7eee9;
+}
+
 .about-section > div:first-child {
   min-width: 0;
 }
