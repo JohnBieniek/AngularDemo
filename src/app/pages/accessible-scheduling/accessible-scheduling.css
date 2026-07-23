@@ -1730,7 +1730,7 @@ h1,
 }
 
 /* Shared compact page rhythm. */
-.scheduling-page .page-shell { padding-top: 16px; }
+.scheduling-page .page-shell { padding-top: 16px; padding-bottom: 16px; }
 .scheduling-page :where(.hero, .needs-card, .engine-card, .google-access-card, .closing-section) {
   padding-top: 20px;
 }

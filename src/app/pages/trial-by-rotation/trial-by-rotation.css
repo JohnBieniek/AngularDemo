@@ -947,6 +947,6 @@
 }
 
 /* Shared compact page rhythm. */
-.page-shell.page-stack { margin-top: 16px; }
+.page-shell.page-stack { margin-top: 16px; padding-bottom: 16px; }
 .hero,
 .section-card { padding-top: 20px; }

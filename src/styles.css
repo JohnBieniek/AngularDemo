@@ -88,7 +88,7 @@ router-outlet {
 .page-stack {
   display: grid;
   gap: 14px;
-  padding-block: 18px 40px;
+  padding-block: 0 16px;
 }
 
 .section-eyebrow {
@@ -349,7 +349,7 @@ router-outlet {
   }
 
   .page-stack {
-    padding-block: 14px 28px;
+    padding-block: 0 16px;
   }
 
   .feature-grid,

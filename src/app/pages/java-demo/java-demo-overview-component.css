@@ -227,7 +227,7 @@ p,
 .project-shell {
   width: min(100%, 1440px);
   margin: 0 auto;
-  padding: 1rem clamp(1rem, 5vw, 4rem) 4rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
 }
 
 .hero-card,

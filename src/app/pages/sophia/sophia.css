@@ -6,7 +6,7 @@
 
 .sophia-page {
   min-height: 100%;
-  padding: 0 0 72px;
+  padding: 0;
 }
 
 .page-stack {
@@ -358,7 +358,7 @@ a {
 
 @media (max-width: 760px) {
   .sophia-page {
-    padding: 0 0 56px;
+    padding: 0;
   }
 
   .page-stack {

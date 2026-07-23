@@ -4,7 +4,7 @@
   background: #f7f9fc;
 }
 
-.mag-page { min-height: 100%; padding: 0 0 72px; }
+.mag-page { min-height: 100%; padding: 0; }
 .page-stack { display: grid; gap: 22px; margin-top: 32px; }
 
 .hero,

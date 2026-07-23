@@ -676,7 +676,8 @@ a {
 }
 
 .projects-note {
-  max-width: 920px !important;
+  width: 100%;
+  max-width: none !important;
   margin-bottom: 2rem !important;
   color: #34465b;
   line-height: 1.7;
@@ -751,7 +752,7 @@ a {
 
 .about-section {
   padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .about-card {
