@@ -1218,3 +1218,21 @@ p,
   margin-top: 2.75rem !important;
   padding-top: 1.5rem !important;
 }
+
+.java-demo-page :where(
+  .hero-lede,
+  .hero-body,
+  .info-card > p,
+  .feature-tile p,
+  .why-card p,
+  .summary-item p,
+  .check-list li,
+  .guide-intro,
+  .query-example > p
+) {
+  color: #465568 !important;
+}
+
+.java-demo-page .guide-tip {
+  color: #dbe7f3 !important;
+}

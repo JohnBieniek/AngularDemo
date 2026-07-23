@@ -1720,3 +1720,11 @@ h1,
   border: 0 !important;
   background: transparent !important;
 }
+
+.scheduling-page :where(p, li, figcaption, small) {
+  color: #465568 !important;
+}
+
+.scheduling-page :where(.hero-lede, .section-label) {
+  color: #315d91 !important;
+}

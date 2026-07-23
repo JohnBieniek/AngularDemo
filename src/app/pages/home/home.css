@@ -643,7 +643,7 @@ a {
 .project-content p,
 .about-section p,
 .about-card span {
-  color: #5a687b;
+  color: #465568;
 }
 
 .section {
@@ -667,7 +667,7 @@ a {
 .projects-note {
   max-width: 920px !important;
   margin-bottom: 2rem !important;
-  color: #5a687b;
+  color: #34465b;
   line-height: 1.7;
 }
 
