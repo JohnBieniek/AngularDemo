@@ -18,6 +18,7 @@ import {
 interface YouTubePlayer {
   mute(): void;
   playVideo(): void;
+  getPlayerState(): number;
   destroy(): void;
 }
 
@@ -61,6 +62,7 @@ export class Sophia implements AfterViewInit, OnDestroy {
   readonly videoLoaded = signal(false);
   private readonly platformId = inject(PLATFORM_ID);
   private player?: YouTubePlayer;
+  private playbackCheck?: ReturnType<typeof setInterval>;
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
@@ -83,6 +85,7 @@ export class Sophia implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.stopPlaybackCheck();
     this.player?.destroy();
   }
 
@@ -96,16 +99,44 @@ export class Sophia implements AfterViewInit, OnDestroy {
         onReady: ({ target }) => {
           target.mute();
           target.playVideo();
-          this.videoLoaded.set(true);
+          this.waitForPlayback(target);
         },
         onStateChange: ({ data }) => {
           if (data === 1) {
             this.videoLoaded.set(true);
+            this.stopPlaybackCheck();
           }
         },
-        onError: () => this.videoLoaded.set(false),
+        onError: () => {
+          this.videoLoaded.set(false);
+          this.stopPlaybackCheck();
+        },
       },
     });
+  }
+
+  private waitForPlayback(player: YouTubePlayer): void {
+    this.stopPlaybackCheck();
+
+    let attempts = 0;
+    this.playbackCheck = setInterval(() => {
+      attempts++;
+
+      if (player.getPlayerState() === 1) {
+        this.videoLoaded.set(true);
+        this.stopPlaybackCheck();
+      } else if (attempts >= 32) {
+        this.videoLoaded.set(false);
+        this.stopPlaybackCheck();
+      }
+    }, 250);
+  }
+
+  private stopPlaybackCheck(): void {
+    if (this.playbackCheck) {
+      clearInterval(this.playbackCheck);
+      this.playbackCheck = undefined;
+    }
   }
 
   readonly breadcrumbs: BreadcrumbItem[] = [
