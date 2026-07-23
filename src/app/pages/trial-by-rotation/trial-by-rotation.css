@@ -137,6 +137,28 @@
   border: 0;
 }
 
+.hero-media {
+  min-width: 0;
+}
+
+.video-quality-note {
+  margin: 10px 2px 0;
+  color: #526174;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.video-quality-note a {
+  color: #24568a;
+  font-weight: 800;
+}
+
+.video-quality-note a:hover {
+  color: #1b466f;
+  text-decoration: underline;
+}
+
 /* Main grids */
 
 .content-grid {
@@ -849,6 +871,10 @@
 @media (min-width: 1921px) {
   .page-shell.page-stack {
     width: min(1880px, calc(100% - 96px));
+  }
+
+  .video-quality-note {
+    text-align: left;
   }
 }
 
