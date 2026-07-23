@@ -319,6 +319,11 @@ a {
   background: #eef2f6;
 }
 
+.mag-preview img {
+  aspect-ratio: 3807 / 1869;
+  object-fit: contain;
+}
+
 .about-section > div:first-child {
   min-width: 0;
 }
