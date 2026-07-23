@@ -1,13 +1,50 @@
 import {
+  AfterViewInit,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  HostListener,
+  ElementRef,
+  inject,
+  OnDestroy,
+  PLATFORM_ID,
   signal,
+  ViewChild,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import {
   BreadcrumbsComponent,
   BreadcrumbItem,
 } from '../../shared/breadcrumbs/breadcrumbs-component';
+
+interface YouTubePlayer {
+  mute(): void;
+  playVideo(): void;
+  destroy(): void;
+}
+
+interface YouTubePlayerEvent {
+  target: YouTubePlayer;
+  data: number;
+}
+
+interface YouTubeApi {
+  Player: new (
+    element: HTMLIFrameElement,
+    options: {
+      events: {
+        onReady: (event: YouTubePlayerEvent) => void;
+        onStateChange: (event: YouTubePlayerEvent) => void;
+        onError: () => void;
+      };
+    },
+  ) => YouTubePlayer;
+}
+
+declare global {
+  interface Window {
+    YT?: YouTubeApi;
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
 
 @Component({
   selector: 'app-sophia',
@@ -17,35 +54,57 @@ import {
   styleUrl: './sophia.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Sophia {
-  readonly videoLoaded = signal(false);
+export class Sophia implements AfterViewInit, OnDestroy {
+  @ViewChild('sophiaPlayer')
+  private playerFrame?: ElementRef<HTMLIFrameElement>;
 
-  @HostListener('window:message', ['$event'])
-  onYouTubeMessage(event: MessageEvent): void {
-    if (!event.origin.endsWith('youtube.com') && !event.origin.endsWith('youtube-nocookie.com')) {
+  readonly videoLoaded = signal(false);
+  private readonly platformId = inject(PLATFORM_ID);
+  private player?: YouTubePlayer;
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
-    let message = event.data;
-    if (typeof message === 'string') {
-      try {
-        message = JSON.parse(message);
-      } catch {
-        return;
-      }
+    if (window.YT?.Player) {
+      this.initializePlayer();
+      return;
     }
 
-    const playbackStarted =
-      (message?.event === 'onStateChange' && message?.info === 1) ||
-      (message?.event === 'infoDelivery' && message?.info?.playerState === 1);
+    window.onYouTubeIframeAPIReady = () => this.initializePlayer();
 
-    if (playbackStarted) {
-      this.videoLoaded.set(true);
+    if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.player?.destroy();
+  }
+
+  private initializePlayer(): void {
+    if (!window.YT?.Player || !this.playerFrame || this.player) {
+      return;
     }
 
-    if (message?.event === 'onError') {
-      this.videoLoaded.set(false);
-    }
+    this.player = new window.YT.Player(this.playerFrame.nativeElement, {
+      events: {
+        onReady: ({ target }) => {
+          target.mute();
+          target.playVideo();
+        },
+        onStateChange: ({ data }) => {
+          if (data === 1) {
+            this.videoLoaded.set(true);
+          }
+        },
+        onError: () => this.videoLoaded.set(false),
+      },
+    });
   }
 
   readonly breadcrumbs: BreadcrumbItem[] = [

@@ -131,21 +131,6 @@ p {
   object-fit: cover;
 }
 
-.video-fallback span {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  width: max-content;
-  max-width: calc(100% - 32px);
-  padding: 9px 14px;
-  color: #fff;
-  font-size: 0.9rem;
-  text-align: center;
-  border-radius: 0.4rem;
-  background: rgba(18, 35, 56, 0.88);
-}
-
 .hero-preview img,
 .graphics-preview img {
   display: block;
