@@ -1,28 +1,9 @@
-import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const packageInfo = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
-const [major, minor, basePatch] = packageInfo.version.split('.').map(Number);
-
-// Version 1.3.3 lands in commit 85. Each later commit advances the patch version.
-const baselineCommitCount = 85;
-let commitCount = baselineCommitCount;
-
-try {
-  commitCount = Number(
-    execFileSync('git', ['rev-list', '--count', 'HEAD'], {
-      cwd: root,
-      encoding: 'utf8',
-    }).trim(),
-  );
-} catch {
-  console.warn('Git history unavailable; using the package version.');
-}
-
-const patch = basePatch + Math.max(0, commitCount - baselineCommitCount);
-const version = `${major}.${minor}.${patch}`;
+const version = packageInfo.version;
 const outputPath = resolve(root, 'src/app/generated-version.ts');
 
 mkdirSync(dirname(outputPath), { recursive: true });
