@@ -14,7 +14,7 @@ import {
 })
 export class MultiverseAdventurersGuild {
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Multiverse Adventurers Guild', route: '/projects/multiverse-adventurers-guild' },
+    { label: 'MAG', route: '/projects/multiverse-adventurers-guild' },
     { label: 'Overview' },
   ];
 }

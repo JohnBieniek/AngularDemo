@@ -116,5 +116,7 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
   .summary-grid article { padding: 17px 19px; }
   .content-section, .technology-section, .links-section { padding: 24px 20px; }
   .mobile-gallery { justify-items: stretch; }
+  .technology-list { width: 100%; justify-content: center; place-content: center; }
+  .technology-list span { flex: 0 0 auto; }
   .button { width: 100%; }
 }
