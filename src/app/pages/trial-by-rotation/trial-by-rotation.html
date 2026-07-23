@@ -31,17 +31,25 @@
           <a class="button button-primary" href="https://rotationaljustice.itch.io/trial-by-rotation" target="_blank" rel="noopener">
             Play on itch.io
           </a>
-          <a class="button button-secondary" href="https://youtu.be/8w58KJIr9Sk?si=RCHn4wObuHNokKbg" target="_blank" rel="noopener">
+          <a class="button button-secondary" href="https://www.youtube.com/watch?v=v_ckGb0hOQI" target="_blank" rel="noopener">
             Watch Trailer
           </a>
         </div>
       </div>
 
       <div class="hero-video" aria-label="Trial by Rotation gameplay video">
-        <video autoplay muted loop playsinline controls preload="metadata">
+        <video class="trailer-fallback" autoplay muted loop playsinline controls preload="metadata">
           <source src="/assets/trial-by-rotation-preview.mp4" type="video/mp4" />
           Your browser does not support embedded video.
         </video>
+        <iframe
+          src="https://www.youtube.com/embed/v_ckGb0hOQI?autoplay=1&mute=1&enablejsapi=1"
+          title="Trial by Rotation trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          [class.is-loaded]="trailerLoaded()"
+        ></iframe>
       </div>
     </section>
 
@@ -193,7 +201,7 @@
 
         <div class="video-embed">
           <iframe
-            src="https://www.youtube.com/embed/8w58KJIr9Sk?si=8hKHisYAKt7gxZLQ"
+            src="https://www.youtube.com/embed/v_ckGb0hOQI?mute=1"
             title="Trial by Rotation trailer"
             allowfullscreen>
           </iframe>

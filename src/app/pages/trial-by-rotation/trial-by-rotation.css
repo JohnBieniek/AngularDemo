@@ -137,6 +137,23 @@
   border: 0;
 }
 
+.hero-video iframe {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.hero-video iframe.is-loaded {
+  opacity: 1;
+}
+
+.hero-video .trailer-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 /* Main grids */
 
 .content-grid {

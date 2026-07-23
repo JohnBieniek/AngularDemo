@@ -18,12 +18,30 @@
         </p>
       </div>
 
-      <figure class="hero-preview">
-        <img
-          src="/assets/images/sophia color molocules.png"
-          alt="Colored molecules displayed in the SOPHIA three-dimensional viewer"
-        />
-      </figure>
+      <div class="hero-preview">
+        <a
+          class="video-fallback"
+          href="https://youtu.be/x9STcU9hGS8?si=TmR8LyeOv25FiAP0"
+          target="_blank"
+          rel="noopener"
+          aria-label="Watch the SOPHIA demonstration on YouTube"
+        >
+          <img
+            src="/assets/images/sophia color molocules.png"
+            alt="Colored molecules displayed in SOPHIA"
+          />
+          <span>Watch the SOPHIA demonstration</span>
+        </a>
+        <iframe
+          src="https://www.youtube.com/embed/x9STcU9hGS8"
+          title="SOPHIA molecular simulation demonstration"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          [class.is-loaded]="videoLoaded()"
+          (load)="videoLoaded.set(true)"
+        ></iframe>
+      </div>
     </section>
 
     <section class="summary-grid" aria-label="Project highlights">
@@ -131,7 +149,7 @@
     </section>
 
     <section class="content-section">
-      <div class="section-intro">
+      <div class="section-intro physics-intro">
         <p class="section-label">Physics engine</p>
         <h2>Forces are assembled from the molecular model at every step.</h2>
         <p>

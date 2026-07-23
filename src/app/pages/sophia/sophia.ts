@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import {
   BreadcrumbsComponent,
   BreadcrumbItem,
@@ -13,6 +13,8 @@ import {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Sophia {
+  readonly videoLoaded = signal(false);
+
   readonly breadcrumbs: BreadcrumbItem[] = [
     { label: 'SOPHIA', route: '/projects/sophia' },
     { label: 'Overview' },
