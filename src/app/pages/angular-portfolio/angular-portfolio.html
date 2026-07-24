@@ -1,0 +1,242 @@
+<main class="portfolio-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Angular application and engineering portfolio</p>
+        <h1>The site behind the work.</h1>
+        <p class="hero-lede">
+          This portfolio is a production Angular application built to present projects with the same
+          care given to the systems they describe.
+        </p>
+        <p>
+          It combines a responsive professional profile, detailed engineering case studies, external
+          applications, and live technical demos in one navigable experience. Reusable page patterns
+          keep the growing collection consistent while each project retains its own visual identity
+          and story. Layouts are optimized for multiple desktop resolutions and mobile phones, so
+          the navigation, project media, and technical content remain clear and usable across screen
+          sizes.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="button button-primary"
+            href="https://github.com/JohnBieniek/AngularDemo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repo
+          </a>
+          <a class="button button-secondary" href="/#projects">Browse Projects</a>
+        </div>
+      </div>
+
+      <figure class="hero-preview">
+        <img
+          src="/assets/social-preview-v3.png"
+          alt="Social preview for John Bieniek's engineering portfolio"
+        />
+        <figcaption>The portfolio's production social preview</figcaption>
+      </figure>
+    </section>
+
+    <section class="summary-grid" aria-label="Application highlights">
+      <article>
+        <strong>Angular 21</strong><span>Standalone components and modern templates</span>
+      </article>
+      <article>
+        <strong>SSR</strong><span>Server rendering and prerendered project routes</span>
+      </article>
+      <article>
+        <strong>Responsive</strong><span>Purpose-built desktop and mobile layouts</span>
+      </article>
+      <article>
+        <strong>AWS Amplify</strong><span>Production hosting and automated deployment</span>
+      </article>
+    </section>
+
+    <section class="content-section features-section">
+      <div class="section-intro">
+        <p class="section-label">What it does</p>
+        <h2>One application for a broad body of work.</h2>
+        <p>
+          The home page provides a concise professional introduction and a visual index of featured
+          projects. Dedicated overview routes expand those cards into engineering narratives that
+          explain the problem, implementation, architecture, product decisions, and results.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article>
+          <iconify-icon icon="mdi:view-dashboard-outline"></iconify-icon>
+          <h3>Project discovery</h3>
+          <p>
+            A responsive card grid gives every featured application a clear summary, representative
+            image, technology context, overview route, and direct project links.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:file-document-multiple-outline"></iconify-icon>
+          <h3>Detailed case studies</h3>
+          <p>
+            Project pages combine screenshots, architecture explanations, workflows, responsive
+            comparisons, technology lists, and links to live products or source code.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:api"></iconify-icon>
+          <h3>Connected demonstrations</h3>
+          <p>
+            The portfolio links presentation content to runnable systems, including the separate
+            Java and Spring demonstration service, API documentation, GraphQL, and source repos.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:cellphone-link"></iconify-icon>
+          <h3>Responsive navigation</h3>
+          <p>
+            Shared headers, breadcrumbs, page shells, and adaptive layouts keep a growing set of
+            projects usable across wide displays, tablets, and phones.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:share-variant-outline"></iconify-icon>
+          <h3>Social presentation</h3>
+          <p>
+            Open Graph and Twitter metadata provide a dedicated 1200 × 627 preview, clear title,
+            description, and stable canonical image URL when the portfolio is shared.
+          </p>
+        </article>
+        <article>
+          <iconify-icon icon="mdi:accessibility"></iconify-icon>
+          <h3>Accessible structure</h3>
+          <p>
+            Semantic landmarks, descriptive alternative text, labeled navigation, visible focus
+            states, and readable contrast make the content easier to understand and operate.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section architecture-section">
+      <div class="section-intro">
+        <p class="section-label">Application architecture</p>
+        <h2>Reusable foundations with room for project-specific storytelling.</h2>
+        <p>
+          Angular Router maps the home page and project overviews into stable URLs. Standalone
+          components own each page, while shared navigation, breadcrumbs, layout tokens, buttons,
+          and typography create a consistent system. Individual page styles then add the visual
+          treatment and responsive behavior each case study needs.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article>
+          <div class="process-heading">
+            <span>01</span>
+            <h3>Route</h3>
+          </div>
+          <p>Stable project URLs make every case study directly reachable and shareable.</p>
+        </article>
+        <article>
+          <div class="process-heading">
+            <span>02</span>
+            <h3>Compose</h3>
+          </div>
+          <p>Standalone Angular components pair focused templates with isolated page styles.</p>
+        </article>
+        <article>
+          <div class="process-heading">
+            <span>03</span>
+            <h3>Reuse</h3>
+          </div>
+          <p>Shared shells, navigation, breadcrumbs, and design tokens prevent visual drift.</p>
+        </article>
+        <article>
+          <div class="process-heading">
+            <span>04</span>
+            <h3>Render</h3>
+          </div>
+          <p>
+            SSR and prerendering deliver crawlable HTML for people, search engines, and social
+            tools.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section delivery-section">
+      <div class="section-intro">
+        <p class="section-label">Production delivery</p>
+        <h2>Built, verified, and deployed as a real application.</h2>
+        <p>
+          The production configuration creates optimized browser and server bundles, prerenders
+          known routes, copies public media into the deployment, and enforces bundle budgets.
+          Version information is generated from the package manifest so the deployed footer can
+          identify the running release.
+        </p>
+      </div>
+      <div class="delivery-grid">
+        <article>
+          <strong>Optimized builds</strong>
+          <span>Hashed browser assets, server bundles, route prerendering, and build budgets.</span>
+        </article>
+        <article>
+          <strong>Media-rich pages</strong>
+          <span
+            >Local screenshots, diagrams, animation, video, resume assets, and social imagery.</span
+          >
+        </article>
+        <article>
+          <strong>Release visibility</strong>
+          <span>Generated application versions make production releases easy to identify.</span>
+        </article>
+      </div>
+      <p class="domain-note">
+        <strong>Cloudflare and AWS Amplify domain integration.</strong> The
+        <code>JohnBieniek.com</code> domain is provided and managed through Cloudflare, then
+        integrated with AWS Amplify, where the production Angular application is hosted. Cloudflare
+        Pages also provides a stable <code>pages.dev</code> domain for branch deployments, making
+        changes available for review before production promotion.
+      </p>
+    </section>
+
+    <section class="technology-section">
+      <div>
+        <p class="section-label">Tools used</p>
+        <h2>A modern Angular and TypeScript stack.</h2>
+      </div>
+      <div class="technology-list" aria-label="Technology stack">
+        <span><iconify-icon icon="mdi:angular"></iconify-icon>Angular 21</span>
+        <span><iconify-icon icon="mdi:language-typescript"></iconify-icon>TypeScript</span>
+        <span><iconify-icon icon="mdi:language-html5"></iconify-icon>HTML5</span>
+        <span><iconify-icon icon="mdi:language-css3"></iconify-icon>CSS3</span>
+        <span><iconify-icon icon="mdi:routes"></iconify-icon>Angular Router</span>
+        <span><iconify-icon icon="mdi:server-outline"></iconify-icon>Angular SSR</span>
+        <span><iconify-icon icon="mdi:nodejs"></iconify-icon>Node.js</span>
+        <span><iconify-icon icon="mdi:aws"></iconify-icon>AWS Amplify</span>
+        <span><iconify-icon icon="simple-icons:cloudflare"></iconify-icon>Cloudflare</span>
+        <span><iconify-icon icon="mdi:git"></iconify-icon>Git</span>
+        <span><iconify-icon icon="mdi:github"></iconify-icon>GitHub</span>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div>
+        <p class="section-label">Explore the project</p>
+        <h2>Inspect the implementation or return to the project list.</h2>
+      </div>
+      <div class="project-links">
+        <a
+          class="button button-primary"
+          href="https://github.com/JohnBieniek/AngularDemo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Repo
+        </a>
+        <a class="button button-secondary" href="/#projects">All Projects</a>
+      </div>
+    </section>
+  </div>
+</main>

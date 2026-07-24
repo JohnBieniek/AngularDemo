@@ -5,6 +5,7 @@ import { JavaDemoOverviewComponent } from './pages/java-demo/java-demo-overview-
 import { AccessibleScheduling } from './pages/accessible-scheduling/accessible-scheduling';
 import { Sophia } from './pages/sophia/sophia';
 import { MultiverseAdventurersGuild } from './pages/multiverse-adventurers-guild/multiverse-adventurers-guild';
+import { AngularPortfolio } from './pages/angular-portfolio/angular-portfolio';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
   {
     path: 'projects/multiverse-adventurers-guild',
     component: MultiverseAdventurersGuild,
+  },
+  {
+    path: 'projects/angular-portfolio',
+    component: AngularPortfolio,
   },
   {
     path: 'projects/trial-by-rotation',
