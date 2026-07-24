@@ -236,17 +236,20 @@ h1 {
 }
 
 .process-grid article {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.45rem 0.65rem;
-  align-items: baseline;
   padding: 1.25rem;
   border: 1px solid rgba(159, 195, 231, 0.2);
   border-radius: 0.85rem;
   background: rgba(255, 255, 255, 0.06);
 }
 
-.process-grid span {
+.process-heading {
+  display: flex;
+  gap: 0.65rem;
+  align-items: baseline;
+  margin-bottom: 0.45rem;
+}
+
+.process-heading span {
   color: #76afe8;
   font-size: 0.8rem;
   font-weight: 800;
@@ -258,7 +261,6 @@ h1 {
 }
 
 .process-grid p {
-  grid-column: 1 / -1;
   color: #c8d5e4;
   font-size: 0.9rem;
 }
