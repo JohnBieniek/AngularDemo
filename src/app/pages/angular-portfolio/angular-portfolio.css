@@ -281,7 +281,7 @@ h1 {
 }
 
 .technology-section {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
   align-items: start;
 }
 
