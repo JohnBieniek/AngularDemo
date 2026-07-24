@@ -254,6 +254,25 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.domain-note {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #4b82bb;
+  border-radius: 0.35rem 0.8rem 0.8rem 0.35rem;
+  color: #53667f;
+  background: #edf5fd;
+  line-height: 1.65;
+}
+
+.domain-note strong {
+  color: #183f6a;
+}
+
+.domain-note code {
+  color: #245b92;
+  font-weight: 700;
+}
+
 .technology-section {
   grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
   align-items: start;
