@@ -152,6 +152,10 @@ h1 {
   max-width: 55rem;
 }
 
+.features-section .section-intro {
+  max-width: none;
+}
+
 .section-intro h2,
 .technology-section h2,
 .links-section h2 {
