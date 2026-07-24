@@ -76,6 +76,18 @@ h1 {
   background: #eaf3fc;
 }
 
+.portfolio-page .button-primary {
+  color: #fff;
+  border-color: #2f67a2;
+  background: #2f67a2;
+}
+
+.portfolio-page .button-primary:hover {
+  color: #fff;
+  border-color: #214f80;
+  background: #214f80;
+}
+
 .portfolio-page .button-secondary:hover {
   color: #173e67;
   border-color: #6798c8;
