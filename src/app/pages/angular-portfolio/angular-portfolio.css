@@ -396,6 +396,19 @@ h1 {
     display: grid;
   }
 
+  .links-section .project-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .links-section .button {
+    flex: 1;
+    min-width: 0;
+    padding-inline: 0.75rem;
+  }
+
   .summary-grid,
   .feature-grid,
   .process-grid,
