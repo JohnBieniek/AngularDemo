@@ -222,6 +222,7 @@ h1 {
 
 .architecture-section .section-intro h2 {
   color: #fff;
+  font-size: clamp(2rem, 2.5vw, 2.4rem);
 }
 
 .architecture-section .section-intro > p:not(.section-label) {
