@@ -42,7 +42,6 @@ p {
 }
 
 h1 {
-  max-width: none;
   margin-bottom: 1.25rem;
   color: #12213a;
   font-size: clamp(2.8rem, 5vw, 5rem);
@@ -161,15 +160,7 @@ h1 {
 }
 
 .section-intro {
-  max-width: 55rem;
-}
-
-.features-section .section-intro {
-  max-width: none;
-}
-
-.delivery-section .section-intro {
-  max-width: none;
+  width: 100%;
 }
 
 .section-intro h2,
@@ -331,7 +322,6 @@ h1 {
 }
 
 .links-section h2 {
-  max-width: 22ch;
   margin-bottom: 0;
 }
 
@@ -340,10 +330,6 @@ h1 {
   .technology-section,
   .links-section {
     grid-template-columns: 1fr;
-  }
-
-  .hero-preview {
-    max-width: 48rem;
   }
 
   .summary-grid,
