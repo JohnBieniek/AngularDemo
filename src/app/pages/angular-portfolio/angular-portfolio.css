@@ -156,6 +156,10 @@ h1 {
   max-width: none;
 }
 
+.delivery-section .section-intro {
+  max-width: none;
+}
+
 .section-intro h2,
 .technology-section h2,
 .links-section h2 {
