@@ -282,7 +282,7 @@ h1 {
 }
 
 .technology-section {
-  grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   padding: 2.5rem;
   border-radius: 1.25rem;
@@ -347,7 +347,6 @@ h1 {
 
 @media (max-width: 980px) {
   .hero,
-  .technology-section,
   .links-section {
     grid-template-columns: 1fr;
   }
@@ -375,6 +374,10 @@ h1 {
 
   .hero {
     gap: 2rem;
+  }
+
+  .technology-section {
+    grid-template-columns: 1fr;
   }
 
   h1 {
