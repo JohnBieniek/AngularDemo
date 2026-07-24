@@ -70,6 +70,18 @@ h1 {
   margin-top: 1.7rem;
 }
 
+.portfolio-page .button-secondary {
+  color: #245b92;
+  border-color: #8eb5dc;
+  background: #eaf3fc;
+}
+
+.portfolio-page .button-secondary:hover {
+  color: #173e67;
+  border-color: #6798c8;
+  background: #dbeafa;
+}
+
 .hero-preview {
   margin: 0;
   overflow: hidden;
