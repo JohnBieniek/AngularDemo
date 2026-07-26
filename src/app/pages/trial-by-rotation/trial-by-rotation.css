@@ -709,11 +709,12 @@
   }
 
   .feature-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
   }
 
   .feature-icon {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 }
 
