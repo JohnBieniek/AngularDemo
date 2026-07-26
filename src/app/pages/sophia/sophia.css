@@ -386,6 +386,22 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .workflow-grid article {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: baseline;
+  }
+
+  .workflow-grid span,
+  .workflow-grid h3 {
+    margin-bottom: 8px;
+  }
+
+  .workflow-grid p {
+    grid-column: 1 / -1;
+  }
+
   .split-heading {
     gap: 8px;
   }
