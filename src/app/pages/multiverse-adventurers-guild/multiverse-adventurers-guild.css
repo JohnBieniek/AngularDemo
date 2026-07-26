@@ -114,6 +114,9 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
   .hero-preview { min-height: 0; }
   .summary-grid, .process-grid, .comparison-grid, .mobile-gallery { grid-template-columns: 1fr; }
   .summary-grid article { padding: 17px 19px; }
+  .process-grid article { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; align-items: baseline; }
+  .process-grid span, .process-grid h3 { margin-bottom: 8px; }
+  .process-grid p { grid-column: 1 / -1; }
   .content-section, .technology-section, .links-section { padding: 24px 20px; }
   .mobile-gallery { justify-items: stretch; }
   .technology-list { width: 100%; justify-content: center; place-content: center; }
