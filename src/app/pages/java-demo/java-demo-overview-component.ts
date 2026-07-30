@@ -1,18 +1,8 @@
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  DestroyRef,
-  inject,
-  makeStateKey,
-  OnInit,
-  PLATFORM_ID,
-  signal,
-  TransferState,
 } from '@angular/core';
-import { isPlatformBrowser, NgFor } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { catchError, EMPTY, filter, switchMap, take, timer } from 'rxjs';
+import { NgFor } from '@angular/common';
 
 import {
   BreadcrumbsComponent,
@@ -44,58 +34,7 @@ interface StackItem {
   styleUrl: './java-demo-overview-component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class JavaDemoOverviewComponent implements OnInit {
-  readonly javaDemoRunning = signal(false);
-  private readonly healthUrl =
-    'http://java26demo-env.eba-tsngktpv.us-east-2.elasticbeanstalk.com/health';
-  private readonly destroyRef = inject(DestroyRef);
-  private readonly platformId = inject(PLATFORM_ID);
-  private readonly transferState = inject(TransferState);
-  private readonly javaDemoRunningKey = makeStateKey<boolean>('javaDemoRunning');
-
-  constructor(private readonly http: HttpClient) {}
-
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.javaDemoRunning.set(this.transferState.get(this.javaDemoRunningKey, false));
-      this.transferState.remove(this.javaDemoRunningKey);
-
-      if (!this.javaDemoRunning()) {
-        this.scheduleHealthCheckRetries();
-      }
-
-      return;
-    }
-
-    this.http
-      .get(this.healthUrl, { responseType: 'text' })
-      .subscribe({
-        next: () => {
-          this.javaDemoRunning.set(true);
-          this.transferState.set(this.javaDemoRunningKey, true);
-        },
-        error: () => {
-          this.javaDemoRunning.set(false);
-          this.transferState.set(this.javaDemoRunningKey, false);
-        },
-      });
-  }
-
-  private scheduleHealthCheckRetries(): void {
-    timer(10_000, 20_000)
-      .pipe(
-        take(2),
-        filter(() => !this.javaDemoRunning()),
-        switchMap(() =>
-          this.http
-            .get(this.healthUrl, { responseType: 'text' })
-            .pipe(catchError(() => EMPTY)),
-        ),
-        takeUntilDestroyed(this.destroyRef),
-      )
-      .subscribe(() => this.javaDemoRunning.set(true));
-  }
-
+export class JavaDemoOverviewComponent {
   breadcrumbs: BreadcrumbItem[] = [
     { label: 'Java Demo', route: '/java-demo' },
     { label: 'Overview' },
