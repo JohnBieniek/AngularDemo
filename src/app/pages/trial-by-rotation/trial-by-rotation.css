@@ -364,7 +364,8 @@
   background: transparent;
 }
 
-.screenshot-button img {
+.screenshot-button img,
+.screenshot-button video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -393,7 +394,9 @@
 }
 
 .screenshot-button:hover img,
-.screenshot-button:focus-visible img {
+.screenshot-button:focus-visible img,
+.screenshot-button:hover video,
+.screenshot-button:focus-visible video {
   transform: translateY(-2px);
   border-color: rgba(96, 165, 250, 0.55);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
@@ -658,7 +661,8 @@
     min-width: 0;
   }
 
-  .screenshot-button img {
+  .screenshot-button img,
+  .screenshot-button video {
     aspect-ratio: 16 / 10;
   }
 
@@ -779,7 +783,8 @@
 
 .hero-video,
 .video-embed,
-.screenshot-button img {
+.screenshot-button img,
+.screenshot-button video {
   border-color: #c8d2de;
   background: #122338;
   box-shadow: 0 12px 30px rgba(23, 32, 51, 0.14);
@@ -815,7 +820,9 @@
 }
 
 .screenshot-button:hover img,
-.screenshot-button:focus-visible img {
+.screenshot-button:focus-visible img,
+.screenshot-button:hover video,
+.screenshot-button:focus-visible video {
   border-color: #7c98b5;
   box-shadow: 0 12px 28px rgba(23, 32, 51, 0.14);
 }
@@ -855,7 +862,7 @@
   box-shadow: none !important;
 }
 
-:host :where(.hero-video, .video-embed, .screenshot-button img) {
+:host :where(.hero-video, .video-embed, .screenshot-button img, .screenshot-button video) {
   border-color: #c8d2de !important;
   background: #122338 !important;
   box-shadow: 0 12px 30px rgba(23, 32, 51, 0.14) !important;

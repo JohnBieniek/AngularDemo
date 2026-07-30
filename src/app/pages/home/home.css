@@ -712,7 +712,9 @@ a {
   border-bottom: 1px solid #dce3ec;
 }
 
-.project-image img {
+.project-image img,
+.project-image video {
+  display: block;
   width: 100%;
   height: auto;
 }
