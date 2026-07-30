@@ -255,6 +255,42 @@ a {
     #17111c;
 }
 
+.robotics-preview {
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(74, 144, 226, 0.34), transparent 12rem),
+    linear-gradient(135deg, #10243f, #1d466e);
+}
+
+.robotics-preview-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.65rem;
+}
+
+.robotics-preview-flow span,
+.robotics-preview-flow strong {
+  padding: 0.75rem 0.85rem;
+  color: #eaf5ff;
+  font-size: clamp(0.68rem, 1vw, 0.82rem);
+  text-align: center;
+  border: 1px solid rgba(181, 220, 255, 0.42);
+  border-radius: 0.55rem;
+  background: rgba(5, 24, 43, 0.54);
+}
+
+.robotics-preview-flow strong {
+  color: #10243f;
+  background: #bfe2ff;
+}
+
+.robotics-preview-flow i {
+  color: #9fd2ff;
+  font-style: normal;
+}
+
 .java-preview {
   background:
     linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(47, 124, 255, 0.22)),
@@ -770,6 +806,20 @@ a {
 }
 
 @media (max-width: 720px) {
+  .robotics-preview {
+    padding: 1rem;
+  }
+
+  .robotics-preview-flow {
+    gap: 0.35rem;
+  }
+
+  .robotics-preview-flow span,
+  .robotics-preview-flow strong {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.64rem;
+  }
+
   .hero-section {
     padding-top: 1.5rem;
   }

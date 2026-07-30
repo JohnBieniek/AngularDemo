@@ -1,0 +1,164 @@
+<main class="robotics-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Selected enterprise work</p>
+        <h1>Retail Robotics &amp; Planogram Mapping</h1>
+        <p class="hero-lede">The Home Depot | Zippedi integration</p>
+        <p>
+          I developed the matching layer that connected imagery captured by autonomous retail
+          robots to The Home Depot's representation of a physical store. The work translated
+          camera observations into aisle, bay, shelf, planogram, and expected-product context.
+        </p>
+        <div class="hero-tags" aria-label="Project disciplines">
+          <span>Enterprise integration</span>
+          <span>Spatial data matching</span>
+          <span>Retail robotics</span>
+          <span>Planogram data</span>
+        </div>
+      </div>
+
+      <div class="system-visual" aria-label="Conceptual image-to-planogram matching flow">
+        <div class="visual-node">
+          <small>Physical store</small>
+          <strong>Shelf imagery</strong>
+          <span>Camera observations and location metadata</span>
+        </div>
+        <div class="visual-connector" aria-hidden="true">↓</div>
+        <div class="visual-node visual-node-primary">
+          <small>My primary area</small>
+          <strong>Location matching layer</strong>
+          <span>Normalize, reconcile, select, and validate</span>
+        </div>
+        <div class="visual-connector" aria-hidden="true">↓</div>
+        <div class="visual-node">
+          <small>Store model</small>
+          <strong>Planogram context</strong>
+          <span>Aisle, bay, shelf, position, and expected products</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-strip" aria-label="Case study highlights">
+      <article><strong>Real-world data</strong><span>Connected images to physical locations</span></article>
+      <article><strong>Multiple models</strong><span>Reconciled vendor and store representations</span></article>
+      <article><strong>Operational context</strong><span>Made observations useful within retail workflows</span></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="content-card">
+        <p class="section-label">The problem</p>
+        <h2>Three systems described the same shelf differently.</h2>
+        <p>
+          A camera could record what it saw. A planogram could describe what products were expected
+          and where. Store-layout data could describe the building's physical organization. For the
+          imagery to become useful, those representations had to resolve to the same real-world
+          location.
+        </p>
+        <p>
+          My work sat at that boundary: determining where an observation belonged in the store and
+          associating it with the correct section of the expected layout.
+        </p>
+      </article>
+
+      <article class="content-card">
+        <p class="section-label">My contribution</p>
+        <h2>From camera frame to planogram position.</h2>
+        <ul>
+          <li>Mapped robot-generated shelf imagery to The Home Depot's store-layout domain.</li>
+          <li>Connected observations to aisle, bay, shelf, and planogram positions.</li>
+          <li>Reconciled location information across vendor and internal representations.</li>
+          <li>Linked physical shelf context to the products expected at that location.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="workflow-section">
+      <div class="section-heading">
+        <p class="section-label">Conceptual workflow</p>
+        <h2>Turning visual observations into store context.</h2>
+        <p>
+          This public-safe diagram shows the problem domain, not The Home Depot's proprietary
+          architecture or implementation.
+        </p>
+      </div>
+
+      <ol class="workflow">
+        <li>
+          <span>01</span>
+          <div><strong>Capture</strong><p>An autonomous robot records shelf imagery and location metadata.</p></div>
+        </li>
+        <li>
+          <span>02</span>
+          <div><strong>Normalize</strong><p>Location inputs are translated into a common store model.</p></div>
+        </li>
+        <li>
+          <span>03</span>
+          <div><strong>Match</strong><p>Each observation is associated with a candidate planogram region.</p></div>
+        </li>
+        <li>
+          <span>04</span>
+          <div><strong>Contextualize</strong><p>The image gains aisle, bay, shelf, and expected-product meaning.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="principles-section">
+      <div class="section-heading">
+        <p class="section-label">Engineering perspective</p>
+        <h2>What this work demonstrates.</h2>
+      </div>
+      <div class="principles-grid">
+        <article>
+          <h3>Domain translation</h3>
+          <p>Connected an emerging vendor platform to an established enterprise retail model.</p>
+        </article>
+        <article>
+          <h3>Physical-digital mapping</h3>
+          <p>Resolved digital observations against the structure of a real, changing environment.</p>
+        </article>
+        <article>
+          <h3>Data reconciliation</h3>
+          <p>Created useful context where identifiers and location assumptions did not naturally align.</p>
+        </article>
+        <article>
+          <h3>Operational usefulness</h3>
+          <p>Focused integration work on making robot-derived information meaningful to store systems.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="disclosure">
+      <div>
+        <p class="section-label">Public case-study boundary</p>
+        <h2>Enterprise work, responsibly presented.</h2>
+      </div>
+      <p>
+        This work was completed as a Home Depot employee. The description and diagrams intentionally
+        omit proprietary source code, internal architecture, store data, implementation details,
+        performance metrics, and confidential operational information.
+      </p>
+    </section>
+
+    <section class="sources-section">
+      <div>
+        <p class="section-label">Public background</p>
+        <h2>Learn more about the retail robotics context.</h2>
+      </div>
+      <div class="source-links">
+        <a
+          href="https://techcrunch.com/2022/04/26/zippedi-is-using-robots-to-digitize-inventory-for-last-mile-delivery/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Zippedi overview — TechCrunch</a>
+        <a
+          href="https://www.hkstp.org/publication/publication-3/publication-3-story-3/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Retail robotics case study — HKSTP</a>
+      </div>
+    </section>
+  </div>
+</main>

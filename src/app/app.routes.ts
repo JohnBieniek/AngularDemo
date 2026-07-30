@@ -6,6 +6,7 @@ import { AccessibleScheduling } from './pages/accessible-scheduling/accessible-s
 import { Sophia } from './pages/sophia/sophia';
 import { MultiverseAdventurersGuild } from './pages/multiverse-adventurers-guild/multiverse-adventurers-guild';
 import { AngularPortfolio } from './pages/angular-portfolio/angular-portfolio';
+import { RetailRobotics } from './pages/retail-robotics/retail-robotics';
 
 export const routes: Routes = [
   {
@@ -28,6 +29,10 @@ export const routes: Routes = [
   {
     path: 'projects/angular-portfolio',
     component: AngularPortfolio,
+  },
+  {
+    path: 'projects/retail-robotics',
+    component: RetailRobotics,
   },
   {
     path: 'projects/trial-by-rotation',
