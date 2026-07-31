@@ -186,6 +186,10 @@ h2 {
   transition: transform 220ms ease;
 }
 
+.gallery-card .gallery-image-left {
+  object-position: left center;
+}
+
 .gallery-card::after {
   position: absolute;
   inset: 40% 0 0;
