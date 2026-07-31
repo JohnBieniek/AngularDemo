@@ -14,6 +14,6 @@ import {
 export class RetailRobotics {
   readonly breadcrumbs: BreadcrumbItem[] = [
     { label: 'Retail Robotics', route: '/projects/retail-robotics' },
-    { label: 'Case Study' },
+    { label: 'Overview' },
   ];
 }
