@@ -262,6 +262,8 @@ a {
 .robotics-preview img {
   width: 100%;
   aspect-ratio: 16 / 10;
+  margin-top: -15px;
+  margin-bottom: -15px;
   object-fit: cover;
   object-position: center 48%;
 }
