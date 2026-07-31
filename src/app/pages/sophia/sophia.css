@@ -199,10 +199,20 @@ p {
 
 .workflow-grid span {
   display: block;
-  margin-bottom: 18px;
   color: #56799d;
   font-size: 0.8rem;
   font-weight: 850;
+}
+
+.workflow-heading {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.workflow-heading h3 {
+  margin: 0;
 }
 
 .detail-grid iconify-icon,
