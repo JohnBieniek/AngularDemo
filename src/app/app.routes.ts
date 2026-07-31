@@ -7,6 +7,7 @@ import { Sophia } from './pages/sophia/sophia';
 import { MultiverseAdventurersGuild } from './pages/multiverse-adventurers-guild/multiverse-adventurers-guild';
 import { AngularPortfolio } from './pages/angular-portfolio/angular-portfolio';
 import { RetailRobotics } from './pages/retail-robotics/retail-robotics';
+import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
   {
@@ -41,6 +42,10 @@ export const routes: Routes = [
   {
     path: 'java-demo',
     component: JavaDemoOverviewComponent,
+  },
+  {
+    path: 'contact',
+    component: Contact,
   },
   {
     path: '**',
