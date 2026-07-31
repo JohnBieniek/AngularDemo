@@ -681,7 +681,7 @@ a {
 }
 
 #projects > * {
-  max-width: 1514px;
+  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -777,6 +777,14 @@ a {
 @media (max-width: 980px) {
   .hero-section {
     align-items: start;
+  }
+}
+
+@media (min-width: 981px) {
+  .hero-section,
+  .section {
+    padding-right: 4vw;
+    padding-left: 4vw;
   }
 }
 
