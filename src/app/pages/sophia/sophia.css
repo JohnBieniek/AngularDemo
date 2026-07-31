@@ -153,6 +153,10 @@ p {
   margin-bottom: 28px;
 }
 
+.workflow-section .section-intro {
+  max-width: none;
+}
+
 .physics-intro {
   max-width: none;
 }
