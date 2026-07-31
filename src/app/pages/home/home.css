@@ -818,6 +818,14 @@ a {
 }
 
 @media (max-width: 720px) {
+  .vision-title-wide {
+    display: block;
+  }
+
+  .vision-title-standard {
+    display: none;
+  }
+
   .hero-section {
     padding-top: 1.5rem;
   }
