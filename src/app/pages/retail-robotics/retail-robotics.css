@@ -257,6 +257,14 @@ h2 {
   line-height: 1.55;
 }
 
+.press-quotes blockquote::before {
+  content: '“';
+}
+
+.press-quotes blockquote::after {
+  content: '”';
+}
+
 .quote-context {
   margin: 0 0 1rem;
   color: #5d7085;
