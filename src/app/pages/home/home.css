@@ -679,7 +679,6 @@ a {
   margin-inline: auto;
 }
 
-#home,
 #projects {
   scroll-margin-top: 88px;
 }
@@ -692,7 +691,6 @@ a {
 }
 
 @media (max-width: 800px) {
-  #home,
   #projects {
     scroll-margin-top: 164px;
   }

@@ -17,9 +17,9 @@
     <div class="nav-links">
       <a
         routerLink="/"
-        fragment="home"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
+        (click)="scrollHomeToTop()"
       >Home</a>
       <a routerLink="/" fragment="projects">Projects</a>
       <a href="/assets/Portfolio-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
