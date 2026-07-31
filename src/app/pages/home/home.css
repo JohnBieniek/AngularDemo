@@ -681,7 +681,7 @@ a {
 }
 
 #projects > * {
-  max-width: 1660px;
+  max-width: 1790px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -788,10 +788,10 @@ a {
   }
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 981px) and (max-width: 1920px) {
   #projects {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
   }
 }
 
