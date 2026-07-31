@@ -289,6 +289,10 @@ a {
   font-size: 1.25rem;
 }
 
+.vision-title-standard {
+  display: none;
+}
+
 .project-title-row span {
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
@@ -798,6 +802,16 @@ a {
 @media (min-width: 981px) and (max-width: 1920px) {
   .project-content {
     padding: 0.625rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .vision-title-wide {
+    display: none;
+  }
+
+  .vision-title-standard {
+    display: block;
   }
 }
 
