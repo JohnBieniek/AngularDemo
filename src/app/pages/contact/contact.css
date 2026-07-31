@@ -86,6 +86,16 @@
   gap: 12px;
 }
 
+.resume-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.resume-action .button {
+  min-width: 190px;
+}
+
 .contact-method {
   display: grid;
   min-width: 0;
