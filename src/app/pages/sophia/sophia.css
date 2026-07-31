@@ -213,6 +213,22 @@ p {
   font-size: 2rem;
 }
 
+.detail-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.detail-heading iconify-icon {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.detail-heading h3 {
+  margin: 0;
+}
+
 .workflow-grid p,
 .detail-grid p,
 .physics-grid p,
