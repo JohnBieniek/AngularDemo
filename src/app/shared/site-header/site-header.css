@@ -81,6 +81,30 @@
     text-align: center;
   }
 
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .brand-copy {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-title {
+    font-size: 0.76rem;
+  }
+
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
