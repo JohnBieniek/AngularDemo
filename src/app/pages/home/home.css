@@ -681,7 +681,7 @@ a {
 }
 
 #projects > * {
-  max-width: 1600px;
+  max-width: 1660px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -783,8 +783,8 @@ a {
 @media (min-width: 981px) {
   .hero-section,
   .section {
-    padding-right: 4vw;
-    padding-left: 4vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
   }
 }
 
