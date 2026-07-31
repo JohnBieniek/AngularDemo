@@ -347,6 +347,10 @@ h2 {
     gap: 2rem;
   }
 
+  .hero-tags {
+    justify-content: center;
+  }
+
   .robot-gallery {
     grid-template-columns: 1fr;
   }
