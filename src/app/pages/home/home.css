@@ -753,8 +753,8 @@ a {
 }
 
 .project-links {
-  margin-top: auto;
-  padding-top: 1.25rem;
+  margin-top: 0.625rem;
+  padding-top: 0;
 }
 
 .project-links a:hover {
