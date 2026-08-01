@@ -21,7 +21,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="scrollHomeToTop()"
       >Home</a>
-      <a routerLink="/" fragment="projects">Projects</a>
+      <a href="/#projects" (click)="scrollToProjects($event)">Projects</a>
       <a href="/assets/Portfolio-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       <a
         href="https://www.linkedin.com/in/johnathanbieniek/"
