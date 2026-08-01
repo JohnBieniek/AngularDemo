@@ -22,23 +22,30 @@
         </div>
       </div>
 
-      <div class="system-visual" aria-label="Conceptual image-to-planogram matching flow">
-        <div class="visual-node">
-          <small>Physical store</small>
-          <strong>Shelf imagery</strong>
-          <span>Camera observations and location metadata</span>
+      <div class="system-visual" aria-label="Zippedi imagery and store data flow into shelf analysis">
+        <div class="visual-inputs">
+          <div class="visual-node">
+            <small>Input 01</small>
+            <strong>Zippedi shelf imagery</strong>
+            <span>Shelf and product images captured by autonomous robots</span>
+          </div>
+          <div class="visual-node">
+            <small>Input 02</small>
+            <strong>Store &amp; planogram data</strong>
+            <span>Aisle, bay, shelf, expected item, and location context</span>
+          </div>
         </div>
-        <div class="visual-connector" aria-hidden="true">↓</div>
+        <div class="visual-merge" aria-hidden="true"></div>
         <div class="visual-node visual-node-primary">
-          <small>My primary area</small>
-          <strong>Location matching layer</strong>
-          <span>Normalize, reconcile, select, and validate</span>
+          <small>My work</small>
+          <strong>Match, analyze, and reconcile</strong>
+          <span>Connect imagery to store locations and expected products, then validate shelf observations</span>
         </div>
         <div class="visual-connector" aria-hidden="true">↓</div>
-        <div class="visual-node">
-          <small>Store model</small>
-          <strong>Planogram context</strong>
-          <span>Aisle, bay, shelf, position, and expected products</span>
+        <div class="visual-node visual-node-output">
+          <small>Output</small>
+          <strong>Actionable shelf intelligence</strong>
+          <span>Usable information about shelf state, labels, stock, and discrepancies</span>
         </div>
       </div>
     </section>

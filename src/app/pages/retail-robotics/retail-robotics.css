@@ -97,6 +97,12 @@ h2 {
   box-shadow: 0 22px 55px rgba(21, 45, 75, 0.13);
 }
 
+.visual-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
 .visual-node {
   display: grid;
   gap: 0.25rem;
@@ -137,6 +143,39 @@ h2 {
 
 .visual-node-primary strong {
   color: #fff;
+}
+
+.visual-node-output {
+  border-color: #9bbbd5;
+  background: #eaf4fb;
+}
+
+.visual-merge {
+  position: relative;
+  height: 2.7rem;
+  margin-inline: 12.5%;
+}
+
+.visual-merge::before {
+  position: absolute;
+  top: 0;
+  right: 16.67%;
+  left: 16.67%;
+  height: 1.25rem;
+  border-right: 2px solid #7ea1bf;
+  border-bottom: 2px solid #7ea1bf;
+  border-left: 2px solid #7ea1bf;
+  content: '';
+}
+
+.visual-merge::after {
+  position: absolute;
+  top: 1.25rem;
+  bottom: 0.45rem;
+  left: 50%;
+  width: 2px;
+  background: #7ea1bf;
+  content: '';
 }
 
 .visual-connector {
@@ -345,6 +384,24 @@ h2 {
 
   .hero {
     gap: 2rem;
+  }
+
+  .visual-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-merge {
+    height: 2rem;
+    margin-inline: 0;
+  }
+
+  .visual-merge::before {
+    display: none;
+  }
+
+  .visual-merge::after {
+    top: 0;
+    bottom: 0.35rem;
   }
 
   .hero-tags {
