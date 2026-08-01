@@ -8,9 +8,11 @@
         <h1>Retail Robotics &amp; Planogram Mapping</h1>
         <p class="hero-lede">The Home Depot | Zippedi integration</p>
         <p>
-          I developed the matching layer that connected imagery captured by autonomous retail
-          robots to The Home Depot's representation of a physical store. The work translated
-          camera observations into aisle, bay, shelf, planogram, and expected-product context.
+          I developed the integration and analysis layer that combined Zippedi shelf imagery and
+          robot-location data with The Home Depot's store layouts and planograms. The system placed
+          each observation within the correct aisle, bay, shelf, and vertical position, compared
+          expected labels and products with the captured image, and produced usable information
+          about shelf condition, product placement, stock availability, and discrepancies.
         </p>
         <div class="hero-tags" aria-label="Project disciplines">
           <span>Enterprise integration</span>
@@ -108,27 +110,29 @@
     <section class="content-grid">
       <article class="content-card">
         <p class="section-label">The problem</p>
-        <h2>Three systems described the same shelf differently.</h2>
+        <h2>A shelf image only became useful once it could be located and understood.</h2>
         <p>
-          A camera could record what it saw. A planogram could describe what products were expected
-          and where. Store-layout data could describe the building's physical organization. For the
-          imagery to become useful, those representations had to resolve to the same real-world
-          location.
+          Zippedi supplied shelf imagery and the robot's location. The Home Depot's store-layout data
+          described the aisle, bay, and shelf, while planogram data described the labels and products
+          expected at each position. Those representations did not identify the same physical shelf
+          in the same way.
         </p>
         <p>
-          My work sat at that boundary: determining where an observation belonged in the store and
-          associating it with the correct section of the expected layout.
+          The challenge was to reconcile the robot's position with the store model, determine how
+          high on the shelf the camera was looking, and align the expected labels and products with
+          what was actually visible. Only then could an image describe the state of a real shelf.
         </p>
       </article>
 
       <article class="content-card">
         <p class="section-label">My contribution</p>
-        <h2>From camera frame to planogram position.</h2>
+        <h2>From robot location to actionable shelf intelligence.</h2>
         <ul>
-          <li>Mapped robot-generated shelf imagery to The Home Depot's store-layout domain.</li>
-          <li>Connected observations to aisle, bay, shelf, and planogram positions.</li>
-          <li>Reconciled location information across vendor and internal representations.</li>
-          <li>Linked physical shelf context to the products expected at that location.</li>
+          <li>Matched the robot's reported location to the correct aisle, bay, and shelf.</li>
+          <li>Resolved the vertical shelf position represented in each captured image.</li>
+          <li>Connected that location to the planogram's expected labels and products.</li>
+          <li>Compared expected labels with visible labels and identified the product above each one.</li>
+          <li>Converted the matched observations into structured shelf, label, stock, and discrepancy information.</li>
         </ul>
       </article>
     </section>
