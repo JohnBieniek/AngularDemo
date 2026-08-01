@@ -1,0 +1,176 @@
+<main class="kiosk-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell kiosk-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Enterprise retail platform</p>
+        <h1>Propane Kiosk Platform</h1>
+        <p class="hero-lede">The Home Depot | Reservation-to-dispensing workflows</p>
+        <p>
+          I built and supported reservation and dispensing logic for The Home Depot's propane kiosk
+          platform across approximately 2,000 stores. The customer-facing workflow coordinated
+          physical kiosk hardware with payments, accounting, and inventory state from reservation
+          through cylinder release.
+        </p>
+
+        <div class="tag-row" aria-label="Project disciplines">
+          <span>Distributed systems</span>
+          <span>Hardware integration</span>
+          <span>Payment processing</span>
+          <span>Transaction workflows</span>
+          <span>Retail automation</span>
+        </div>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/assets/propane-kiosk-hardware.jpg"
+          alt="AmeriGas 24/7 self-service propane exchange kiosk outside a retail store"
+        />
+        <figcaption>Public example of 24/7 self-service propane exchange hardware. Photo: AmeriGas.</figcaption>
+      </figure>
+    </section>
+
+    <section class="scale-strip" aria-label="Project scale and scope">
+      <div><strong>~2,000</strong><span>Stores supported</span></div>
+      <div><strong>Reservation → Release</strong><span>End-to-end transaction ownership</span></div>
+      <div><strong>Digital + Physical</strong><span>Software coordinated with kiosk hardware</span></div>
+    </section>
+
+    <section class="workflow-section" aria-labelledby="workflow-title">
+      <div class="section-heading">
+        <p class="section-label">Transaction lifecycle</p>
+        <h2 id="workflow-title">One customer action crossed several system boundaries.</h2>
+        <p>
+          A successful exchange depended on customer intent, money movement, available physical
+          inventory, kiosk state, and a financially accountable result remaining synchronized.
+        </p>
+      </div>
+
+      <div class="workflow" aria-label="Propane kiosk transaction flow">
+        <article><span>01</span><strong>Reserve</strong><p>Establish the requested purchase or exchange and the kiosk location.</p></article>
+        <i aria-hidden="true">→</i>
+        <article><span>02</span><strong>Authorize</strong><p>Coordinate the transaction with payment and customer-facing systems.</p></article>
+        <i aria-hidden="true">→</i>
+        <article class="owned"><span>03</span><strong>Dispense</strong><p>Drive the correct hardware action while protecting transaction state.</p></article>
+        <i aria-hidden="true">→</i>
+        <article><span>04</span><strong>Reconcile</strong><p>Align inventory, accounting, and the final customer outcome.</p></article>
+      </div>
+    </section>
+
+    <section class="detail-grid">
+      <article>
+        <p class="section-label">The engineering problem</p>
+        <h2>A transaction was not complete until the physical outcome matched the digital record.</h2>
+        <p>
+          A reservation could begin in software, but fulfillment depended on real equipment at a
+          specific store. Payments, kiosk availability, cylinder inventory, release commands, and
+          accounting records all described different parts of the same customer transaction.
+        </p>
+        <p>
+          The platform needed to preserve a consistent outcome when those systems responded at
+          different times or when a physical action could not complete as expected.
+        </p>
+      </article>
+
+      <article>
+        <p class="section-label">My contribution</p>
+        <h2>Reservation and dispensing logic at fleet scale.</h2>
+        <ul>
+          <li>Developed workflows spanning reservation, authorization, dispensing, and completion.</li>
+          <li>Integrated enterprise services with store-level propane kiosk hardware.</li>
+          <li>Coordinated payment, accounting, and inventory state around physical cylinder release.</li>
+          <li>Supported customer-facing production behavior across approximately 2,000 stores.</li>
+          <li>Handled the boundary between recoverable software transactions and real-world outcomes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="hardware-section" aria-labelledby="hardware-title">
+      <div class="hardware-copy">
+        <p class="section-label">The physical edge</p>
+        <h2 id="hardware-title">Software had to produce a safe, understandable action in the real world.</h2>
+        <p>
+          Self-service exchange replaces an associate-assisted cage unlock with a transaction that
+          can reserve inventory, accept payment, open the appropriate compartment, receive an empty
+          cylinder, release a full cylinder, and record the result.
+        </p>
+        <a
+          href="https://www.amerigas.com/propane-retailer/partner/self-serve-propane-exchange"
+          target="_blank"
+          rel="noopener noreferrer"
+        >How self-service exchange works <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <figure>
+        <img
+          src="/assets/propane-kiosk-exchange.jpg"
+          alt="AmeriGas propane cylinder exchange cages"
+          loading="lazy"
+        />
+        <figcaption>Propane cylinder exchange equipment. Photo: AmeriGas.</figcaption>
+      </figure>
+    </section>
+
+    <section class="quote-section" aria-labelledby="quotes-title">
+      <div class="quote-heading">
+        <p class="section-label">Public perspective</p>
+        <h2 id="quotes-title">The value appears in the customer experience.</h2>
+      </div>
+
+      <figure>
+        <blockquote>
+          Amazing! Never had to walk into the store and wait for an associate to help. Had my
+          exchange in 2 minutes!
+        </blockquote>
+        <figcaption>
+          Verified purchaser review on
+          <a
+            href="https://www.homedepot.com/p/reviews/AMERIGAS-Propane-Tank-Exchange-204S/202317242/2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >The Home Depot</a>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <blockquote>
+          Self-serve propane exchange kiosks are mostly hands-off, so your employees don't need to
+          do any unlocking, swapping, or ringing up.
+        </blockquote>
+        <figcaption>
+          <a
+            href="https://www.amerigas.com/propane-retailer/partner/self-serve-propane-exchange"
+            target="_blank"
+            rel="noopener noreferrer"
+          >AmeriGas</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="boundary-section">
+      <div>
+        <p class="section-label">Public case-study boundary</p>
+        <h2>Production ownership, responsibly presented.</h2>
+      </div>
+      <p>
+        This work was completed as a Home Depot employee. The case study intentionally omits
+        proprietary architecture, source code, vendor protocols, payment details, internal metrics,
+        operational procedures, and safety-control implementation.
+      </p>
+      <div class="source-links">
+        <a
+          href="https://www.homedepot.com/p/AMERIGAS-Propane-Tank-Exchange-204S/202317242"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Home Depot product</a>
+        <a
+          href="https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"
+          target="_blank"
+          rel="noopener noreferrer"
+        >AmeriGas exchange overview</a>
+      </div>
+    </section>
+  </div>
+</main>

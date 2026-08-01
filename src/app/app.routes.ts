@@ -8,6 +8,7 @@ import { MultiverseAdventurersGuild } from './pages/multiverse-adventurers-guild
 import { AngularPortfolio } from './pages/angular-portfolio/angular-portfolio';
 import { RetailRobotics } from './pages/retail-robotics/retail-robotics';
 import { Contact } from './pages/contact/contact';
+import { PropaneKioskPlatform } from './pages/propane-kiosk-platform/propane-kiosk-platform';
 
 export const routes: Routes = [
   {
@@ -34,6 +35,10 @@ export const routes: Routes = [
   {
     path: 'projects/retail-robotics',
     component: RetailRobotics,
+  },
+  {
+    path: 'projects/propane-kiosk-platform',
+    component: PropaneKioskPlatform,
   },
   {
     path: 'projects/trial-by-rotation',
