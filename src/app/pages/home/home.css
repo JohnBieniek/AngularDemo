@@ -785,6 +785,12 @@ a {
   padding-top: 0.625rem;
 }
 
+@media (min-width: 721px) {
+  .project-links {
+    column-gap: 1.35rem;
+  }
+}
+
 .project-links a:hover {
   color: #173c61;
   text-decoration: underline;
