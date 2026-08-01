@@ -25,27 +25,32 @@
       <div class="system-visual" aria-label="Zippedi imagery and store data flow into shelf analysis">
         <div class="visual-inputs">
           <div class="visual-node">
-            <small>Input 01</small>
             <strong>Zippedi shelf imagery</strong>
-            <span>Shelf and product images captured by autonomous robots</span>
+            <span>Shelf and product images captured by autonomous robots, including robot location</span>
           </div>
           <div class="visual-node">
-            <small>Input 02</small>
             <strong>Store &amp; planogram data</strong>
-            <span>Aisle, bay, shelf, expected item, and location context</span>
+            <span>Aisle, bay, shelf, position, and expected products</span>
           </div>
         </div>
         <div class="visual-merge" aria-hidden="true"></div>
         <div class="visual-node visual-node-primary">
           <small>My work</small>
           <strong>Match, analyze, and reconcile</strong>
-          <span>Connect imagery to store locations and expected products, then validate shelf observations</span>
+          <span>
+            Match the robot's location to the store layout and planogram, determine the shelf height
+            and expected products, compare expected labels with the captured image, identify the
+            product above each label, and evaluate the shelf's state
+          </span>
         </div>
         <div class="visual-connector" aria-hidden="true">↓</div>
         <div class="visual-node visual-node-output">
           <small>Output</small>
           <strong>Actionable shelf intelligence</strong>
-          <span>Usable information about shelf state, labels, stock, and discrepancies</span>
+          <span>
+            Usable information about shelf condition, label matches, product placement, stock
+            availability, and detected discrepancies
+          </span>
         </div>
       </div>
     </section>
