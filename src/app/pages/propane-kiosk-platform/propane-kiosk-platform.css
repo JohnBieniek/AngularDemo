@@ -161,7 +161,7 @@ p {
 }
 
 .section-heading {
-  max-width: 960px;
+  width: 100%;
   margin-bottom: 28px;
 }
 
