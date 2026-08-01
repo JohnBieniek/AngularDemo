@@ -403,22 +403,17 @@ h2 {
     gap: 0.7rem;
   }
 
+  .system-visual {
+    padding: 0.8rem;
+  }
+
   .visual-inputs {
-    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
-  .visual-merge {
-    height: 2rem;
-    margin-inline: 0;
-  }
-
-  .visual-merge::before {
-    display: none;
-  }
-
-  .visual-merge::after {
-    top: 0;
-    bottom: 0.35rem;
+  .visual-node {
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
   }
 
   .hero-tags {
