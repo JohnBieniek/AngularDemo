@@ -13,7 +13,7 @@ import {
 })
 export class RetailRobotics {
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Retail Robotics', route: '/projects/retail-robotics' },
+    { label: 'Vision Mapping', route: '/projects/retail-robotics' },
     { label: 'Overview' },
   ];
 }

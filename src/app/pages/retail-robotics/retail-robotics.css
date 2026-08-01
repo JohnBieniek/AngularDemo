@@ -50,6 +50,10 @@ h1 {
   letter-spacing: -0.055em;
 }
 
+.title-mobile {
+  display: none;
+}
+
 h2 {
   color: #152d4b;
   font-size: clamp(1.65rem, 2.5vw, 2.35rem);
@@ -378,6 +382,14 @@ h2 {
 }
 
 @media (max-width: 620px) {
+  .title-desktop {
+    display: none;
+  }
+
+  .title-mobile {
+    display: inline;
+  }
+
   .page-stack {
     gap: 2.5rem;
   }
