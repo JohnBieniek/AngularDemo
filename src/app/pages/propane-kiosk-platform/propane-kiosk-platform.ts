@@ -13,7 +13,7 @@ import {
 })
 export class PropaneKioskPlatform {
   readonly breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Propane Kiosk Platform', route: '/projects/propane-kiosk-platform' },
+    { label: 'Propane Kiosks', route: '/projects/propane-kiosk-platform' },
     { label: 'Overview' },
   ];
 }
