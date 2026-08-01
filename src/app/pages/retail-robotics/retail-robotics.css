@@ -386,6 +386,23 @@ h2 {
     gap: 2rem;
   }
 
+  .press-quotes {
+    gap: 0.7rem;
+  }
+
+  .press-quotes-heading {
+    padding: 0;
+  }
+
+  .press-quotes-heading h2,
+  .disclosure h2 {
+    margin-bottom: 0;
+  }
+
+  .disclosure {
+    gap: 0.7rem;
+  }
+
   .visual-inputs {
     grid-template-columns: 1fr;
   }
