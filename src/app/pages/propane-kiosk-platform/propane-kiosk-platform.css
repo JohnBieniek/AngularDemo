@@ -227,7 +227,7 @@ p {
 }
 
 .workflow i::before {
-  width: 100%;
+  width: calc(100% - 10px);
   height: 3px;
   background: currentColor;
   content: '';
@@ -235,13 +235,13 @@ p {
 
 .workflow i::after {
   position: absolute;
-  right: -1px;
-  width: 11px;
-  height: 11px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid currentColor;
   content: '';
-  transform: rotate(45deg);
 }
 
 .detail-grid {
