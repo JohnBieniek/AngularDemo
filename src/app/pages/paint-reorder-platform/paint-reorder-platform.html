@@ -1,0 +1,206 @@
+<main class="paint-page">
+  <app-breadcrumbs [items]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="page-shell page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Enterprise commerce platform</p>
+        <h1>Paint Reorder Platform</h1>
+        <p class="hero-lede">The Home Depot | Paint systems and homedepot.com integration</p>
+        <p>
+          I architected and built the paint-side platform capabilities behind online paint
+          reordering. The work moved catalog and customer paint data from legacy databases into
+          Cloud Spanner, established ongoing synchronization, and gave the homedepot.com team a
+          stable contract for finding, configuring, ordering, and saving paint.
+        </p>
+
+        <div class="tag-row" aria-label="Project disciplines">
+          <span>Cloud Spanner</span><span>GCP</span><span>PCF</span> <span>API architecture</span
+          ><span>Data migration</span><span>System integration</span>
+        </div>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/assets/paint-ordering-project-color.jpg"
+          alt="The Home Depot Project Color experience shown on a phone in a painted room"
+        />
+        <figcaption>
+          Public example of The Home Depot's connected digital paint experience. Image: The Home
+          Depot.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="outcome-strip" aria-label="Project scope">
+      <div>
+        <strong>Legacy to cloud</strong><span>Catalog and customer data migrated to Spanner</span>
+      </div>
+      <div>
+        <strong>One contract</strong
+        ><span>A facade insulated .com from paint-system complexity</span>
+      </div>
+      <div>
+        <strong>Browse to order</strong
+        ><span>Configuration, portfolio, and ordering capabilities</span>
+      </div>
+    </section>
+
+    <section class="architecture-section" aria-labelledby="architecture-title">
+      <div class="section-heading">
+        <p class="section-label">Platform architecture</p>
+        <h2 id="architecture-title">
+          A stable commerce contract across two generations of systems.
+        </h2>
+        <p>
+          PCF services continued to communicate with legacy paint systems while GCP services worked
+          with the new cloud model. An orchestration facade gave homedepot.com one purposeful API
+          surface instead of exposing either platform's internal structure.
+        </p>
+      </div>
+
+      <div class="architecture-flow" aria-label="Paint reorder platform system flow">
+        <article>
+          <small>Customer channel</small><strong>homedepot.com</strong
+          ><span>Search, configure, reorder, and receive an order result</span>
+        </article>
+        <i aria-hidden="true">→</i>
+        <article class="owned">
+          <small>Contract boundary</small><strong>Orchestration facade</strong
+          ><span>A stable paint-domain contract for the .com team</span>
+        </article>
+        <i aria-hidden="true">↔</i>
+        <article>
+          <small>Platform services</small><strong>GCP + PCF APIs</strong
+          ><span>New cloud capabilities alongside legacy-system adapters</span>
+        </article>
+        <i aria-hidden="true">↔</i>
+        <article>
+          <small>Systems of record</small><strong>Spanner + legacy</strong
+          ><span>Catalog, customer portfolio, formula, and ordering data</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-grid">
+      <article>
+        <p class="section-label">Data modernization</p>
+        <h2>Moved the paint domain without losing continuity.</h2>
+        <p>
+          The migration combined one-time loads and repeatable batch processing with ongoing data
+          flows. I designed the Cloud Spanner schemas, relationships, interleaving strategy, and
+          data structures needed to represent the new paint platform.
+        </p>
+        <ul>
+          <li>
+            Built migration paths with Dataflow, Cloud Functions, Cloud Storage, and batch jobs.
+          </li>
+          <li>Handled initial and one-time loads from multiple legacy database systems.</li>
+          <li>Architected continuous flows to keep cloud and legacy records synchronized.</li>
+          <li>Designed schemas around paint catalog, configuration, and customer use cases.</li>
+        </ul>
+      </article>
+
+      <article>
+        <p class="section-label">API and contract design</p>
+        <h2>Translated paint-domain complexity into commerce capabilities.</h2>
+        <p>
+          I worked directly on the contract between the paint and homedepot.com teams, then designed
+          the internal APIs and orchestration needed to fulfill it across PCF and GCP.
+        </p>
+        <ul>
+          <li>Exposed paint catalog and color-search capabilities.</li>
+          <li>Returned brand, container size, sheen, formula, and display information.</li>
+          <li>Supported changes to color and other compatible configuration options.</li>
+          <li>Accepted online orders and returned a coherent processing result.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="journey-section" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <p class="section-label">Customer journey enabled</p>
+        <h2 id="journey-title">Enough detail to confidently buy the same paint again.</h2>
+        <p>
+          Paint is not a single SKU choice. A reorder depends on the exact combination of color,
+          formula, brand, product, sheen, and container size, plus pricing and fulfillment context.
+        </p>
+      </div>
+      <ol class="journey">
+        <li>
+          <span>01</span><strong>Find</strong>
+          <p>Search saved colors and paint catalog data.</p>
+        </li>
+        <li>
+          <span>02</span><strong>Configure</strong>
+          <p>Select compatible brand, size, sheen, and formula.</p>
+        </li>
+        <li>
+          <span>03</span><strong>Price</strong>
+          <p>Resolve quantities, cost, and taxes through ordering systems.</p>
+        </li>
+        <li>
+          <span>04</span><strong>Order</strong>
+          <p>Process the request and provide a clear result to .com.</p>
+        </li>
+        <li>
+          <span>05</span><strong>Remember</strong>
+          <p>Add the paint to the customer's portfolio for future use.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="order-section">
+      <div>
+        <p class="section-label">Order integration</p>
+        <h2>Connected consumer reordering to an established professional ordering system.</h2>
+      </div>
+      <p>
+        The platform integrated with the existing paint ordering capability previously used largely
+        for contractor and professional shipping workflows. We processed orders received from
+        homedepot.com, coordinated amounts, costs, and taxes, recorded the paint in the customer's
+        portfolio, and returned the outcome through the facade.
+      </p>
+    </section>
+
+    <section class="public-context">
+      <div>
+        <p class="section-label">Public product context</p>
+        <h2>The visible experience depended on connected paint data.</h2>
+      </div>
+      <p>
+        Home Depot publicly describes a color-first journey that narrows results by sheen and other
+        attributes before presenting compatible brands, then connects that selection to online
+        purchase. That customer experience is the public context for the paint-platform contracts
+        and services described here.
+      </p>
+      <div class="source-links">
+        <a
+          href="https://corporate.homedepot.com/news/products/new-technology-shows-you-perfect-paint-color-its-your-walls"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Project Color overview</a
+        >
+        <a
+          href="https://www.homedepot.com/b/Paint-Paint-Colors/N-5yc1vZcaw8"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Current paint catalog</a
+        >
+      </div>
+    </section>
+
+    <section class="disclosure">
+      <div>
+        <p class="section-label">Public case-study boundary</p>
+        <h2>Paint-platform ownership, responsibly presented.</h2>
+      </div>
+      <p>
+        This work was completed as a Home Depot employee on the paint-platform side. I did not build
+        the homedepot.com user interface. This case study omits proprietary schemas, contracts,
+        source code, infrastructure details, customer data, internal metrics, and operational
+        procedures.
+      </p>
+    </section>
+  </div>
+</main>

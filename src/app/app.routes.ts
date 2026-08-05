@@ -9,12 +9,13 @@ import { AngularPortfolio } from './pages/angular-portfolio/angular-portfolio';
 import { RetailRobotics } from './pages/retail-robotics/retail-robotics';
 import { Contact } from './pages/contact/contact';
 import { PropaneKioskPlatform } from './pages/propane-kiosk-platform/propane-kiosk-platform';
+import { PaintReorderPlatform } from './pages/paint-reorder-platform/paint-reorder-platform';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: Home
+    component: Home,
   },
   {
     path: 'projects/accessible-scheduling',
@@ -41,8 +42,12 @@ export const routes: Routes = [
     component: PropaneKioskPlatform,
   },
   {
+    path: 'projects/paint-reorder-platform',
+    component: PaintReorderPlatform,
+  },
+  {
     path: 'projects/trial-by-rotation',
-    component: TrialByRotation
+    component: TrialByRotation,
   },
   {
     path: 'java-demo',
@@ -54,6 +59,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: ''
-  }
+    redirectTo: '',
+  },
 ];
