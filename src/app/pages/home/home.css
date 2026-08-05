@@ -227,6 +227,45 @@ a {
   gap: 1.25rem;
 }
 
+.project-group-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #cfd8e3;
+}
+
+.project-group-heading-secondary {
+  margin-top: 2.5rem;
+}
+
+.project-group-label {
+  margin: 0 0 0.35rem;
+  color: #315d91;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.project-group-heading h3 {
+  margin: 0;
+  color: #17263c;
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.project-group-heading > p {
+  max-width: 680px;
+  margin: 0;
+  color: #465568;
+  line-height: 1.55;
+  text-align: right;
+}
+
 .project-card {
   overflow: hidden;
   border-radius: 1.25rem;
@@ -488,6 +527,16 @@ a {
 
   .bloomberg-label-mobile {
     display: inline;
+  }
+
+  .project-group-heading {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .project-group-heading > p {
+    font-size: 0.88rem;
+    text-align: left;
   }
 
   #projects {
