@@ -6,114 +6,90 @@
       <div class="hero-copy">
         <p class="eyebrow">Enterprise commerce platform</p>
         <h1>Paint Reorder Platform</h1>
-        <p class="hero-lede">The Home Depot | Paint systems and homedepot.com integration</p>
+        <p class="hero-lede">The Home Depot | Paint-platform modernization</p>
         <p>
-          I architected and built the paint-side platform capabilities behind online paint
-          reordering. The work migrated legacy data into a modern cloud platform, established
-          ongoing synchronization, and gave the homedepot.com team a stable contract for finding,
-          configuring, ordering, and saving paint.
+          I led the architecture and implementation of several paint-platform capabilities
+          supporting online reordering. The work modernized supporting services while maintaining
+          compatibility with existing systems and gave the customer-facing team a stable interface
+          for paint search, configuration, ordering, and purchase history.
         </p>
 
         <div class="tag-row" aria-label="Project disciplines">
-          <span>Cloud data platform</span><span>GCP</span><span>PCF</span>
-          <span>API architecture</span><span>Data migration</span><span>System integration</span>
+          <span>Cloud platforms</span><span>Service architecture</span>
+          <span>Data modernization</span><span>System integration</span>
         </div>
       </div>
 
-      <figure class="hero-image">
-        <img
-          src="/assets/projects/paint-reorder/project-color.jpg"
-          alt="The Home Depot Project Color experience shown on a phone in a painted room"
-        />
-        <figcaption>
-          Public example of The Home Depot's connected digital paint experience.
-        </figcaption>
-      </figure>
+      <div class="hero-visual" aria-label="Paint search, configuration, reordering, and purchase history capabilities">
+        <div class="paint-spectrum" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="visual-card">
+          <small>Customer need</small>
+          <strong>Find the right paint again</strong>
+          <div class="visual-path" aria-hidden="true">
+            <span>Search</span><b>→</b><span>Configure</span><b>→</b><span>Reorder</span>
+          </div>
+          <small>Platform outcome</small>
+          <strong>Reliable service interfaces</strong>
+        </div>
+      </div>
     </section>
 
     <section class="outcome-strip" aria-label="Project scope">
-      <div>
-        <strong>Legacy to cloud</strong><span>Data migrated to a modern cloud platform</span>
-      </div>
-      <div>
-        <strong>One contract</strong
-        ><span>A facade insulated .com from paint-system complexity</span>
-      </div>
-      <div>
-        <strong>Browse to order</strong
-        ><span>Configuration, portfolio, and ordering capabilities</span>
-      </div>
+      <div><strong>Modernized services</strong><span>Existing and modern systems supported</span></div>
+      <div><strong>Stable interface</strong><span>Clear capabilities for customer-facing teams</span></div>
+      <div><strong>Visible capabilities</strong><span>Search, configure, reorder, and review history</span></div>
     </section>
 
     <section class="architecture-section" aria-labelledby="architecture-title">
       <div class="section-heading">
-        <p class="section-label">Platform architecture</p>
-        <h2 id="architecture-title">
-          A stable commerce contract across two generations of systems.
-        </h2>
+        <p class="section-label">Engineering scope</p>
+        <h2 id="architecture-title">Modernized a customer-facing capability without disrupting service.</h2>
         <p>
-          PCF services continued to communicate with legacy paint systems while GCP services worked
-          with the new cloud model. An orchestration facade gave homedepot.com one purposeful API
-          surface instead of exposing either platform's internal structure.
+          I helped evolve the services supporting online paint reordering while preserving
+          compatibility with established systems. The work created a consistent way for the
+          customer-facing experience to use paint search, configuration, ordering, and history.
         </p>
       </div>
 
-      <div class="architecture-flow" aria-label="Paint reorder platform system flow">
-        <article>
-          <small>Customer channel</small><strong>homedepot.com</strong
-          ><span>Search, configure, reorder, and receive an order result</span>
-        </article>
-        <i aria-hidden="true"></i>
-        <article class="owned">
-          <small>Contract boundary</small><strong>Orchestration facade</strong
-          ><span>A stable paint-domain contract for the .com team</span>
-        </article>
-        <i aria-hidden="true"></i>
-        <article>
-          <small>Platform services</small><strong>GCP + PCF APIs</strong
-          ><span>New cloud capabilities alongside legacy-system adapters</span>
-        </article>
-        <i aria-hidden="true"></i>
-        <article>
-          <small>Data foundation</small><strong>Modern, highly available databases</strong
-          ><span
-            >Reliable access to catalog, configuration, portfolio, and ordering information</span
-          >
-        </article>
+      <div class="scope-grid">
+        <article><small>Modernize</small><strong>Evolve the platform</strong><span>Introduced modern capabilities alongside established enterprise systems.</span></article>
+        <article><small>Stabilize</small><strong>Define clear interfaces</strong><span>Translated paint-domain needs into dependable service capabilities.</span></article>
+        <article><small>Preserve continuity</small><strong>Support staged change</strong><span>Maintained service continuity throughout a broader modernization effort.</span></article>
       </div>
     </section>
 
     <section class="detail-grid">
       <article>
         <p class="section-label">Data modernization</p>
-        <h2>Moved the paint domain without losing continuity.</h2>
+        <h2>Moved the paint domain forward without losing continuity.</h2>
         <p>
-          The migration combined one-time loads and repeatable batch processing with ongoing data
-          flows. I helped shape the relationships and data structures needed to support the new
-          paint platform without interrupting existing capabilities.
+          I helped modernize data workflows supporting paint reordering across multiple existing
+          systems. The work focused on safe migration, continuity, and an information model aligned
+          with customer-visible paint capabilities.
         </p>
         <ul>
-          <li>
-            Built migration paths with Dataflow, Cloud Functions, Cloud Storage, and batch jobs.
-          </li>
-          <li>Handled initial and one-time loads from multiple legacy database systems.</li>
-          <li>Architected continuous flows to keep the old and new platforms synchronized.</li>
-          <li>Modeled data around paint catalog, configuration, and customer use cases.</li>
+          <li>Built cloud-based migration processes for data originating in multiple legacy systems.</li>
+          <li>Supported a staged migration while preserving service continuity.</li>
+          <li>Modeled information around catalog, configuration, and purchase-history use cases.</li>
+          <li>Designed for reliability, recoverability, and operational support.</li>
         </ul>
       </article>
 
       <article>
-        <p class="section-label">API and contract design</p>
+        <p class="section-label">Service interface design</p>
         <h2>Translated paint-domain complexity into commerce capabilities.</h2>
         <p>
-          I worked directly on the contract between the paint and homedepot.com teams, then designed
-          the internal APIs and orchestration needed to fulfill it across PCF and GCP.
+          I worked with the paint and customer-facing teams to define the service capabilities
+          needed for a coherent online reorder experience, then helped implement the supporting
+          platform services.
         </p>
         <ul>
-          <li>Exposed paint catalog and color-search capabilities.</li>
-          <li>Returned brand, container size, sheen, formula, and display information.</li>
-          <li>Supported changes to color and other compatible configuration options.</li>
-          <li>Accepted online orders and returned a coherent processing result.</li>
+          <li>Supported paint catalog and color-search capabilities.</li>
+          <li>Provided brand, container size, sheen, formula, and display information.</li>
+          <li>Enabled changes to color and other compatible configuration options.</li>
+          <li>Accepted online orders and returned a consistent processing result.</li>
         </ul>
       </article>
     </section>
@@ -128,119 +104,63 @@
         </p>
       </div>
       <ol class="journey">
-        <li>
-          <span>01</span><strong>Find</strong>
-          <p>Search saved colors and paint catalog data.</p>
-        </li>
-        <li>
-          <span>02</span><strong>Configure</strong>
-          <p>Select compatible brand, size, sheen, and formula.</p>
-        </li>
-        <li>
-          <span>03</span><strong>Price</strong>
-          <p>Resolve quantities, cost, and taxes through ordering systems.</p>
-        </li>
-        <li>
-          <span>04</span><strong>Order</strong>
-          <p>Process the request and provide a clear result to .com.</p>
-        </li>
-        <li>
-          <span>05</span><strong>Remember</strong>
-          <p>Add the paint to the customer's portfolio for future use.</p>
-        </li>
+        <li><span>01</span><strong>Find</strong><p>Search saved colors and paint catalog information.</p></li>
+        <li><span>02</span><strong>Configure</strong><p>Select compatible brand, size, sheen, and formula.</p></li>
+        <li><span>03</span><strong>Review</strong><p>Confirm the paint configuration and order details.</p></li>
+        <li><span>04</span><strong>Order</strong><p>Submit the request and receive a clear result.</p></li>
+        <li><span>05</span><strong>Remember</strong><p>Make purchase information available for future use.</p></li>
       </ol>
     </section>
 
     <section class="experience-section" aria-labelledby="experience-title">
       <div class="section-heading">
         <p class="section-label">Customer-facing examples</p>
-        <h2 id="experience-title">From a configured product to a remembered paint purchase.</h2>
+        <h2 id="experience-title">From a configured product to a remembered purchase.</h2>
         <p>
-          These public Home Depot examples show the customer-facing endpoints of the platform work:
-          a paint product defined by color, product line, container size, and sheen, and a purchase
-          history experience that lets customers find a previous mix and change its options before
-          reordering.
+          These links point to public Home Depot pages illustrating the customer-facing use cases
+          described here. No Home Depot imagery or interface captures are republished on this site.
         </p>
       </div>
 
       <div class="experience-gallery">
-        <a
-          class="experience-card product-example"
-          href="https://www.homedepot.com/p/BEHR-PREMIUM-PLUS-1-gal-Designer-Collection-DC-010-Even-Better-Beige-Eggshell-Enamel-Low-Odor-Interior-Paint-Primer-205001/320626862"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="experience-image">
-            <img
-              src="/assets/projects/paint-reorder/product-page-tight.png"
-              alt="Home Depot product page for BEHR Premium Plus Even Better Beige interior eggshell paint"
-              loading="lazy"
-            />
-          </div>
-          <span>
-            <strong>Online paint configuration</strong>
-            <small>Product, color, container size, brand, paint type, and sheen</small>
-          </span>
+        <a class="experience-card" href="https://www.homedepot.com/p/BEHR-PREMIUM-PLUS-1-gal-Designer-Collection-DC-010-Even-Better-Beige-Eggshell-Enamel-Low-Odor-Interior-Paint-Primer-205001/320626862" target="_blank" rel="noopener noreferrer">
+          <span class="example-label">Public product example</span>
+          <strong>Online paint configuration</strong>
+          <p>See how product, color, container size, brand, paint type, and sheen appear in a public listing.</p>
+          <small>View on homedepot.com ↗</small>
         </a>
-
-        <a
-          class="experience-card history-example"
-          href="https://www.homedepot.com/c/view-your-purchase-history"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="experience-image">
-            <img
-              src="/assets/projects/paint-reorder/purchase-history-phone.jpg"
-              alt="Home Depot paint purchase history displayed on a phone held above a painting workspace"
-              loading="lazy"
-            />
-          </div>
-          <span>
-            <strong>Purchase and paint history</strong>
-            <small>Search orders, review purchases, buy again, or open dedicated paint history</small>
-          </span>
+        <a class="experience-card" href="https://www.homedepot.com/c/view-your-purchase-history" target="_blank" rel="noopener noreferrer">
+          <span class="example-label">Public service overview</span>
+          <strong>Purchase history</strong>
+          <p>See the public experience for finding orders, reviewing purchases, and buying again.</p>
+          <small>View on homedepot.com ↗</small>
         </a>
       </div>
     </section>
 
     <section class="order-section">
-      <div>
-        <p class="section-label">Order integration</p>
-        <h2>Connected consumer reordering to an established professional ordering system.</h2>
-      </div>
+      <div><p class="section-label">Order integration</p><h2>Connected online reordering to enterprise order processing.</h2></div>
       <p>
-        The platform integrated with the existing paint ordering capability previously used largely
-        for contractor and professional shipping workflows. We processed orders received from
-        homedepot.com, coordinated amounts, costs, and taxes, recorded the paint in the customer's
-        portfolio, and returned the outcome through the facade.
+        I integrated the online experience with existing enterprise ordering capabilities. The
+        platform validated configured paint orders, coordinated downstream processing, updated the
+        customer's saved paint information, and returned a consistent result to the customer-facing
+        application.
       </p>
     </section>
 
     <section class="disclosure">
-      <div>
-        <p class="section-label">Public case-study boundary</p>
-        <h2>Paint-platform ownership, responsibly presented.</h2>
-      </div>
+      <div><p class="section-label">Public case-study boundary</p><h2>Paint-platform ownership, responsibly presented.</h2></div>
       <p>
-        This work was completed as a Home Depot employee on the paint-platform side. I did not build
-        the homedepot.com user interface. This case study omits proprietary data models, API
-        contracts, source code, infrastructure details, customer data, internal metrics, and
-        operational procedures.
+        The Home Depot and related product names are trademarks of their respective owners. This
+        independent portfolio is not affiliated with or endorsed by The Home Depot. The description
+        reflects my personal work experience and excludes source code, proprietary specifications,
+        nonpublic metrics, customer information, and operational procedures. I worked on the
+        paint-platform capabilities described here, not the homedepot.com user interface.
       </p>
       <div class="source-links">
-        <a
-          href="https://corporate.homedepot.com/news/products/new-technology-shows-you-perfect-paint-color-its-your-walls"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Project Color overview</a
-        >
-        <a
-          href="https://www.homedepot.com/b/Paint-Paint-Colors/N-5yc1vZcaw8"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Current paint catalog</a
-        >
+        <a href="https://corporate.homedepot.com/news/products/new-technology-shows-you-perfect-paint-color-its-your-walls" target="_blank" rel="noopener noreferrer">Project Color overview</a>
+        <a href="https://www.homedepot.com/b/Paint-Paint-Colors/N-5yc1vZcaw8" target="_blank" rel="noopener noreferrer">Current paint catalog</a>
+        <a href="https://www.homedepot.com/c/view-your-purchase-history" target="_blank" rel="noopener noreferrer">Purchase history overview</a>
       </div>
     </section>
   </div>
