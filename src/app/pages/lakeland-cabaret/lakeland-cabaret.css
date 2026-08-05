@@ -30,7 +30,7 @@ p { color: #53657d; line-height: 1.72; }
 .content-section .section-intro { max-width: none; }
 .section-intro > p:not(.section-label) { font-size: 1.04rem; }
 .service-grid, .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid #d5e0ea; background: #d5e0ea; }
-.service-grid article { display: grid; align-content: start; gap: 0.65rem; min-height: 14rem; padding: 1.5rem; background: #fff; }
+.service-grid article { display: grid; align-content: start; gap: 0.65rem; padding: 1.5rem; background: #fff; }
 .service-grid strong { font-size: 1.2rem; }
 .service-grid p, .strategy-grid p { margin-bottom: 0; font-size: 0.9rem; }
 .strategy-section { padding: clamp(1.5rem, 4vw, 3.5rem); color: #fff; background: #173e63; }
