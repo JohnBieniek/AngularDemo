@@ -321,9 +321,9 @@ a {
 .cabaret-preview img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  filter: saturate(0.82);
+  background: #fff;
 }
 
 .paint-preview img {
