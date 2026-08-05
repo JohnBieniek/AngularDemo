@@ -27,6 +27,7 @@ p { color: #5d6171; line-height: 1.72; }
 .summary-grid span { color: #707283; font-size: 0.86rem; line-height: 1.45; }
 .content-section, .strategy-section { display: grid; gap: 2rem; }
 .section-intro { max-width: 62rem; }
+.content-section .section-intro { max-width: none; }
 .section-intro > p:not(.section-label) { font-size: 1.04rem; }
 .service-grid, .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid #deddea; background: #deddea; }
 .service-grid article { display: grid; align-content: start; gap: 0.65rem; min-height: 14rem; padding: 1.5rem; background: #fff; }
