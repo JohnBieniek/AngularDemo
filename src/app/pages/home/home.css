@@ -311,53 +311,14 @@ a {
 }
 
 .paint-preview {
-  background: #173e63;
+  background: #eee9df;
 }
 
-.paint-card-visual {
-  display: grid;
-  align-content: center;
-  gap: 18px;
+.paint-preview img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  padding: clamp(24px, 4vw, 42px);
-  color: #fff;
-  background:
-    radial-gradient(circle at 84% 18%, rgba(136, 183, 216, 0.24), transparent 10rem),
-    #173e63;
-}
-.paint-card-swatches {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 7px;
-}
-.paint-card-swatches i {
-  height: clamp(34px, 5vw, 56px);
-  border-radius: 5px;
-  background: #c7d9e8;
-}
-.paint-card-swatches i:nth-child(2) { background: #88b7d8; }
-.paint-card-swatches i:nth-child(3) { background: #f1c56e; }
-.paint-card-swatches i:nth-child(4) { background: #df8d72; }
-.paint-card-swatches i:nth-child(5) { background: #7f9b87; }
-.paint-card-path {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.paint-card-path span {
-  flex: 1;
-  padding: 7px 5px;
-  border-radius: 4px;
-  color: #173e63;
-  background: #fff;
-  font-size: 0.7rem;
-  text-align: center;
-}
-.paint-card-path b { color: #a9d4f2; }
-.paint-card-visual > strong {
-  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-  letter-spacing: -0.03em;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .propane-preview img {
