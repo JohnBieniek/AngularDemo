@@ -10,6 +10,7 @@ import { RetailRobotics } from './pages/retail-robotics/retail-robotics';
 import { Contact } from './pages/contact/contact';
 import { PropaneKioskPlatform } from './pages/propane-kiosk-platform/propane-kiosk-platform';
 import { PaintReorderPlatform } from './pages/paint-reorder-platform/paint-reorder-platform';
+import { LakelandCabaret } from './pages/lakeland-cabaret/lakeland-cabaret';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'projects/accessible-scheduling',
     component: AccessibleScheduling,
+  },
+  {
+    path: 'projects/lakeland-cabaret',
+    component: LakelandCabaret,
   },
   {
     path: 'projects/sophia',

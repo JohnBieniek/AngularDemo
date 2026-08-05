@@ -314,6 +314,18 @@ a {
   background: #eee9df;
 }
 
+.cabaret-preview {
+  background: #181273;
+}
+
+.cabaret-preview img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.82);
+}
+
 .paint-preview img {
   width: 100%;
   aspect-ratio: 16 / 10;
