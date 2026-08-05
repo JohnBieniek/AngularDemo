@@ -28,7 +28,6 @@
 .journey-section,
 .experience-section,
 .order-section,
-.public-context,
 .disclosure {
   border: 1px solid #d5e0ea;
   border-radius: 16px;
@@ -327,7 +326,6 @@ p {
 }
 
 .order-section,
-.public-context,
 .disclosure {
   display: grid;
   grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.25fr);
@@ -347,15 +345,8 @@ p {
   color: #a9d4f2;
 }
 .order-section p,
-.public-context p,
 .disclosure p {
   margin-bottom: 0;
-}
-.public-context {
-  grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.8fr);
-}
-.public-context p + p {
-  margin-top: 1rem;
 }
 .source-links {
   display: grid;
@@ -402,7 +393,6 @@ p {
   .journey {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .public-context,
   .disclosure {
     grid-template-columns: 1fr;
   }
@@ -416,7 +406,6 @@ p {
   .journey-section,
   .experience-section,
   .order-section,
-  .public-context,
   .disclosure {
     padding: 18px;
   }
