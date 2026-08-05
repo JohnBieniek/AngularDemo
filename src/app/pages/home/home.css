@@ -240,6 +240,17 @@ a {
   font-weight: 800;
 }
 
+.project-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image-link:focus-visible {
+  outline: 3px solid #24568a;
+  outline-offset: -3px;
+}
+
 .scheduling-preview {
   background:
     linear-gradient(135deg, rgba(47, 124, 255, 0.34), rgba(255, 255, 255, 0.06)),
