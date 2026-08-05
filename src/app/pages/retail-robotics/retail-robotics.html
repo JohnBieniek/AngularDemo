@@ -13,9 +13,9 @@
         <p>
           I developed the integration and analysis layer that combined Zippedi shelf imagery and
           robot-location data with The Home Depot's store layouts and planograms. The system placed
-          each observation within the correct aisle, bay, shelf, and vertical position, compared
-          expected labels and products with the captured image, and produced usable information
-          about shelf condition, product placement, stock availability, and discrepancies.
+          each observation within the correct aisle, bay, shelf, and planogram context, then
+          produced usable information about product placement, labeling, stock availability, and
+          discrepancies.
         </p>
         <div class="hero-tags" aria-label="Project disciplines">
           <span>Enterprise integration</span>
@@ -43,9 +43,8 @@
           <small>My work</small>
           <strong>Match, analyze, and reconcile</strong>
           <span>
-            Match the robot's location to the store layout and planogram, determine the shelf height
-            and expected products, compare expected labels with the captured image, identify the
-            product above each label, and evaluate the shelf's state
+            Match robot observations to the corresponding store and planogram context, then evaluate
+            product placement, labeling, availability, and discrepancies
           </span>
         </div>
         <div class="visual-connector" aria-hidden="true">↓</div>
@@ -80,21 +79,6 @@
 
         <a
           class="gallery-card"
-          href="https://techcrunch.com/2022/04/26/zippedi-is-using-robots-to-digitize-inventory-for-last-mile-delivery/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="gallery-image-left"
-            src="/assets/projects/retail-vision/zippedi-working.gif"
-            alt="Zippedi robot scanning shelves in a hardware store"
-            loading="lazy"
-          />
-          <span><strong>Scanning shelves in motion</strong><small>Media: Zippedi; reporting: TechCrunch</small></span>
-        </a>
-
-        <a
-          class="gallery-card"
           href="https://www.bloomberglinea.com/english/chilean-robot-as-a-service-company-zippedi-raises-69-million-to-digitize-stores/"
           target="_blank"
           rel="noopener noreferrer"
@@ -121,9 +105,8 @@
           in the same way.
         </p>
         <p>
-          The challenge was to reconcile the robot's position with the store model, determine how
-          high on the shelf the camera was looking, and align the expected labels and products with
-          what was actually visible. Only then could an image describe the state of a real shelf.
+          The challenge was to reconcile robot observations with the corresponding store and
+          planogram context. Only then could an image describe the state of a real shelf.
         </p>
       </article>
 
@@ -131,11 +114,9 @@
         <p class="section-label">My contribution</p>
         <h2>From robot location to actionable shelf intelligence.</h2>
         <ul>
-          <li>Matched the robot's reported location to the correct aisle, bay, and shelf.</li>
-          <li>Resolved the vertical shelf position represented in each captured image.</li>
-          <li>Connected that location to the planogram's expected labels and products.</li>
-          <li>Compared expected labels with visible labels and identified the product above each one.</li>
-          <li>Converted the matched observations into structured shelf, label, stock, and discrepancy information.</li>
+          <li>Matched robot observations to the corresponding aisle, bay, shelf, and planogram context.</li>
+          <li>Evaluated product placement, labeling, availability, and discrepancies.</li>
+          <li>Converted matched observations into usable shelf intelligence.</li>
         </ul>
       </article>
     </section>
