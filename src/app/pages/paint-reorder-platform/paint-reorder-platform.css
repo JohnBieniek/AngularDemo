@@ -26,6 +26,7 @@
 .architecture-section,
 .detail-grid > article,
 .journey-section,
+.experience-section,
 .order-section,
 .public-context,
 .disclosure {
@@ -146,7 +147,8 @@ p {
 }
 
 .architecture-section,
-.journey-section {
+.journey-section,
+.experience-section {
   padding: clamp(24px, 4vw, 48px);
 }
 .section-heading {
@@ -270,6 +272,60 @@ p {
   line-height: 1.5;
 }
 
+.experience-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.experience-card {
+  display: grid;
+  grid-template-rows: minmax(300px, 1fr) auto;
+  overflow: hidden;
+  border: 1px solid #d6dce4;
+  border-radius: 10px;
+  color: inherit;
+  background: #f8fafc;
+  text-decoration: none;
+}
+.experience-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 430px;
+}
+.product-example img {
+  padding: 24px;
+  object-fit: contain;
+  background: #d4caba;
+}
+.history-example img {
+  object-fit: cover;
+  object-position: center;
+}
+.experience-card span {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-top: 1px solid #d6dce4;
+  background: #fff;
+}
+.experience-card strong {
+  color: #173e63;
+}
+.experience-card small {
+  color: #697485;
+  line-height: 1.45;
+}
+.experience-card:hover strong {
+  color: #235d8d;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+.experience-card:focus-visible {
+  outline: 3px solid #24568a;
+  outline-offset: 3px;
+}
+
 .order-section,
 .public-context,
 .disclosure {
@@ -358,6 +414,7 @@ p {
   .hero,
   .architecture-section,
   .journey-section,
+  .experience-section,
   .order-section,
   .public-context,
   .disclosure {
@@ -379,6 +436,7 @@ p {
   .detail-grid,
   .architecture-flow,
   .journey,
+  .experience-gallery,
   .order-section,
   .disclosure {
     grid-template-columns: 1fr;
