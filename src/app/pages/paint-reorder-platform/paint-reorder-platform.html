@@ -9,14 +9,14 @@
         <p class="hero-lede">The Home Depot | Paint systems and homedepot.com integration</p>
         <p>
           I architected and built the paint-side platform capabilities behind online paint
-          reordering. The work moved catalog and customer paint data from legacy databases into
-          Cloud Spanner, established ongoing synchronization, and gave the homedepot.com team a
-          stable contract for finding, configuring, ordering, and saving paint.
+          reordering. The work migrated legacy data into a modern cloud platform, established
+          ongoing synchronization, and gave the homedepot.com team a stable contract for finding,
+          configuring, ordering, and saving paint.
         </p>
 
         <div class="tag-row" aria-label="Project disciplines">
-          <span>Cloud Spanner</span><span>GCP</span><span>PCF</span> <span>API architecture</span
-          ><span>Data migration</span><span>System integration</span>
+          <span>Cloud data platform</span><span>GCP</span><span>PCF</span>
+          <span>API architecture</span><span>Data migration</span><span>System integration</span>
         </div>
       </div>
 
@@ -34,7 +34,7 @@
 
     <section class="outcome-strip" aria-label="Project scope">
       <div>
-        <strong>Legacy to cloud</strong><span>Catalog and customer data migrated to Spanner</span>
+        <strong>Legacy to cloud</strong><span>Data migrated to a modern cloud platform</span>
       </div>
       <div>
         <strong>One contract</strong
@@ -64,20 +64,20 @@
           <small>Customer channel</small><strong>homedepot.com</strong
           ><span>Search, configure, reorder, and receive an order result</span>
         </article>
-        <i aria-hidden="true">→</i>
+        <i aria-hidden="true"></i>
         <article class="owned">
           <small>Contract boundary</small><strong>Orchestration facade</strong
           ><span>A stable paint-domain contract for the .com team</span>
         </article>
-        <i aria-hidden="true">↔</i>
+        <i aria-hidden="true"></i>
         <article>
           <small>Platform services</small><strong>GCP + PCF APIs</strong
           ><span>New cloud capabilities alongside legacy-system adapters</span>
         </article>
-        <i aria-hidden="true">↔</i>
+        <i aria-hidden="true"></i>
         <article>
-          <small>Systems of record</small><strong>Spanner + legacy</strong
-          ><span>Catalog, customer portfolio, formula, and ordering data</span>
+          <small>Paint systems</small><strong>New + legacy platforms</strong
+          ><span>Domain capabilities coordinated across the modernization boundary</span>
         </article>
       </div>
     </section>
@@ -88,16 +88,16 @@
         <h2>Moved the paint domain without losing continuity.</h2>
         <p>
           The migration combined one-time loads and repeatable batch processing with ongoing data
-          flows. I designed the Cloud Spanner schemas, relationships, interleaving strategy, and
-          data structures needed to represent the new paint platform.
+          flows. I helped shape the relationships and data structures needed to support the new
+          paint platform without interrupting existing capabilities.
         </p>
         <ul>
           <li>
             Built migration paths with Dataflow, Cloud Functions, Cloud Storage, and batch jobs.
           </li>
           <li>Handled initial and one-time loads from multiple legacy database systems.</li>
-          <li>Architected continuous flows to keep cloud and legacy records synchronized.</li>
-          <li>Designed schemas around paint catalog, configuration, and customer use cases.</li>
+          <li>Architected continuous flows to keep the old and new platforms synchronized.</li>
+          <li>Modeled data around paint catalog, configuration, and customer use cases.</li>
         </ul>
       </article>
 
@@ -197,9 +197,9 @@
       </div>
       <p>
         This work was completed as a Home Depot employee on the paint-platform side. I did not build
-        the homedepot.com user interface. This case study omits proprietary schemas, contracts,
-        source code, infrastructure details, customer data, internal metrics, and operational
-        procedures.
+        the homedepot.com user interface. This case study omits proprietary data models, API
+        contracts, source code, infrastructure details, customer data, internal metrics, and
+        operational procedures.
       </p>
     </section>
   </div>
