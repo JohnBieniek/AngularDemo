@@ -300,7 +300,7 @@ p {
 }
 .history-example img {
   object-fit: cover;
-  object-position: top center;
+  object-position: center;
 }
 .experience-card span {
   display: grid;
