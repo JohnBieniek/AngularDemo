@@ -286,6 +286,10 @@ p {
   background: #f8fafc;
   text-decoration: none;
 }
+.experience-image {
+  min-height: 300px;
+  overflow: hidden;
+}
 .experience-card img {
   display: block;
   width: 100%;
