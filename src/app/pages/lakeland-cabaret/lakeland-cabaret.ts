@@ -3,12 +3,11 @@ import {
   BreadcrumbItem,
   BreadcrumbsComponent,
 } from '../../shared/breadcrumbs/breadcrumbs-component';
-import { ProjectsLink } from '../../shared/projects-link/projects-link';
 
 @Component({
   selector: 'app-lakeland-cabaret',
   standalone: true,
-  imports: [BreadcrumbsComponent, ProjectsLink],
+  imports: [BreadcrumbsComponent],
   templateUrl: './lakeland-cabaret.html',
   styleUrl: './lakeland-cabaret.css',
 })
