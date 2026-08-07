@@ -71,8 +71,8 @@ p { color: #465568; line-height: 1.68; }
 code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background: #eef2f6; }
 .architecture-note { margin: 24px 0 0; padding: 18px 20px; border-left: 3px solid #527ca8; background: #f2f5f8; }
 .accessibility-section { border-top: 4px solid #315d91; }
-.accessibility-showcase { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr); gap: 28px; align-items: center; margin-bottom: 28px; }
-.accessibility-showcase .section-intro { margin-bottom: 0; }
+.accessibility-layout { display: grid; grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.25fr); gap: 22px; align-items: start; }
+.accessibility-features { grid-template-columns: 1fr; gap: 14px; }
 .command-window-shot { box-shadow: 0 10px 28px rgba(23, 32, 51, 0.09); }
 .accessibility-statement { margin: 24px 0 0; padding: 20px; border-left: 4px solid #315d91; color: #283a51; background: #eef4fa; font-weight: 750; }
 
@@ -104,7 +104,7 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 }
 
 @media (max-width: 980px) {
-  .hero, .sheet-layout, .accessibility-showcase, .technology-section, .links-section { grid-template-columns: 1fr; }
+  .hero, .sheet-layout, .accessibility-layout, .technology-section, .links-section { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr; }
   .process-grid, .voice-play-grid { grid-template-columns: repeat(2, 1fr); }
   .comparison-grid { grid-template-columns: 1fr; }
