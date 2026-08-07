@@ -105,6 +105,9 @@ code { padding: 0.1em 0.32em; border-radius: 0.25rem; color: #283a51; background
 
 @media (max-width: 980px) {
   .hero, .sheet-layout, .accessibility-layout, .technology-section, .links-section { grid-template-columns: 1fr; }
+  .accessibility-layout .command-window-shot { order: -1; }
+  .linked-inline { display: none; }
+  .linked-card { display: block; order: -1; }
   .feature-grid { grid-template-columns: 1fr; }
   .process-grid, .voice-play-grid { grid-template-columns: repeat(2, 1fr); }
   .comparison-grid { grid-template-columns: 1fr; }
